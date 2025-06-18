@@ -15,27 +15,27 @@ public class Driver {
     public static void initialize(BrowserModel browser) {
         if (driver == null) {
             synchronized (Driver.class) {
-                switch(browser.getBrowserName()) {
+                switch(browser.getName()) {
                     case "chrome" :
                         ChromeOptions chromeOptions = new ChromeOptions();
-                        chromeOptions.addArguments(browser.getBrowserMode());
-                        chromeOptions.addArguments(browser.getBrowserLanguage());
+                        chromeOptions.addArguments(browser.getMode());
+                        chromeOptions.addArguments(browser.getLanguage());
                         driver = new ChromeDriver(chromeOptions);
                         break;
                     case "firefox" :
                         FirefoxOptions firefoxOptions = new FirefoxOptions();
-                        firefoxOptions.addArguments(browser.getBrowserMode());
-                        firefoxOptions.addArguments(browser.getBrowserLanguage());
+                        firefoxOptions.addArguments(browser.getMode());
+                        firefoxOptions.addArguments(browser.getLanguage());
                         driver = new FirefoxDriver(firefoxOptions);
                         break;
                     case "edge" :
                         EdgeOptions edgeOptions = new EdgeOptions();
-                        edgeOptions.addArguments(browser.getBrowserMode());
-                        edgeOptions.addArguments(browser.getBrowserLanguage());
+                        edgeOptions.addArguments(browser.getMode());
+                        edgeOptions.addArguments(browser.getLanguage());
                         driver = new EdgeDriver(edgeOptions);
                         break;
                     default:
-                        throw new IllegalArgumentException("Неподдерживаемый браузер: " + browser.getBrowserName());
+                        throw new IllegalArgumentException("Неподдерживаемый браузер: " + browser.getName());
                 }
                 driver.manage().window().maximize();
             }
@@ -44,7 +44,7 @@ public class Driver {
     }
 
     public static WebDriver instance() {
-        if (driver == null)
+        if (driver != null)
             return driver;
         else throw new IllegalArgumentException("Браузер не инициализирован");
     }

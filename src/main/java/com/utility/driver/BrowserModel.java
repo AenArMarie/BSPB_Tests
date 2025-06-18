@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 public class BrowserModel {
 
-    private String browserName;
-    private String browserMode;
-    private String browserLanguage;
+    private String name;
+    private String mode;
+    private String language;
 }
