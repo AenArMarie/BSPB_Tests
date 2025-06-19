@@ -37,6 +37,7 @@ public abstract class BaseElement {
     }
 
     public void click() {
+        DriverMethods.getActions().moveToElement(getElement()).perform();
         getElement().click();
     }
 
@@ -52,6 +53,10 @@ public abstract class BaseElement {
             ProjectLogger.error("Элемент не найден: " + e.getMessage());
         }
         return webElement;
+    }
+
+    public void hover(){
+        DriverMethods.getActions().moveToElement(getElement()).perform();
     }
 
     public String getAttribute(String attribute) {

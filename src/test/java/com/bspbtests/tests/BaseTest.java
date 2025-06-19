@@ -27,6 +27,7 @@ public abstract class BaseTest {
         ProjectLogger.info("Открытие главной страницы");
         Driver.instance().get("https://www.bspb.ru"); //TODO хардкод
         Driver.instance().manage().window().maximize();
+        DriverMethods.initializeWait(5000); //TODO хардкод
     }
 
     @Rule
@@ -39,7 +40,7 @@ public abstract class BaseTest {
         @Override
         protected void finished(Description description) {
             ProjectLogger.info("Завершение теста\n");
-            Driver.quit();
+            //Driver.quit();
         }
     };
 }
