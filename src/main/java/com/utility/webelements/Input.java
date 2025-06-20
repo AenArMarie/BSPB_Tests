@@ -10,8 +10,7 @@ public class Input extends BaseElement{
     }
 
     public void setInput(String text){
-        getElement().sendKeys(Keys.CONTROL + "a");
-        getElement().sendKeys(Keys.DELETE);
+        getElement().sendKeys(Keys.CONTROL + "a"); //TODO хардкод
         getElement().sendKeys(text);
     }
 }

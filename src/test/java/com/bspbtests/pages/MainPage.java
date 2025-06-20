@@ -9,6 +9,8 @@ public class MainPage extends BaseForm{
     Element whiteNightsInvestment = new Element(By.xpath("//a[contains(@class, 'css-70yt0k') and contains(., 'Белые ночи')]"), "Ссылка на вклад 'Белые ночи'");
     Element buyCurrencyButton = new Element(By.xpath("//*[contains(@class, 'css-oen4ev')]"), "Кнопка 'Купить валюту'");
 
+    private String topMenuLocatorTemplate = "//*[contains(@class, 'css-9f19sy') and contains(., '%s')]";
+
     public MainPage() {
         super(By.xpath("//*[contains(@class, 'css-2wq498') and contains(., 'Ипотека')]"), "Карточка 'Ипотека'");
     }
@@ -23,5 +25,10 @@ public class MainPage extends BaseForm{
 
     public void clickBuyCurrencyButton(){
         buyCurrencyButton.click();
+    }
+
+    public void clickTopMenuItemByText(String text){
+        Element menuItem = new Element(By.xpath(String.format(topMenuLocatorTemplate, text)), "Кнопка с текстом " + text);
+        menuItem.click();
     }
 }

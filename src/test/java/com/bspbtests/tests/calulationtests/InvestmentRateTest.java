@@ -1,15 +1,16 @@
-package com.bspbtests.tests;
+package com.bspbtests.tests.calulationtests;
 
 import com.bspbtests.pages.CalculatorForm;
 import com.bspbtests.pages.MainPage;
 import com.bspbtests.pages.WhiteNightsInvestmentPage;
+import com.bspbtests.tests.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class InvestmentRateTest extends BaseTest{
+public class InvestmentRateTest extends BaseTest {
 
     @Test
-    public void test1() throws InterruptedException {
+    public void investmentRateTest(){
         MainPage mainPage = new MainPage();
         Assert.assertTrue(mainPage.isDisplayed());
         mainPage.hoverInvestments();
