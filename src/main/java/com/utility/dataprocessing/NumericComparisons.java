@@ -1,8 +1,8 @@
-package com.utility.comparisons;
+package com.utility.dataprocessing;
 
 public class NumericComparisons {
 
-    public static boolean equalsWithMargin(double a, double b, double margin) { //TODO имена перменных?
+    public static boolean equalsWithMargin(double a, double b, double margin) {
         double tol = Math.abs(margin);
         if (Double.compare(a, b) == 0) {
             return true;

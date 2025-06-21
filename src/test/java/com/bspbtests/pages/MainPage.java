@@ -1,18 +1,20 @@
 package com.bspbtests.pages;
 
+import com.bspbtests.constants.ElementsTextConstants;
+import com.bspbtests.pages.baseform.BaseForm;
 import com.utility.webelements.Element;
 import org.openqa.selenium.By;
 
-public class MainPage extends BaseForm{
+public class MainPage extends BaseForm {
 
-    Element investmentsMenu = new Element(By.xpath("//*[contains(@class, 'css-1y4qndl') and contains(., 'Вклады')]"), "Вклады"); //TODO вынести в верхнее меню
-    Element whiteNightsInvestment = new Element(By.xpath("//a[contains(@class, 'css-70yt0k') and contains(., 'Белые ночи')]"), "Ссылка на вклад 'Белые ночи'");
-    Element buyCurrencyButton = new Element(By.xpath("//*[contains(@class, 'css-oen4ev')]"), "Кнопка 'Купить валюту'");
+    private Element investmentsMenu = new Element(By.xpath(String.format("//*[contains(@class, 'css-1y4qndl') and contains(., '%s')]", ElementsTextConstants.MAIN_PAGE_INVEST)), "Вклады");
+    private Element whiteNightsInvestment = new Element(By.xpath(String.format("//a[contains(@class, 'css-70yt0k') and contains(., '%s')]", ElementsTextConstants.WHITE_NIGHTS)), "Ссылка на вклад 'Белые ночи'");
+    private Element buyCurrencyButton = new Element(By.xpath("//*[contains(@class, 'css-oen4ev')]"), "Кнопка 'Купить валюту'");
 
     private String topMenuLocatorTemplate = "//*[contains(@class, 'css-9f19sy') and contains(., '%s')]";
 
     public MainPage() {
-        super(By.xpath("//*[contains(@class, 'css-2wq498') and contains(., 'Ипотека')]"), "Карточка 'Ипотека'");
+        super(By.xpath(String.format("//*[contains(@class, 'css-2wq498') and contains(., '%s')]", ElementsTextConstants.MAIN_PAGE_MORTGAGE)), "Главная страница");
     }
 
     public void hoverInvestments() {
@@ -23,11 +25,11 @@ public class MainPage extends BaseForm{
         whiteNightsInvestment.click();
     }
 
-    public void clickBuyCurrencyButton(){
+    public void clickBuyCurrencyButton() {
         buyCurrencyButton.click();
     }
 
-    public void clickTopMenuItemByText(String text){
+    public void clickTopMenuItemByText(String text) {
         Element menuItem = new Element(By.xpath(String.format(topMenuLocatorTemplate, text)), "Кнопка с текстом " + text);
         menuItem.click();
     }

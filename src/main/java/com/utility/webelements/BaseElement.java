@@ -20,18 +20,18 @@ public abstract class BaseElement {
     public By getLocator() {
         return locator;
     }
+
     public String getName() {
         return name;
     }
 
-    public WebElement getElement()
-    {
+    public WebElement getElement() {
         WebElement webElement = null;
         try {
             DriverMethods.waitForElementToAppear(getLocator());
             webElement = Driver.instance().findElement(getLocator());
         } catch (NoSuchElementException e) {
-            ProjectLogger.error("Элемент " + getName() +" не найден: " + e.getMessage());
+            ProjectLogger.error("Элемент " + getName() + " не найден: " + e.getMessage());
         }
         return webElement;
     }
@@ -45,17 +45,7 @@ public abstract class BaseElement {
         return getElement().getText();
     }
 
-    public WebElement getChildElement(By locator) {
-        WebElement webElement = null;
-        try {
-            webElement = getElement().findElement(locator);
-        } catch (NoSuchElementException e) {
-            ProjectLogger.error("Элемент не найден: " + e.getMessage());
-        }
-        return webElement;
-    }
-
-    public void hover(){
+    public void hover() {
         DriverMethods.getActions().moveToElement(getElement()).perform();
     }
 

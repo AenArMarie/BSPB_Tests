@@ -1,12 +1,13 @@
-package com.bspbtests.tests;
+package com.bspbtests.tests.basetest;
 
 import com.bspbtests.constants.PathConstants;
+import com.bspbtests.jsondata.ConfigData;
+import com.bspbtests.jsondata.TestData;
 import com.utility.driver.BrowserModel;
 import com.utility.driver.Driver;
 import com.utility.driver.DriverMethods;
 import com.utility.files.FilesReader;
 import com.utility.logger.ProjectLogger;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
@@ -14,6 +15,8 @@ import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 
 public abstract class BaseTest {
+
+    protected TestData testData;
 
     @BeforeClass
     public static void setUp() {
@@ -23,11 +26,13 @@ public abstract class BaseTest {
 
     @Before
     public void additionalSetUp() {
+        testData = FilesReader.readJson(PathConstants.TEST_DATA_PATH, TestData.class);
+        ConfigData configData = FilesReader.readJson(PathConstants.CONFIG_DATA_PATH, ConfigData.class);
         ProjectLogger.info("Запуск теста");
         ProjectLogger.info("Открытие главной страницы");
-        Driver.instance().get("https://www.bspb.ru"); //TODO хардкод
         Driver.instance().manage().window().maximize();
-        DriverMethods.initializeWait(5000); //TODO хардкод
+        Driver.instance().get(configData.getBaseUrl());
+        DriverMethods.initializeWait(configData.getDriverWaitTime());
     }
 
     @Rule
@@ -40,7 +45,7 @@ public abstract class BaseTest {
         @Override
         protected void finished(Description description) {
             ProjectLogger.info("Завершение теста\n");
-            //Driver.quit();
+            Driver.quit();
         }
     };
 }

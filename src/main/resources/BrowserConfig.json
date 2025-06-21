@@ -1,5 +1,5 @@
 {
   "name" : "chrome",
   "mode" : "--incognito",
-  "language" : "--lang=en"
+  "language" : "--lang=ru"
 }

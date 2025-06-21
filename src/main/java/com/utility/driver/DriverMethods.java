@@ -1,6 +1,5 @@
 package com.utility.driver;
 
-import com.utility.constants.MainPaths;
 import com.utility.logger.ProjectLogger;
 import lombok.Getter;
 import org.openqa.selenium.*;
@@ -17,6 +16,7 @@ public class DriverMethods {
 
     @Getter
     private static Actions actions = new Actions(Driver.instance());
+    @Getter
     private static Wait<WebDriver> wait;
 
     public static void initializeWait(int millisOfWaitTime) {

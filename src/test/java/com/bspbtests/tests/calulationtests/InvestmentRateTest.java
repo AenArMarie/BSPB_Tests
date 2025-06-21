@@ -1,36 +1,44 @@
 package com.bspbtests.tests.calulationtests;
 
+import com.bspbtests.constants.CommonLogMessages;
+import com.bspbtests.constants.StringConstants;
 import com.bspbtests.pages.CalculatorForm;
 import com.bspbtests.pages.MainPage;
 import com.bspbtests.pages.WhiteNightsInvestmentPage;
-import com.bspbtests.tests.BaseTest;
+import com.bspbtests.tests.basetest.BaseTest;
+import com.utility.logger.ProjectLogger;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class InvestmentRateTest extends BaseTest {
 
     @Test
-    public void investmentRateTest(){
+    public void investmentRateTest() {
+        ProjectLogger.info(CommonLogMessages.MAIN_PAGE_CHECK_LOG);
         MainPage mainPage = new MainPage();
-        Assert.assertTrue(mainPage.isDisplayed());
+        Assert.assertTrue(CommonLogMessages.MAIN_PAGE_NOT_DISPLAYED, mainPage.isDisplayed());
+        ProjectLogger.info("Переход на страницу вклада 'Белые ночи'");
         mainPage.hoverInvestments();
         mainPage.clickWhiteNights();
+        ProjectLogger.info("Проверка открытия страницы вклада 'Белые ночи'");
         WhiteNightsInvestmentPage whiteNightsInvestmentPage = new WhiteNightsInvestmentPage();
-        Assert.assertTrue(whiteNightsInvestmentPage.isDisplayed());
+        Assert.assertTrue("Страница вклада 'Белые ночи' не открыта", whiteNightsInvestmentPage.isDisplayed());
+        ProjectLogger.info("Проверка открытия кальулятора прибыли вклада");
         CalculatorForm calculatorForm = new CalculatorForm();
-        Assert.assertTrue(calculatorForm.isDisplayed());
-        calculatorForm.setInvestmentSum("1000000"); //TODO хардкод
-        calculatorForm.click31Days();
+        Assert.assertTrue("Калькулятор вклада 'Белые ночи' не открыт", calculatorForm.isDisplayed());
+        ProjectLogger.info("Установка суммы вклада " + testData.getInvestmentRateData().getInvestedAmount());
+        calculatorForm.setInvestmentSum(testData.getInvestmentRateData().getInvestedAmount());
+        ProjectLogger.info("Установка срока вклада " + testData.getInvestmentRateData().getInvestmentPeriodText());
+        calculatorForm.clickInvestmentPeriodByText(testData.getInvestmentRateData().getInvestmentPeriodText());
 
-        String interestAmountText = calculatorForm.getInterestAmount();
-        interestAmountText = interestAmountText.replaceAll("\\D+", ""); //TODO сделать функцию для преобразования
-        long interestValue = Long.parseLong(interestAmountText);
-
+        ProjectLogger.info("Получение информации о проценте вклада и прибыли");
         String investmentRateText = calculatorForm.getInvestmentRate();
-        investmentRateText = investmentRateText.replaceAll("\\D+", "");
-        long investmentRate = Long.parseLong(investmentRateText);
+        long investmentRate = Long.parseLong(investmentRateText.replaceAll(StringConstants.ALL_NON_NUMERIC_CHARS, StringConstants.EMPTY_STRING));
 
-        Assert.assertEquals(13589, interestValue); //TODO хардкод
-        Assert.assertEquals(16, investmentRate);
+        ProjectLogger.info("Проверка процента вклада");
+        Assert.assertEquals("Процент вклада не соответствует ожидаемому", testData.getInvestmentRateData().getExpectedInvestmentRate(), investmentRate);
+        ProjectLogger.info("Получение прибыли вклада");
+        Assert.assertTrue("Прибыль вклада не соответствует ожидаемой", calculatorForm.checkIfNormalizedInterestAmountEqualToText(testData.getInvestmentRateData().getExpectedInterestValue()));
+
     }
 }

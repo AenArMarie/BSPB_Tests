@@ -1,4 +1,4 @@
-package com.bspbtests.pages;
+package com.bspbtests.pages.baseform;
 
 import com.utility.webelements.BaseElement;
 import com.utility.webelements.Element;
@@ -8,7 +8,9 @@ public abstract class BaseForm {
 
     private BaseElement uniqueElement;
 
-    protected BaseForm (By locator, String name) { uniqueElement = new Element(locator, name); }
+    protected BaseForm(By locator, String name) {
+        uniqueElement = new Element(locator, name);
+    }
 
     public boolean isDisplayed() {
         return uniqueElement.getElement().isDisplayed();
