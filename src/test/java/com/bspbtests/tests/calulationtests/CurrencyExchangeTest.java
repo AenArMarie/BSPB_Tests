@@ -25,7 +25,7 @@ public class CurrencyExchangeTest extends BaseTest {
         CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         Assert.assertTrue("Форма с калькулятором конвертации валюты не отображена", currencyConversionForm.isDisplayed());
 
-        ProjectLogger.info("Выбор имеющейса валюты: " + testData.getCurrencyExchangeData().getExistingCurrencyText());
+        ProjectLogger.info("Выбор имеющейся валюты: " + testData.getCurrencyExchangeData().getExistingCurrencyText());
         currencyConversionForm.clickExistingCurrenciesDropDownButton();
         currencyConversionForm.selectAsExistingCurrencyByText(testData.getCurrencyExchangeData().getExistingCurrencyText());
 
@@ -33,7 +33,7 @@ public class CurrencyExchangeTest extends BaseTest {
         currencyConversionForm.clickConvertedCurrenciesDropDownButton();
         currencyConversionForm.selectAsConvertedCurrencyByText(testData.getCurrencyExchangeData().getConvertedCurrencyText());
 
-        ProjectLogger.info("Установка имеющейгося количества валюты " + testData.getCurrencyExchangeData().getAmountBelowThreshold());
+        ProjectLogger.info("Установка имеющегося количества валюты " + testData.getCurrencyExchangeData().getAmountBelowThreshold());
         currencyConversionForm.setExistingCurrencyAmount(String.valueOf(testData.getCurrencyExchangeData().getAmountBelowThreshold()));
         ProjectLogger.info("Получение конвертации при малом количестве валюты");
         String firstConversionText = StringProcessing.splitStringByTextAndGetPart(
@@ -44,7 +44,7 @@ public class CurrencyExchangeTest extends BaseTest {
         Assert.assertTrue("Данные о конвертации не верны", NumericComparisons.equalsWithMargin(firstConversionRate * testData.getCurrencyExchangeData().getAmountBelowThreshold(),
                 Double.parseDouble(currencyConversionForm.getConvertedCurrencyAmount().replaceAll(StringConstants.ALL_SPACES, StringConstants.EMPTY_STRING)), testData.getCurrencyExchangeData().getMarginOfError()));
 
-        ProjectLogger.info("Установка имеющейгося количества валюты " + testData.getCurrencyExchangeData().getAmountAboveThreshold());
+        ProjectLogger.info("Установка имеющегося количества валюты " + testData.getCurrencyExchangeData().getAmountAboveThreshold());
         currencyConversionForm.setExistingCurrencyAmount(String.valueOf(testData.getCurrencyExchangeData().getAmountAboveThreshold()));
         ProjectLogger.info("Получение конвертации при большом количестве валюты");
         String secondConversionText = StringProcessing.splitStringByTextAndGetPart(
