@@ -13,5 +13,9 @@
     "investmentPeriodText" : "31 день",
     "expectedInvestmentRate" : 16,
     "expectedInterestValue" : "13589"
+  },
+  "cardOrderingData" : {
+    "phoneNumber" : "+79999999999",
+    "email" : "mock@mail.com"
   }
 }

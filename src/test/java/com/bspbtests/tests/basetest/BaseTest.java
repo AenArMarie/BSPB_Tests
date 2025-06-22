@@ -2,13 +2,11 @@ package com.bspbtests.tests.basetest;
 
 import com.bspbtests.constants.PathConstants;
 import com.bspbtests.jsondata.ConfigData;
-import com.bspbtests.jsondata.TestData;
-import com.bspbtests.utility.driver.BrowserModel;
+import com.bspbtests.jsondata.testdata.TestData;
 import com.bspbtests.utility.driver.Driver;
 import com.bspbtests.utility.driver.DriverMethods;
 import com.utility.files.FilesReader;
 import com.utility.logger.ProjectLogger;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.rules.TestWatcher;

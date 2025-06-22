@@ -1,9 +1,9 @@
 package com.bspbtests.pages;
 
-import com.bspbtests.constants.AttributeNames;
+import com.bspbtests.constants.AttributeConstants;
 import com.bspbtests.pages.baseform.BaseForm;
-import com.bspbtests.webelements.Element;
-import com.bspbtests.webelements.Input;
+import com.bspbtests.utility.webelements.Element;
+import com.bspbtests.utility.webelements.Input;
 import org.openqa.selenium.By;
 
 public class CurrencyConversionForm extends BaseForm {
@@ -50,7 +50,7 @@ public class CurrencyConversionForm extends BaseForm {
     }
 
     public String getConvertedCurrencyAmount() {
-        return convertedCurrencyAmountInput.getAttribute(AttributeNames.VALUE);
+        return convertedCurrencyAmountInput.getAttribute(AttributeConstants.VALUE);
     }
 
     public String getConversionRateByPartialText(String partialText) {

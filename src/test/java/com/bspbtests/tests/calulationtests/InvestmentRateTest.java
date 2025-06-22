@@ -36,7 +36,7 @@ public class InvestmentRateTest extends BaseTest {
         long investmentRate = Long.parseLong(investmentRateText.replaceAll(StringConstants.ALL_NON_NUMERIC_CHARS, StringConstants.EMPTY_STRING));
 
         ProjectLogger.info("Проверка процента вклада");
-        Assert.assertEquals("Процент вклада не соответствует ожидаемому", testData.getInvestmentRateData().getExpectedInvestmentRate(), investmentRate);
+        Assert.assertEquals("Процент вклада не соответствует ожидаемому", investmentRate, testData.getInvestmentRateData().getExpectedInvestmentRate());
         ProjectLogger.info("Получение прибыли вклада");
         Assert.assertTrue("Прибыль вклада не соответствует ожидаемой", calculatorForm.checkIfNormalizedInterestAmountEqualToText(testData.getInvestmentRateData().getExpectedInterestValue()));
 

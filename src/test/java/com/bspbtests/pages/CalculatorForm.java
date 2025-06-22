@@ -5,8 +5,8 @@ import com.bspbtests.constants.ElementsTextConstants;
 import com.bspbtests.constants.StringConstants;
 import com.bspbtests.pages.baseform.BaseForm;
 import com.bspbtests.utility.driver.DriverMethods;
-import com.bspbtests.webelements.Element;
-import com.bspbtests.webelements.Input;
+import com.bspbtests.utility.webelements.Element;
+import com.bspbtests.utility.webelements.Input;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 

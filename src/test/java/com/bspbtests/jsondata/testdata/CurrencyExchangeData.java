@@ -1,4 +1,4 @@
-package com.bspbtests.jsondata;
+package com.bspbtests.jsondata.testdata;
 
 import lombok.Getter;
 import lombok.Setter;

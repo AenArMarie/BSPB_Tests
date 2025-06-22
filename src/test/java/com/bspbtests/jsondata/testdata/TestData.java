@@ -1,4 +1,4 @@
-package com.bspbtests.jsondata;
+package com.bspbtests.jsondata.testdata;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,4 +9,5 @@ public class TestData {
 
     private CurrencyExchangeData currencyExchangeData;
     private InvestmentRateData investmentRateData;
+    private CardOrderingData cardOrderingData;
 }
