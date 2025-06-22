@@ -1,5 +1,7 @@
-package com.utility.driver;
+package com.bspbtests.utility.driver;
 
+import com.bspbtests.constants.PathConstants;
+import com.utility.files.FilesReader;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,21 +11,17 @@ import org.openqa.selenium.edge.EdgeOptions;
 
 public class Driver {
 
-    private static volatile WebDriver driver;
+    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    public static void initialize(BrowserModel browser) {
-        if (driver == null) {
-            synchronized (Driver.class) {
-                if (driver == null) {
-                    driver = createDriver(browser);
-                }
-            }
-        } else {
-            throw new IllegalStateException("Driver уже инициализирован");
+    public static WebDriver instance() {
+        if (driver.get() == null) {
+            driver.set(createDriver());
         }
+        return driver.get();
     }
 
-    private static WebDriver createDriver(BrowserModel browser) {
+    private static WebDriver createDriver() {
+        BrowserModel browser = FilesReader.readJson(PathConstants.BROWSER_CONFIG_PATH, BrowserModel.class);
         switch (browser.getName()) {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
@@ -42,16 +40,10 @@ public class Driver {
         }
     }
 
-    public static WebDriver instance() {
-        if (driver != null)
-            return driver;
-        else throw new IllegalStateException("Driver не инициализирован");
-    }
-
     public static void quit() {
-        if (driver != null) {
-            driver.quit();
-            driver = null;
+        if (driver.get() != null) {
+            driver.get().quit();
+            driver.remove();
         }
     }
 }

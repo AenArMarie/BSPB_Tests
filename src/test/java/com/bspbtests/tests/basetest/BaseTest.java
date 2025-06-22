@@ -3,13 +3,13 @@ package com.bspbtests.tests.basetest;
 import com.bspbtests.constants.PathConstants;
 import com.bspbtests.jsondata.ConfigData;
 import com.bspbtests.jsondata.TestData;
-import com.utility.driver.BrowserModel;
-import com.utility.driver.Driver;
-import com.utility.driver.DriverMethods;
+import com.bspbtests.utility.driver.BrowserModel;
+import com.bspbtests.utility.driver.Driver;
+import com.bspbtests.utility.driver.DriverMethods;
 import com.utility.files.FilesReader;
 import com.utility.logger.ProjectLogger;
+import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
@@ -18,14 +18,8 @@ public abstract class BaseTest {
 
     protected TestData testData;
 
-    @BeforeClass
-    public static void setUp() {
-        BrowserModel browserModel = FilesReader.readJson(PathConstants.BROWSER_CONFIG_PATH, BrowserModel.class);
-        Driver.initialize(browserModel);
-    }
-
     @Before
-    public void additionalSetUp() {
+    public void setUp() {
         testData = FilesReader.readJson(PathConstants.TEST_DATA_PATH, TestData.class);
         ConfigData configData = FilesReader.readJson(PathConstants.CONFIG_DATA_PATH, ConfigData.class);
         ProjectLogger.info("Запуск теста");

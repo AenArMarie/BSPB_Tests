@@ -1,4 +1,4 @@
-package com.utility.driver;
+package com.bspbtests.utility.driver;
 
 import com.utility.logger.ProjectLogger;
 import lombok.Getter;
@@ -14,8 +14,6 @@ import java.time.Duration;
 
 public class DriverMethods {
 
-    @Getter
-    private static Actions actions = new Actions(Driver.instance());
     @Getter
     private static Wait<WebDriver> wait;
 
@@ -46,5 +44,9 @@ public class DriverMethods {
         } catch (TimeoutException e) {
             ProjectLogger.error("Элемент не прогрузился за указанное время: " + e.getMessage());
         }
+    }
+
+    public static Actions getActions() {
+        return new Actions(Driver.instance());
     }
 }

@@ -1,4 +1,4 @@
-package com.utility.driver;
+package com.bspbtests.utility.driver;
 
 import lombok.Getter;
 import lombok.Setter;

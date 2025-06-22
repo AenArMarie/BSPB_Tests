@@ -1,4 +1,4 @@
-package com.utility.dataprocessing;
+package com.bspbtests.utility.dataprocessing;
 
 public class StringProcessing {
 

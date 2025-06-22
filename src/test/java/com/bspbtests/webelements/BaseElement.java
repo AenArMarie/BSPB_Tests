@@ -1,7 +1,7 @@
-package com.utility.webelements;
+package com.bspbtests.webelements;
 
-import com.utility.driver.Driver;
-import com.utility.driver.DriverMethods;
+import com.bspbtests.utility.driver.Driver;
+import com.bspbtests.utility.driver.DriverMethods;
 import com.utility.logger.ProjectLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;

@@ -1,4 +1,4 @@
-package com.utility.webelements;
+package com.bspbtests.webelements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
