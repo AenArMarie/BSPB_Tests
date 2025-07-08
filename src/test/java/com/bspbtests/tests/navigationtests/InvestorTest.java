@@ -6,8 +6,9 @@ import com.bspbtests.pages.InvestorPage;
 import com.bspbtests.pages.MainPage;
 import com.bspbtests.tests.basetest.BaseTest;
 import com.utility.logger.ProjectLogger;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class InvestorTest extends BaseTest {
 
@@ -15,12 +16,12 @@ public class InvestorTest extends BaseTest {
     public void investorTest() {
         ProjectLogger.info(CommonLogMessages.MAIN_PAGE_CHECK_LOG);
         MainPage mainPage = new MainPage();
-        Assert.assertTrue(CommonLogMessages.MAIN_PAGE_NOT_DISPLAYED, mainPage.isDisplayed());
+        assertTrue(mainPage.isDisplayed(), CommonLogMessages.MAIN_PAGE_NOT_DISPLAYED);
 
         ProjectLogger.info("Переход на страницу 'Инвесторам'");
         mainPage.clickTopMenuItemByText(MainPageMenuItemText.INVESTOR);
         InvestorPage investorPage = new InvestorPage();
         ProjectLogger.info("Проверка отображения страницы 'Инвесторам'");
-        Assert.assertTrue("Страница 'Инвесторам' не отображена", investorPage.isDisplayed());
+        assertTrue(investorPage.isDisplayed(), "Страница 'Инвесторам' не отображена");
     }
 }

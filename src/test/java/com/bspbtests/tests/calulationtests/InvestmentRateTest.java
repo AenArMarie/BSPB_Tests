@@ -7,8 +7,9 @@ import com.bspbtests.pages.MainPage;
 import com.bspbtests.pages.WhiteNightsInvestmentPage;
 import com.bspbtests.tests.basetest.BaseTest;
 import com.utility.logger.ProjectLogger;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class InvestmentRateTest extends BaseTest {
 
@@ -16,16 +17,16 @@ public class InvestmentRateTest extends BaseTest {
     public void investmentRateTest() {
         ProjectLogger.info(CommonLogMessages.MAIN_PAGE_CHECK_LOG);
         MainPage mainPage = new MainPage();
-        Assert.assertTrue(CommonLogMessages.MAIN_PAGE_NOT_DISPLAYED, mainPage.isDisplayed());
+        assertTrue(mainPage.isDisplayed(), CommonLogMessages.MAIN_PAGE_NOT_DISPLAYED);
         ProjectLogger.info("Переход на страницу вклада 'Белые ночи'");
         mainPage.hoverInvestments();
         mainPage.clickWhiteNights();
         ProjectLogger.info("Проверка открытия страницы вклада 'Белые ночи'");
         WhiteNightsInvestmentPage whiteNightsInvestmentPage = new WhiteNightsInvestmentPage();
-        Assert.assertTrue("Страница вклада 'Белые ночи' не открыта", whiteNightsInvestmentPage.isDisplayed());
+        assertTrue(whiteNightsInvestmentPage.isDisplayed(), "Страница вклада 'Белые ночи' не открыта");
         ProjectLogger.info("Проверка открытия кальулятора прибыли вклада");
         CalculatorForm calculatorForm = new CalculatorForm();
-        Assert.assertTrue("Калькулятор вклада 'Белые ночи' не открыт", calculatorForm.isDisplayed());
+        assertTrue(calculatorForm.isDisplayed(), "Калькулятор вклада 'Белые ночи' не открыт");
         ProjectLogger.info("Установка суммы вклада " + testData.getInvestmentRateData().getInvestedAmount());
         calculatorForm.setInvestmentSum(testData.getInvestmentRateData().getInvestedAmount());
         ProjectLogger.info("Установка срока вклада " + testData.getInvestmentRateData().getInvestmentPeriodText());
@@ -36,9 +37,9 @@ public class InvestmentRateTest extends BaseTest {
         long investmentRate = Long.parseLong(investmentRateText.replaceAll(StringConstants.ALL_NON_NUMERIC_CHARS, StringConstants.EMPTY_STRING));
 
         ProjectLogger.info("Проверка процента вклада");
-        Assert.assertEquals("Процент вклада не соответствует ожидаемому", investmentRate, testData.getInvestmentRateData().getExpectedInvestmentRate());
+        assertEquals(investmentRate, testData.getInvestmentRateData().getExpectedInvestmentRate(), "Процент вклада не соответствует ожидаемому");
         ProjectLogger.info("Получение прибыли вклада");
-        Assert.assertTrue("Прибыль вклада не соответствует ожидаемой", calculatorForm.checkIfNormalizedInterestAmountEqualToText(testData.getInvestmentRateData().getExpectedInterestValue()));
+        assertTrue(calculatorForm.checkIfNormalizedInterestAmountEqualToText(testData.getInvestmentRateData().getExpectedInterestValue()), "Прибыль вклада не соответствует ожидаемой");
 
     }
 }

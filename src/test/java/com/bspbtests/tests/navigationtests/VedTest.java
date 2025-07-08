@@ -6,8 +6,9 @@ import com.bspbtests.pages.MainPage;
 import com.bspbtests.pages.VedPage;
 import com.bspbtests.tests.basetest.BaseTest;
 import com.utility.logger.ProjectLogger;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class VedTest extends BaseTest {
 
@@ -15,12 +16,12 @@ public class VedTest extends BaseTest {
     public void vedTest() {
         ProjectLogger.info(CommonLogMessages.MAIN_PAGE_CHECK_LOG);
         MainPage mainPage = new MainPage();
-        Assert.assertTrue(CommonLogMessages.MAIN_PAGE_NOT_DISPLAYED, mainPage.isDisplayed());
+        assertTrue(mainPage.isDisplayed(), CommonLogMessages.MAIN_PAGE_NOT_DISPLAYED);
 
         ProjectLogger.info("Переход на страницу 'ВЭД'");
         mainPage.clickTopMenuItemByText(MainPageMenuItemText.VED);
         VedPage vedPage = new VedPage();
         ProjectLogger.info("Проверка отображения страницы 'ВЭД'");
-        Assert.assertTrue("Страница 'ВЭД' не отображена", vedPage.isDisplayed());
+        assertTrue(vedPage.isDisplayed(), "Страница 'ВЭД' не отображена");
     }
 }

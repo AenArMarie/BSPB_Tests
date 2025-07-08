@@ -6,8 +6,9 @@ import com.bspbtests.pages.MainPage;
 import com.bspbtests.pages.PrivateBankingPage;
 import com.bspbtests.tests.basetest.BaseTest;
 import com.utility.logger.ProjectLogger;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PrivateBankingTest extends BaseTest {
 
@@ -15,12 +16,12 @@ public class PrivateBankingTest extends BaseTest {
     public void privateBankingTest() {
         ProjectLogger.info(CommonLogMessages.MAIN_PAGE_CHECK_LOG);
         MainPage mainPage = new MainPage();
-        Assert.assertTrue(CommonLogMessages.MAIN_PAGE_NOT_DISPLAYED, mainPage.isDisplayed());
+        assertTrue(mainPage.isDisplayed(), CommonLogMessages.MAIN_PAGE_NOT_DISPLAYED);
 
         ProjectLogger.info("Переход на страницу 'Private Banking'");
         mainPage.clickTopMenuItemByText(MainPageMenuItemText.PRIVATE_BANKING);
         PrivateBankingPage privateBankingPage = new PrivateBankingPage();
         ProjectLogger.info("Проверка отображения страницы 'Private Banking'");
-        Assert.assertTrue("Страница 'Private Banking' не отображена", privateBankingPage.isDisplayed());
+        assertTrue(privateBankingPage.isDisplayed(), "Страница 'Private Banking' не отображена");
     }
 }

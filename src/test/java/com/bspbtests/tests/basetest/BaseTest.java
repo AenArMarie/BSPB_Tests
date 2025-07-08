@@ -7,16 +7,15 @@ import com.bspbtests.utility.driver.Driver;
 import com.bspbtests.utility.driver.DriverMethods;
 import com.utility.files.FilesReader;
 import com.utility.logger.ProjectLogger;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.rules.TestWatcher;
-import org.junit.runner.Description;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.*;
 
 public abstract class BaseTest {
 
     protected TestData testData;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         testData = FilesReader.readJson(PathConstants.TEST_DATA_PATH, TestData.class);
         ConfigData configData = FilesReader.readJson(PathConstants.CONFIG_DATA_PATH, ConfigData.class);
@@ -27,17 +26,21 @@ public abstract class BaseTest {
         DriverMethods.initializeWait(configData.getDriverWaitTime());
     }
 
-    @Rule
-    public TestWatcher watcher = new TestWatcher() {
+    @RegisterExtension
+    TestResultWatcher watcher = new TestResultWatcher();
+
+    static class TestResultWatcher implements TestWatcher, AfterTestExecutionCallback {
+
         @Override
-        protected void failed(Throwable e, Description description) {
-            DriverMethods.makeScreenshot(description.getMethodName(), PathConstants.SCREENSHOT_PATH, PathConstants.SCREENSHOT_TYPE);
+        public void testFailed(ExtensionContext context, Throwable cause) {
+            String methodName = context.getRequiredTestMethod().getName();
+            DriverMethods.makeScreenshot(methodName, PathConstants.SCREENSHOT_PATH, PathConstants.SCREENSHOT_TYPE);
         }
 
         @Override
-        protected void finished(Description description) {
+        public void afterTestExecution(ExtensionContext context) {
             ProjectLogger.info("Завершение теста\n");
             Driver.quit();
         }
-    };
+    }
 }
