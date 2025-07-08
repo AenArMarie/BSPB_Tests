@@ -7,7 +7,6 @@ import com.bspbtests.utility.driver.Driver;
 import com.bspbtests.utility.driver.DriverMethods;
 import com.utility.files.FilesReader;
 import com.utility.logger.ProjectLogger;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.*;
 
