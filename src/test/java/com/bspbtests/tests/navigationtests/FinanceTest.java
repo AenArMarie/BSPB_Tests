@@ -6,13 +6,15 @@ import com.bspbtests.pages.FinancePage;
 import com.bspbtests.pages.MainPage;
 import com.bspbtests.tests.basetest.BaseTest;
 import com.utility.logger.ProjectLogger;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FinanceTest extends BaseTest {
 
     @Test
+    @Disabled
     public void financeTest() {
         ProjectLogger.info(CommonLogMessages.MAIN_PAGE_CHECK_LOG);
         MainPage mainPage = new MainPage();

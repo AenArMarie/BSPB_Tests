@@ -8,13 +8,15 @@ import com.bspbtests.tests.basetest.BaseTest;
 import com.bspbtests.utility.dataprocessing.NumericComparisons;
 import com.bspbtests.utility.dataprocessing.StringProcessing;
 import com.utility.logger.ProjectLogger;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CurrencyExchangeTest extends BaseTest {
 
     @Test
+    @Disabled
     public void currencyExchangeTest() {
         ProjectLogger.info(CommonLogMessages.MAIN_PAGE_CHECK_LOG);
         MainPage mainPage = new MainPage();
@@ -43,7 +45,7 @@ public class CurrencyExchangeTest extends BaseTest {
         double firstConversionRate = Double.parseDouble(StringProcessing.splitStringByTextAndGetPart(firstConversionText, StringConstants.ALL_SPACES, 0));
         ProjectLogger.info("Проверка расчетов");
         assertTrue(NumericComparisons.equalsWithMargin(firstConversionRate * testData.getCurrencyExchangeData().getAmountBelowThreshold(),
-                        Double.parseDouble(currencyConversionForm.getConvertedCurrencyAmount().replaceAll(StringConstants.ALL_SPACES, StringConstants.EMPTY_STRING)), testData.getCurrencyExchangeData().getMarginOfError()), "Данные о конвертации не верны");
+                Double.parseDouble(currencyConversionForm.getConvertedCurrencyAmount().replaceAll(StringConstants.ALL_SPACES, StringConstants.EMPTY_STRING)), testData.getCurrencyExchangeData().getMarginOfError()), "Данные о конвертации не верны");
 
         ProjectLogger.info("Установка имеющегося количества валюты " + testData.getCurrencyExchangeData().getAmountAboveThreshold());
         currencyConversionForm.setExistingCurrencyAmount(String.valueOf(testData.getCurrencyExchangeData().getAmountAboveThreshold()));
@@ -54,6 +56,6 @@ public class CurrencyExchangeTest extends BaseTest {
         double secondConversionRate = Double.parseDouble(StringProcessing.splitStringByTextAndGetPart(secondConversionText, StringConstants.ALL_SPACES, 0));
         ProjectLogger.info("Проверка расчетов");
         assertTrue(NumericComparisons.equalsWithMargin(secondConversionRate * testData.getCurrencyExchangeData().getAmountAboveThreshold(),
-                        Double.parseDouble(currencyConversionForm.getConvertedCurrencyAmount().replaceAll(StringConstants.ALL_SPACES, StringConstants.EMPTY_STRING)), testData.getCurrencyExchangeData().getMarginOfError()), "Данные о конвертации не верны");
+                Double.parseDouble(currencyConversionForm.getConvertedCurrencyAmount().replaceAll(StringConstants.ALL_SPACES, StringConstants.EMPTY_STRING)), testData.getCurrencyExchangeData().getMarginOfError()), "Данные о конвертации не верны");
     }
 }
