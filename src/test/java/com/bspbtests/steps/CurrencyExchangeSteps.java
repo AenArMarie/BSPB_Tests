@@ -3,17 +3,15 @@ package com.bspbtests.steps;
 import com.bspbtests.constants.StringConstants;
 import com.bspbtests.pages.CurrencyConversionForm;
 import com.bspbtests.pages.MainPage;
-import com.bspbtests.utility.dataprocessing.NumericComparisons;
 import com.bspbtests.utility.dataprocessing.StringProcessing;
 import com.utility.logger.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static com.bspbtests.steps.Hooks.testData;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.within;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CurrencyExchangeSteps {
 

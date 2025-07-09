@@ -36,7 +36,6 @@ public class MainPage extends BaseForm {
     }
 
     public void clickBuyCurrencyButton() {
-        buyCurrencyButton.waitToBeClickable();
         buyCurrencyButton.click();
     }
 

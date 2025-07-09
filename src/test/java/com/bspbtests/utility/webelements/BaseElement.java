@@ -39,23 +39,15 @@ public abstract class BaseElement {
 
     public void click() {
         DriverMethods.getWait().until(d -> {
-           try {
-               DriverMethods.getActions().moveToElement(getElement()).perform();
-               getElement().click();
-               return true;
-           } catch (ElementClickInterceptedException e) {
-           }
+            try {
+                DriverMethods.getActions().moveToElement(getElement()).perform();
+                getElement().click();
+                return true;
+            } catch (ElementClickInterceptedException e) {
+            }
             return false;
         });
 
-    }
-
-    public void waitToBeClickable() {
-        try {
-            DriverMethods.waitForElementToBeClickable(getLocator());
-        } catch (NoSuchElementException e) {
-            ProjectLogger.error("Элемент " + getName() + " не найден: " + e.getMessage());
-        }
     }
 
     public String getText() {

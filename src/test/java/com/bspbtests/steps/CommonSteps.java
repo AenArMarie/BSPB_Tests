@@ -5,8 +5,6 @@ import com.bspbtests.pages.MainPage;
 import com.utility.logger.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 public class CommonSteps {
 
     @Дано("пользователь находится на главной странице")

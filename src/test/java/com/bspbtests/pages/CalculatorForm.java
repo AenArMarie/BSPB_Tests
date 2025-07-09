@@ -28,7 +28,6 @@ public class CalculatorForm extends BaseForm {
 
     public void clickInvestmentPeriodByText(String text) {
         Element investmentPeriodButton = new Element(By.xpath(String.format(investmentPeriodXpathTemplate, text)), "Кнопка выбора периода вложения с текстом " + text);
-        investmentPeriodButton.waitToBeClickable();
         investmentPeriodButton.click();
     }
 

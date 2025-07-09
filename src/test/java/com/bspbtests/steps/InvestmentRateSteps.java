@@ -11,8 +11,6 @@ import io.cucumber.java.ru.Тогда;
 import org.assertj.core.api.SoftAssertions;
 
 import static com.bspbtests.steps.Hooks.testData;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class InvestmentRateSteps {
 
@@ -49,8 +47,8 @@ public class InvestmentRateSteps {
         String investmentRateText = calculatorForm.getInvestmentRate();
         long investmentRate = Long.parseLong(investmentRateText.replaceAll(StringConstants.ALL_NON_NUMERIC_CHARS, StringConstants.EMPTY_STRING));
         softly.assertThat(investmentRate)
-                        .as("Проверка процента вклада")
-                                .isEqualTo(testData.getInvestmentRateData().getExpectedInvestmentRate());
+                .as("Проверка процента вклада")
+                .isEqualTo(testData.getInvestmentRateData().getExpectedInvestmentRate());
         softly.assertThat(calculatorForm.checkIfNormalizedInterestAmountEqualToText(testData.getInvestmentRateData().getExpectedInterestValue()))
                 .as("Проверка прибыли вклада").isTrue();
         softly.assertAll();
