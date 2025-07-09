@@ -10,26 +10,25 @@ import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static com.bspbtests.steps.Hooks.testData;
+import static org.assertj.core.api.Assertions.within;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CurrencyExhangeSteps {
-
-    private MainPage mainPage;
-    private CurrencyConversionForm currencyConversionForm;
-
+public class CurrencyExchangeSteps {
 
     @Дано("он открывает форму конвертации валют")
     public void openConversionForm() {
         ProjectLogger.info("Открытие страницы покупки валюты");
-        mainPage = new MainPage();
+        MainPage mainPage = new MainPage();
         mainPage.clickBuyCurrencyButton();
-        currencyConversionForm = new CurrencyConversionForm();
-        assertTrue(currencyConversionForm.isDisplayed(), "Форма конвертации не отображена");
+        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
+        currencyConversionForm.isDisplayed();
     }
 
     @Дано("выбрана исходная валюта")
     public void selectExistingCurrency() {
+        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         ProjectLogger.info("Выбор имеющейся валюты: " + testData.getCurrencyExchangeData().getExistingCurrencyText());
         currencyConversionForm.clickExistingCurrenciesDropDownButton();
         currencyConversionForm.selectAsExistingCurrencyByText(testData.getCurrencyExchangeData().getExistingCurrencyText());
@@ -37,6 +36,7 @@ public class CurrencyExhangeSteps {
 
     @Дано("выбрана целевая валюта")
     public void selectTargetCurrency() {
+        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         ProjectLogger.info("Выбор конвертированной валюты: " + testData.getCurrencyExchangeData().getConvertedCurrencyText());
         currencyConversionForm.clickConvertedCurrenciesDropDownButton();
         currencyConversionForm.selectAsConvertedCurrencyByText(testData.getCurrencyExchangeData().getConvertedCurrencyText());
@@ -44,6 +44,7 @@ public class CurrencyExhangeSteps {
 
     @Когда("он вводит маленькое количество валюты")
     public void enterSmallAmount() {
+        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         double amount = testData.getCurrencyExchangeData().getAmountBelowThreshold();
         ProjectLogger.info("Установка количества валюты: " + amount);
         currencyConversionForm.setExistingCurrencyAmount(String.valueOf(amount));
@@ -51,6 +52,7 @@ public class CurrencyExhangeSteps {
 
     @Тогда("расчет конверсии соответствует ожидаемому значению с допустимой погрешностью")
     public void verifySmallConversion() {
+        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         String rawRate = currencyConversionForm.getConversionRateByPartialText(testData.getCurrencyExchangeData().getMinimalConversionRateCurrency());
         String rateStr = StringProcessing.splitStringByTextAndGetPart(rawRate, StringConstants.EQUALS_SEPARATOR, 1);
         double rate = Double.parseDouble(StringProcessing.splitStringByTextAndGetPart(rateStr, StringConstants.ALL_SPACES, 0));
@@ -59,12 +61,14 @@ public class CurrencyExhangeSteps {
         double actual = Double.parseDouble(currencyConversionForm.getConvertedCurrencyAmount().replaceAll(StringConstants.ALL_SPACES, ""));
         double margin = testData.getCurrencyExchangeData().getMarginOfError();
 
-        ProjectLogger.info("Проверка расчета для маленького количества");
-        assertTrue(NumericComparisons.equalsWithMargin(expected, actual, margin), "Данные о конвертации не верны");
+        assertThat(actual)
+                .as("Проверка данных о конвертации")
+                .isCloseTo(expected, within(margin));
     }
 
     @Когда("он вводит большое количество валюты")
     public void enterLargeAmount() {
+        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         double amount = testData.getCurrencyExchangeData().getAmountAboveThreshold();
         ProjectLogger.info("Установка количества валюты: " + amount);
         currencyConversionForm.setExistingCurrencyAmount(String.valueOf(amount));
@@ -72,6 +76,7 @@ public class CurrencyExhangeSteps {
 
     @Тогда("расчет конверсии также соответствует ожидаемому значению с допустимой погрешностью")
     public void verifyLargeConversion() {
+        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         String rawRate = currencyConversionForm.getConversionRateByPartialText(testData.getCurrencyExchangeData().getThresholdForDiffConversionRateText());
         String rateStr = StringProcessing.splitStringByTextAndGetPart(rawRate, StringConstants.EQUALS_SEPARATOR, 1);
         double rate = Double.parseDouble(StringProcessing.splitStringByTextAndGetPart(rateStr, StringConstants.ALL_SPACES, 0));
@@ -80,7 +85,8 @@ public class CurrencyExhangeSteps {
         double actual = Double.parseDouble(currencyConversionForm.getConvertedCurrencyAmount().replaceAll(StringConstants.ALL_SPACES, ""));
         double margin = testData.getCurrencyExchangeData().getMarginOfError();
 
-        ProjectLogger.info("Проверка расчета для большого количества");
-        assertTrue(NumericComparisons.equalsWithMargin(expected, actual, margin), "Данные о конвертации не верны");
+        assertThat(actual)
+                .as("Проверка данных о конвертации")
+                .isCloseTo(expected, within(margin));
     }
 }

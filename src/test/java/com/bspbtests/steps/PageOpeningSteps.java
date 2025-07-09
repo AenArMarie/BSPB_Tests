@@ -10,6 +10,8 @@ import io.cucumber.java.ru.Тогда;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class PageOpeningSteps {
 
     private MainPage mainPage;
@@ -45,6 +47,9 @@ public class PageOpeningSteps {
                 ProjectLogger.error("Страница с данным названием не найдена");
                 fail();
         }
-        assertTrue(expectedPage.isDisplayed(), "Страница '" + expectedPageName + "' не отображена");
+        assertThat(expectedPage.isDisplayed())
+                .as("Проверка отображения страницы " + expectedPageName)
+                .isTrue();
+
     }
 }

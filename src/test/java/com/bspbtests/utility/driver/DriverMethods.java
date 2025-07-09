@@ -5,6 +5,7 @@ import lombok.Getter;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -43,6 +44,14 @@ public class DriverMethods {
                     Driver.instance().findElement(locator).isDisplayed());
         } catch (TimeoutException e) {
             ProjectLogger.error("Элемент не прогрузился за указанное время: " + e.getMessage());
+        }
+    }
+
+    public static void waitForElementToBeClickable(By locator) {
+        try {
+            wait.until(d -> ExpectedConditions.elementToBeClickable(locator));
+        } catch (TimeoutException e) {
+            ProjectLogger.error("Элемент не стал интерактивным за указанное время: " + e.getMessage());
         }
     }
 

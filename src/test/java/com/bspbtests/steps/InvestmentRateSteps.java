@@ -8,6 +8,7 @@ import com.utility.logger.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
+import org.assertj.core.api.SoftAssertions;
 
 import static com.bspbtests.steps.Hooks.testData;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,47 +16,44 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class InvestmentRateSteps {
 
-    private MainPage mainPage;
-    WhiteNightsInvestmentPage whiteNightsInvestmentPage;
-    CalculatorForm calculatorForm;
-
     @Дано("он переходит на страницу вклада 'Белые ночи' из подменю 'Вклады'")
     public void openingWhiteNightsPage() {
-        mainPage = new MainPage();
+        MainPage mainPage = new MainPage();
         ProjectLogger.info("Переход на страницу вклада 'Белые ночи'");
         mainPage.hoverInvestments();
         mainPage.clickWhiteNights();
-        ProjectLogger.info("Проверка открытия страницы вклада 'Белые ночи'");
-        whiteNightsInvestmentPage = new WhiteNightsInvestmentPage();
-        assertTrue(whiteNightsInvestmentPage.isDisplayed(), "Страница вклада 'Белые ночи' не открыта");
-        ProjectLogger.info("Проверка открытия кальулятора прибыли вклада");
-        calculatorForm = new CalculatorForm();
-        assertTrue(calculatorForm.isDisplayed(), "Калькулятор вклада 'Белые ночи' не открыт");
+        WhiteNightsInvestmentPage whiteNightsInvestmentPage = new WhiteNightsInvestmentPage();
+        whiteNightsInvestmentPage.isDisplayed();
+        CalculatorForm calculatorForm = new CalculatorForm();
+        calculatorForm.isDisplayed();
     }
 
     @Когда("он выбирает срок вклада")
     public void choosingInvestmentPeriod() {
+        CalculatorForm calculatorForm = new CalculatorForm();
         ProjectLogger.info("Установка суммы вклада " + testData.getInvestmentRateData().getInvestedAmount());
         calculatorForm.setInvestmentSum(testData.getInvestmentRateData().getInvestedAmount());
     }
 
     @Когда("он указывает сумму вклада")
     public void inputtingInvestmentAmount() {
+        CalculatorForm calculatorForm = new CalculatorForm();
         ProjectLogger.info("Установка срока вклада " + testData.getInvestmentRateData().getInvestmentPeriodText());
         calculatorForm.clickInvestmentPeriodByText(testData.getInvestmentRateData().getInvestmentPeriodText());
     }
 
-    @Тогда("ставка по вкладу соответствует тестовым данным")
+    @Тогда("ставка и выгода по вкладу соответствует тестовым данным")
     public void checkingInvestmentRate() {
+        CalculatorForm calculatorForm = new CalculatorForm();
+        SoftAssertions softly = new SoftAssertions();
         String investmentRateText = calculatorForm.getInvestmentRate();
         long investmentRate = Long.parseLong(investmentRateText.replaceAll(StringConstants.ALL_NON_NUMERIC_CHARS, StringConstants.EMPTY_STRING));
-        ProjectLogger.info("Проверка процента вклада");
-        assertEquals(investmentRate, testData.getInvestmentRateData().getExpectedInvestmentRate(), "Процент вклада не соответствует ожидаемому");
+        softly.assertThat(investmentRate)
+                        .as("Проверка процента вклада")
+                                .isEqualTo(testData.getInvestmentRateData().getExpectedInvestmentRate());
+        softly.assertThat(calculatorForm.checkIfNormalizedInterestAmountEqualToText(testData.getInvestmentRateData().getExpectedInterestValue()))
+                .as("Проверка прибыли вклада").isTrue();
+        softly.assertAll();
     }
 
-    @Тогда("выгода по вкладу соответствует тестовым данным")
-    public void checkingInvestmentRevenue() {
-        ProjectLogger.info("Получение прибыли вклада");
-        assertTrue(calculatorForm.checkIfNormalizedInterestAmountEqualToText(testData.getInvestmentRateData().getExpectedInterestValue()), "Прибыль вклада не соответствует ожидаемой");
-    }
 }

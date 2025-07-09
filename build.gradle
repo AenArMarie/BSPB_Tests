@@ -28,6 +28,7 @@ dependencies {
     testRuntimeOnly    'org.junit.jupiter:junit-jupiter-engine:5.13.3'
     testImplementation 'org.junit.platform:junit-platform-launcher:1.13.3'
     testImplementation 'org.junit.platform:junit-platform-engine:1.13.3'
+    testImplementation 'org.assertj:assertj-core:3.27.3'
 
     testImplementation 'ch.qos.logback:logback-classic:1.5.16'
 }
@@ -35,6 +36,7 @@ dependencies {
 tasks.withType(Test).configureEach {
     systemProperty 'file.encoding', 'UTF-8'
     useJUnitPlatform()
+    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
 }
 
 tasks.withType(JavaCompile).configureEach {
