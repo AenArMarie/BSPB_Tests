@@ -9,12 +9,14 @@ import com.bspbtests.pages.baseform.BaseForm;
 import com.utility.logger.ProjectLogger;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
+import io.qameta.allure.Step;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PageOpeningSteps {
 
     @Когда("он нажимает на пункт меню {string}")
+    @Step("Нажатие на пункт меню {menuText}")
     public void menuButtonPressed(String menuText) {
         MainPage mainPage = new MainPage();
         ProjectLogger.info("Переход на страницу '" + menuText + "'");
@@ -22,6 +24,7 @@ public class PageOpeningSteps {
     }
 
     @Тогда("открывается страница {string}")
+    @Step("Открытие страницы {expectedPageName}")
     public void pageOpened(String expectedPageName) {
         ProjectLogger.info("Проверка отображения страницы '" + expectedPageName + "'");
         BaseForm expectedPage;

@@ -8,6 +8,7 @@ import com.utility.logger.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
+import io.qameta.allure.Step;
 
 import static com.bspbtests.steps.Hooks.testData;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -16,6 +17,7 @@ import static org.assertj.core.api.Assertions.within;
 public class CurrencyExchangeSteps {
 
     @Дано("он открывает форму конвертации валют")
+    @Step("Открытие формы конвертации валют")
     public void openConversionForm() {
         ProjectLogger.info("Открытие страницы покупки валюты");
         MainPage mainPage = new MainPage();
@@ -25,6 +27,7 @@ public class CurrencyExchangeSteps {
     }
 
     @Дано("выбрана исходная валюта")
+    @Step("Выбор исходной валюты")
     public void selectExistingCurrency() {
         CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         ProjectLogger.info("Выбор имеющейся валюты: " + testData.getCurrencyExchangeData().getExistingCurrencyText());
@@ -33,6 +36,7 @@ public class CurrencyExchangeSteps {
     }
 
     @Дано("выбрана целевая валюта")
+    @Step("Выбор целевой валюты")
     public void selectTargetCurrency() {
         CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         ProjectLogger.info("Выбор конвертированной валюты: " + testData.getCurrencyExchangeData().getConvertedCurrencyText());
@@ -41,6 +45,7 @@ public class CurrencyExchangeSteps {
     }
 
     @Когда("он вводит маленькое количество валюты")
+    @Step("Ввод малого числа валюты")
     public void enterSmallAmount() {
         CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         double amount = testData.getCurrencyExchangeData().getAmountBelowThreshold();
@@ -49,6 +54,7 @@ public class CurrencyExchangeSteps {
     }
 
     @Тогда("расчет конверсии соответствует ожидаемому значению с допустимой погрешностью")
+    @Step("Проверка на соответствие конверсии малого количества валюты тестовым данным")
     public void verifySmallConversion() {
         CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         String rawRate = currencyConversionForm.getConversionRateByPartialText(testData.getCurrencyExchangeData().getMinimalConversionRateCurrency());
@@ -65,6 +71,7 @@ public class CurrencyExchangeSteps {
     }
 
     @Когда("он вводит большое количество валюты")
+    @Step("Ввод большого количества валюты")
     public void enterLargeAmount() {
         CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         double amount = testData.getCurrencyExchangeData().getAmountAboveThreshold();
@@ -73,6 +80,7 @@ public class CurrencyExchangeSteps {
     }
 
     @Тогда("расчет конверсии также соответствует ожидаемому значению с допустимой погрешностью")
+    @Step("Проверка на соответствие конверсии большого количества валюты тестовым данным")
     public void verifyLargeConversion() {
         CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         String rawRate = currencyConversionForm.getConversionRateByPartialText(testData.getCurrencyExchangeData().getThresholdForDiffConversionRateText());

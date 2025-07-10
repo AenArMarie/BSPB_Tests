@@ -10,6 +10,7 @@ import com.utility.logger.ProjectLogger;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import io.qameta.allure.Step;
 
 public class Hooks {
 
@@ -17,6 +18,7 @@ public class Hooks {
     public static ConfigData configData;
 
     @Before
+    @Step("Запуск теста")
     public void setUp() {
         testData = FilesReader.readJson(PathConstants.TEST_DATA_PATH, TestData.class);
         configData = FilesReader.readJson(PathConstants.CONFIG_DATA_PATH, ConfigData.class);
@@ -30,6 +32,7 @@ public class Hooks {
     }
 
     @After
+    @Step("Завершение теста")
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
             DriverMethods.makeScreenshot(

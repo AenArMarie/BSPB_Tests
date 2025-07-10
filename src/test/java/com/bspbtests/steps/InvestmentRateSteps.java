@@ -8,6 +8,7 @@ import com.utility.logger.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
+import io.qameta.allure.Step;
 import org.assertj.core.api.SoftAssertions;
 
 import static com.bspbtests.steps.Hooks.testData;
@@ -15,6 +16,7 @@ import static com.bspbtests.steps.Hooks.testData;
 public class InvestmentRateSteps {
 
     @Дано("он переходит на страницу вклада 'Белые ночи' из подменю 'Вклады'")
+    @Step("Переход на страницу вклада 'Белые ночи' из подменю 'Вклады'")
     public void openingWhiteNightsPage() {
         MainPage mainPage = new MainPage();
         ProjectLogger.info("Переход на страницу вклада 'Белые ночи'");
@@ -27,6 +29,7 @@ public class InvestmentRateSteps {
     }
 
     @Когда("он выбирает срок вклада")
+    @Step("Выбор срока вклада")
     public void choosingInvestmentPeriod() {
         CalculatorForm calculatorForm = new CalculatorForm();
         ProjectLogger.info("Установка суммы вклада " + testData.getInvestmentRateData().getInvestedAmount());
@@ -34,6 +37,7 @@ public class InvestmentRateSteps {
     }
 
     @Когда("он указывает сумму вклада")
+    @Step("Указание суммы вклада")
     public void inputtingInvestmentAmount() {
         CalculatorForm calculatorForm = new CalculatorForm();
         ProjectLogger.info("Установка срока вклада " + testData.getInvestmentRateData().getInvestmentPeriodText());
@@ -41,6 +45,7 @@ public class InvestmentRateSteps {
     }
 
     @Тогда("ставка и выгода по вкладу соответствует тестовым данным")
+    @Step("Проверка на соответствие ставки и выгоды по вкладу тестовым данным")
     public void checkingInvestmentRate() {
         CalculatorForm calculatorForm = new CalculatorForm();
         SoftAssertions softly = new SoftAssertions();
