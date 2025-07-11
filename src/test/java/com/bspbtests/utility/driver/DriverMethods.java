@@ -37,6 +37,10 @@ public class DriverMethods {
         }
     }
 
+    public static String getPageSource() {
+        return Driver.instance().getPageSource();
+    }
+
     public static byte[] makeScreenshotByteArray() {
         return ((TakesScreenshot) Driver.instance()).getScreenshotAs(OutputType.BYTES);
     }

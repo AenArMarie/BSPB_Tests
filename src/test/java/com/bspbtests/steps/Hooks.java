@@ -1,5 +1,7 @@
 package com.bspbtests.steps;
 
+import com.bspbtests.constants.CommonLogMessages;
+import com.bspbtests.constants.FileTypes;
 import com.bspbtests.constants.PathConstants;
 import com.bspbtests.jsondata.ConfigData;
 import com.bspbtests.jsondata.testdata.TestData;
@@ -39,9 +41,13 @@ public class Hooks {
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
             Allure.addAttachment(scenario.getName(),
-                    "impage/png",
+                    FileTypes.IMAGE_PNG,
                     new ByteArrayInputStream(DriverMethods.makeScreenshotByteArray()),
-                    ".png");
+                    FileTypes.PNG_TYPE);
+            Allure.addAttachment(CommonLogMessages.PAGE_SOURCE_NAME,
+                    FileTypes.TEXT_HTML,
+                    DriverMethods.getPageSource(),
+                    FileTypes.HTML_TYPE);
         }
 
         ProjectLogger.info("Завершение теста\n");
