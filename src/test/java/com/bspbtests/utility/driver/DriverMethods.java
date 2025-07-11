@@ -37,6 +37,10 @@ public class DriverMethods {
         }
     }
 
+    public static byte[] makeScreenshotByteArray() {
+        return ((TakesScreenshot) Driver.instance()).getScreenshotAs(OutputType.BYTES);
+    }
+
     public static void waitForElementToAppear(By locator) {
         try {
             wait.until(d -> Driver.instance().findElement(locator) != null &&
