@@ -62,7 +62,7 @@ public class ICountOrderInputSteps {
 
     @Тогда("поля 'Фамилия', 'Имя' и 'Адрес доставки' подсвечиваются красным")
     @Step("Проверка подсвечивания красным полей 'Фамилия', 'Имя' и 'Адрес доставки'")
-    public void checkingSurname() {
+    public void checkingRedStatus() {
         CardOrderingForm cardOrderingForm = new CardOrderingForm();
         SoftAssertions softly = new SoftAssertions();
         softly.assertThat(cardOrderingForm.getLastNameInvalidity())

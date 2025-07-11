@@ -25,7 +25,7 @@ public class Driver {
         switch (browser.getName()) {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
+                //chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
                 chromeOptions.addArguments(browser.getMode());
                 chromeOptions.addArguments(browser.getLanguage());
                 return new ChromeDriver(chromeOptions);

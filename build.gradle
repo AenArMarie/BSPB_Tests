@@ -36,6 +36,7 @@ dependencies {
 
     implementation 'org.slf4j:slf4j-api:2.0.16'
     implementation 'io.cucumber:cucumber-java:7.23.0'
+    implementation 'net.bytebuddy:byte-buddy:1.17.6'
 
     testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.23.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.13.3'
@@ -55,7 +56,9 @@ dependencies {
 }
 
 test {
-    jvmArgs = [ "-javaagent:${configurations.agent.singleFile}" ]
+    jvmArgs = [ "-javaagent:${configurations.agent.singleFile}",
+                "-Daj.weaving.log=${projectDir}/logs",
+                "-noverify"]
 }
 
 tasks.withType(Test).configureEach {
