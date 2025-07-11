@@ -29,10 +29,9 @@ public class PageOpeningSteps {
         ProjectLogger.info("Проверка отображения страницы '" + expectedPageName + "'");
         BaseForm expectedPage;
         switch (expectedPageName) {
-            case MainPageMenuItemText.PRIVATE_BANKING:
+            case MainPageMenuItemText.PRIVATE_BANKING ->
                 expectedPage = new PrivateBankingPage();
-                break;
-            default:
+            default ->
                 expectedPage = new MainMenuPage(ElementsTextConstants.PAGES_UNIQUE_ELEMENT_TEXT.get(expectedPageName), expectedPageName);
         }
         assertThat(expectedPage.isDisplayed())
