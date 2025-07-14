@@ -3,10 +3,7 @@ package com.bspbtests.utility.webelements;
 import com.bspbtests.utility.driver.Driver;
 import com.bspbtests.utility.driver.DriverMethods;
 import com.utility.logger.ProjectLogger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 public abstract class BaseElement {
 
@@ -43,7 +40,7 @@ public abstract class BaseElement {
                 DriverMethods.getActions().moveToElement(getElement()).perform();
                 getElement().click();
                 return true;
-            } catch (ElementClickInterceptedException ignored) {
+            } catch (ElementNotInteractableException ignored) {
             }
             return false;
         });
