@@ -35,16 +35,8 @@ public abstract class BaseElement {
     }
 
     public void click() {
-        DriverMethods.getWait().until(d -> {
-            try {
-                DriverMethods.getActions().moveToElement(getElement()).perform();
-                getElement().click();
-                return true;
-            } catch (ElementClickInterceptedException ignored) {
-            }
-            return false;
-        });
-
+        DriverMethods.getActions().moveToElement(getElement()).perform();
+        getElement().click();
     }
 
     public String getText() {
