@@ -5,6 +5,7 @@ import lombok.Getter;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -21,22 +22,6 @@ public class DriverMethods {
         wait = new WebDriverWait(Driver.instance(), Duration.ofMillis(millisOfWaitTime));
     }
 
-    public static void makeScreenshot(String testResultName, String screenshotPath, String screenshotType) {
-        File screenshot = ((TakesScreenshot) Driver.instance()).getScreenshotAs(OutputType.FILE);
-        File directory = new File(screenshotPath);
-        if (!directory.exists()) {
-            if (!directory.mkdirs()) {
-                ProjectLogger.error("Не удалось создать папку для скриншотов");
-            }
-        }
-        try {
-            FileHandler.copy(screenshot, new File(screenshotPath + testResultName + screenshotType));
-            ProjectLogger.info("Скриншот сохранен: " + screenshotPath + screenshotType);
-        } catch (IOException e) {
-            ProjectLogger.error("Не удалось создать файл скриншота");
-        }
-    }
-
     public static String getPageSource() {
         return Driver.instance().getPageSource();
     }
@@ -47,8 +32,8 @@ public class DriverMethods {
 
     public static void waitForElementToAppear(By locator) {
         try {
-            wait.until(d -> Driver.instance().findElement(locator) != null &&
-                    Driver.instance().findElement(locator).isDisplayed());
+            WebDriverWait wait = new WebDriverWait(Driver.instance(), Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         } catch (TimeoutException e) {
             ProjectLogger.error("Элемент не прогрузился за указанное время: " + e.getMessage());
         }

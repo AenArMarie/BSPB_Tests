@@ -27,7 +27,6 @@ public class Driver {
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments(browser.getMode());
                 chromeOptions.addArguments(browser.getLanguage());
-                chromeOptions.addArguments("--headless=new", "--window-size=1920,1080");
                 return new ChromeDriver(chromeOptions);
             case "edge":
                 EdgeOptions edgeOptions = new EdgeOptions();
