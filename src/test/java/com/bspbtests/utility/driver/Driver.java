@@ -25,13 +25,11 @@ public class Driver {
         switch (browser.getName()) {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
-                //chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
                 chromeOptions.addArguments(browser.getMode());
                 chromeOptions.addArguments(browser.getLanguage());
                 return new ChromeDriver(chromeOptions);
             case "edge":
                 EdgeOptions edgeOptions = new EdgeOptions();
-                edgeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
                 edgeOptions.addArguments(browser.getMode());
                 edgeOptions.addArguments(browser.getLanguage());
                 return new EdgeDriver(edgeOptions);
