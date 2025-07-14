@@ -40,7 +40,7 @@ public abstract class BaseElement {
                 DriverMethods.getActions().moveToElement(getElement()).perform();
                 getElement().click();
                 return true;
-            } catch (ElementNotInteractableException ignored) {
+            } catch (ElementClickInterceptedException ignored) {
             }
             return false;
         });
