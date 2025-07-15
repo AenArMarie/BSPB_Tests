@@ -48,13 +48,15 @@ public class Hooks {
                     FileTypes.TEXT_HTML,
                     DriverMethods.getPageSource(),
                     FileTypes.HTML_TYPE);
+        }
+
+        ProjectLogger.info("Завершение теста\n");
+        Driver.quit();
+        if (scenario.isFailed()) {
             Allure.addAttachment(CommonLogMessages.SELENOID_VIDEO_NAME,
                     FileTypes.VIDEO_MP4,
                     DriverMethods.getSelenoidVideo(),
                     FileTypes.MP4);
         }
-
-        ProjectLogger.info("Завершение теста\n");
-        Driver.quit();
     }
 }
