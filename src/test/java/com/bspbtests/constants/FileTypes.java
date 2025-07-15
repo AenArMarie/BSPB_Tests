@@ -6,4 +6,6 @@ public class FileTypes {
     public static final String PNG_TYPE = ".png";
     public static final String TEXT_HTML = "text/html";
     public static final String HTML_TYPE = ".html";
+    public static final String VIDEO_MP4 = "video/mp4";
+    public static final String MP4 = ".mp4";
 }

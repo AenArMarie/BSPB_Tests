@@ -1,6 +1,8 @@
 package com.bspbtests.utility.driver;
 
+import com.bspbtests.constants.FileTypes;
 import com.utility.logger.ProjectLogger;
+import io.qameta.allure.Allure;
 import lombok.Getter;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -11,6 +13,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.URL;
 import java.time.Duration;
 
 public class DriverMethods {
@@ -36,6 +41,17 @@ public class DriverMethods {
             wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         } catch (TimeoutException e) {
             ProjectLogger.error("Элемент не прогрузился за указанное время: " + e.getMessage());
+        }
+    }
+
+    public static InputStream getSelenoidVideo() {
+        String sessionId = Driver.instance().getSessionId().toString();
+        String videoUrl = "http://localhost:8084/video" + sessionId + FileTypes.MP4;
+
+        try (InputStream is = new URL(videoUrl).openStream()) {
+            return is;
+        } catch (Exception e) {
+            return null;
         }
     }
 

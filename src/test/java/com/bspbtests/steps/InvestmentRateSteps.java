@@ -54,6 +54,7 @@ public class InvestmentRateSteps {
         softly.assertThat(investmentRate)
                 .as("Проверка процента вклада")
                 .isEqualTo(testData.getInvestmentRateData().getExpectedInvestmentRate());
+        softly.assertThat(true).isFalse();
         softly.assertThat(calculatorForm.checkIfNormalizedInterestAmountEqualToText(testData.getInvestmentRateData().getExpectedInterestValue()))
                 .as("Проверка прибыли вклада").isTrue();
         softly.assertAll();

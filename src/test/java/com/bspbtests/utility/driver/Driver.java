@@ -2,12 +2,7 @@ package com.bspbtests.utility.driver;
 
 import com.bspbtests.constants.PathConstants;
 import com.utility.files.FilesReader;
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.AbstractDriverOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -19,9 +14,9 @@ import java.util.HashMap;
 
 public class Driver {
 
-    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    private static final ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
 
-    public static WebDriver instance() {
+    public static RemoteWebDriver instance() {
         if (driver.get() == null) {
             try {
                 driver.set(createDriver());
@@ -33,7 +28,7 @@ public class Driver {
         return driver.get();
     }
 
-    private static WebDriver createDriver() throws MalformedURLException {
+    private static RemoteWebDriver createDriver() throws MalformedURLException {
         BrowserModel browser = FilesReader.readJson(PathConstants.BROWSER_CONFIG_PATH, BrowserModel.class);
         AbstractDriverOptions options;
         switch (browser.getName()) {
