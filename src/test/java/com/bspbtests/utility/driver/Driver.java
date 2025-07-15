@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.AbstractDriverOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
@@ -33,43 +35,32 @@ public class Driver {
 
     private static WebDriver createDriver() throws MalformedURLException {
         BrowserModel browser = FilesReader.readJson(PathConstants.BROWSER_CONFIG_PATH, BrowserModel.class);
+        AbstractDriverOptions options;
         switch (browser.getName()) {
-            case "chrome":
-                ChromeOptions chromeOptions = new ChromeOptions();
-                /*chromeOptions.addArguments(browser.getMode());
-                chromeOptions.addArguments(browser.getLanguage());*/
-                ChromeOptions options = new ChromeOptions();
+            case "chrome" -> {
+                options = new ChromeOptions();
                 options.setCapability("browserVersion", "128.0");
-                options.setCapability("selenoid:options", new HashMap<String, Object>() {{
-                    /* How to add test badge */
-                    put("name", "Test badge...");
+            }
 
-                    /* How to set session timeout */
-                    put("sessionTimeout", "15m");
-
-                    /* How to set timezone */
-                    put("env", new ArrayList<String>() {{
-                        add("TZ=UTC");
-                    }});
-
-                    /* How to add "trash" button */
-                    put("labels", new HashMap<String, Object>() {{
-                        put("manual", "true");
-                    }});
-
-                    /* How to enable video recording */
-                    put("enableVideo", true);
-                }});
-                return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
-                //return new ChromeDriver(chromeOptions);
-            case "edge":
-                EdgeOptions edgeOptions = new EdgeOptions();
-                edgeOptions.addArguments(browser.getMode());
-                edgeOptions.addArguments(browser.getLanguage());
-                return new EdgeDriver(edgeOptions);
-            default:
+            case "firefox" -> {
+                options = new FirefoxOptions();
+                options.setCapability("browserVersion", "125.0");
+            }
+            default ->
                 throw new IllegalArgumentException("Неподдерживаемый браузер: " + browser.getName());
         }
+        options.setCapability("selenoid:options", new HashMap<String, Object>() {{
+            put("name", "Test badge...");
+            put("sessionTimeout", "15m");
+            put("env", new ArrayList<String>() {{
+                add("TZ=UTC");
+            }});
+            put("labels", new HashMap<String, Object>() {{
+                put("manual", "true");
+            }});
+            put("enableVideo", true);
+        }});
+        return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
     }
 
     public static void quit() {
