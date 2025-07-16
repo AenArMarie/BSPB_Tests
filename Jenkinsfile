@@ -8,14 +8,19 @@ pipeline {
     agent any
 
     stages {
+        stage('Cleaning') {
+                    steps {
+                        bat 'gradlew.bat clean'
+                    }
+                }
         stage('Smoke test') {
             steps {
-                bat 'gradlew.bat clean test -Dcucumber.filter.tags="@smoke"'
+                bat 'gradlew.bat test -Dcucumber.filter.tags="@smoke"'
             }
         }
         stage('Regression test') {
             steps {
-                bat 'gradlew.bat clean test -Dcucumber.filter.tags="regression"'
+                bat 'gradlew.bat test -Dcucumber.filter.tags="@regression"'
             }
         }
         stage('Allure Report') {
