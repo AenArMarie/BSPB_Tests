@@ -23,10 +23,11 @@ pipeline {
                 bat 'gradlew.bat test -Dcucumber.filter.tags="@regression"'
             }
         }
-        stage('Allure Report') {
-                    steps {
-                        allure includeProperties: false, jdk: '', results: [[path: 'build/allure-results']]
-                    }
-                }
     }
+
+    post {
+            always {
+                allure includeProperties: false, jdk: '', results: [[path: 'build/allure-results']]
+            }
+        }
 }
