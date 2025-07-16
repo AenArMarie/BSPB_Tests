@@ -23,7 +23,6 @@ public class Driver {
             } catch (MalformedURLException e) {
                 throw new RuntimeException(e);
             }
-
         }
         return driver.get();
     }
@@ -36,7 +35,6 @@ public class Driver {
                 options = new ChromeOptions();
                 options.setCapability("browserVersion", "128.0");
             }
-
             case "firefox" -> {
                 options = new FirefoxOptions();
                 options.setCapability("browserVersion", "125.0");

@@ -25,7 +25,7 @@ configurations {
 }
 
 def allureVersion = "2.24.0"
-def aspectJVersion = '1.9.21'
+def aspectJVersion = '1.9.24'
 
 dependencies {
     agent "org.aspectj:aspectjweaver:$aspectJVersion"
@@ -57,7 +57,7 @@ dependencies {
 
 test {
     jvmArgs = [ "-javaagent:${configurations.agent.singleFile}",
-                "-Daj.weaving.log=${projectDir}/logs",
+                "-Daj.weaving.dump.dir=build/aspectj-logs",
                 "-noverify"]
 }
 
