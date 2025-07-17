@@ -5,6 +5,10 @@ properties([
 ])
 
 node {
+    stage('Checkout') {
+            git url: 'https://github.com/AenArMarie/BSPB_Tests.git', branch: 'main'
+        }
+
     stage('Cleaning') {
         bat 'gradlew.bat clean'
     }
