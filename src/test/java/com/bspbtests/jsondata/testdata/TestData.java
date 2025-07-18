@@ -11,5 +11,4 @@ public class TestData {
     private CurrencyExchangeData currencyExchangeData;
     private InvestmentRateData investmentRateData;
     private CardOrderingData cardOrderingData;
-    private User userData;
 }

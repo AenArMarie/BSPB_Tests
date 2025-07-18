@@ -1,0 +1,36 @@
+{
+  "users" : [
+    {
+      "age" : 24,
+      "name" : "victoor",
+      "surname" : "vladimirovich",
+      "lastName" : "popov",
+      "gender" : "M",
+      "isActiveClient" : true
+    },
+    {
+      "age" : 24,
+      "name" : "valery",
+      "surname" : "victorovich",
+      "lastName" : "whoshich",
+      "gender" : "M",
+      "isActiveClient" : false
+    },
+    {
+      "age" : 24,
+      "name" : "victoor",
+      "surname" : "vladimirovich",
+      "lastName" : "popov",
+      "gender" : "M",
+      "isActiveClient" : true
+    },
+    {
+      "age" : 24,
+      "name" : "victoor",
+      "surname" : "vladimirovich",
+      "lastName" : "popov",
+      "gender" : "M",
+      "isActiveClient" : true
+    }
+  ]
+}

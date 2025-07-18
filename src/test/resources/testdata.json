@@ -17,13 +17,5 @@
   "cardOrderingData" : {
     "phoneNumber" : "+79999999999",
     "email" : "mock@mail.com"
-  },
-  "userData" : {
-    "age" : 23,
-    "name" : "valery",
-    "surname" : "victorovich",
-    "lastName" : "whoskin",
-    "gender" : "M",
-    "isActiveClient" : false
   }
 }

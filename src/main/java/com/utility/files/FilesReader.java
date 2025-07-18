@@ -13,7 +13,7 @@ public class FilesReader {
         try {
             return objectMapper.readValue(new File(filePath), targetClass);
         } catch (IOException e) {
-            ProjectLogger.error("Ошибка чтения JSON");
+            ProjectLogger.error("Ошибка чтения JSON" + e.getMessage());
             return null;
         }
     }
