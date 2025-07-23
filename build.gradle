@@ -52,6 +52,8 @@ dependencies {
     testImplementation 'io.qameta.allure:allure-assertj'
     testImplementation "io.qameta.allure:allure-junit-platform"
 
+    testImplementation 'io.rest-assured:rest-assured:5.5.5'
+
     testImplementation 'ch.qos.logback:logback-classic:1.5.16'
 }
 

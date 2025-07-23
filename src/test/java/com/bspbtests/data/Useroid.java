@@ -2,41 +2,27 @@ package com.bspbtests.data;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import lombok.*;
 
 import java.util.Objects;
 
+@Builder
+@EqualsAndHashCode
+@Getter
+@Setter
+@ToString
+@JsonDeserialize(builder = Useroid.UseroidBuilder.class)
 public class Useroid {
-    int age;
-    String name;
-    String surname;
-    String lastName;
-    String gender;
-    boolean isActiveClient;
+    private int age;
+    private String name;
+    private String surname;
+    private String lastName;
+    private String gender;
+    private boolean isActiveClient;
 
-    @JsonCreator
-    public Useroid(@JsonProperty("age") int age,
-                   @JsonProperty("name") String name,
-                   @JsonProperty("surname") String surname,
-                   @JsonProperty("lastName")String lastName,
-                   @JsonProperty("gender") String gender,
-                   @JsonProperty("isActiveClient") boolean isActiveClient) {
-        this.age = age;
-        this.name = name;
-        this.surname = surname;
-        this.lastName = lastName;
-        this.gender = gender;
-        this.isActiveClient = isActiveClient;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Useroid useroid = (Useroid) o;
-        return age == useroid.age && isActiveClient == useroid.isActiveClient && Objects.equals(name, useroid.name) && Objects.equals(surname, useroid.surname) && Objects.equals(lastName, useroid.lastName) && Objects.equals(gender, useroid.gender);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(age, name, surname, lastName, gender, isActiveClient);
+    @JsonPOJOBuilder(withPrefix = "")
+    public static class UseroidBuilder {
     }
 }

@@ -22,7 +22,7 @@ public class Hooks {
     public static TestData testData;
     public static ConfigData configData;
 
-    @Before
+    @Before("@web")
     @Step("Запуск теста")
     public void setUp() {
         testData = FilesReader.readJson(PathConstants.TEST_DATA_PATH, TestData.class);
@@ -36,7 +36,7 @@ public class Hooks {
         DriverMethods.initializeWait(configData.getDriverWaitTime());
     }
 
-    @After
+    @After("@web")
     @Step("Завершение теста")
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {

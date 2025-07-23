@@ -1,19 +1,28 @@
 package com.bspbtests.steps;
 
 import com.bspbtests.constants.PathConstants;
-import com.bspbtests.data.User;
+import com.bspbtests.data.ExchangeOfficeModel;
+import com.bspbtests.data.OfficeDataModel;
 import com.bspbtests.data.Useroid;
-import com.bspbtests.jsondata.ConfigData;
 import com.bspbtests.jsondata.UserData;
-import com.bspbtests.jsondata.testdata.TestData;
+import com.bspbtests.requests.GetExchangeOfficesRequest;
+import com.bspbtests.utility.ApiUtilities;
 import com.utility.files.FilesReader;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 import io.qameta.allure.Step;
+import io.restassured.response.Response;
+import org.apache.http.HttpStatus;
+import org.assertj.core.api.Assertions;
+import org.assertj.core.api.Assumptions;
 import org.assertj.core.api.SoftAssertions;
 
-import static com.bspbtests.steps.Hooks.testData;
-import static org.assertj.core.api.Assertions.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assumptions.assumeThat;
 
 public class CollectionSteps {
 
@@ -27,21 +36,67 @@ public class CollectionSteps {
     @Step("Проверка совпадения самопредставления пользователя с тестовыми данными")
     public void checkSelfAwareness() {
         SoftAssertions softly = new SoftAssertions();
-        Useroid actualUser = new Useroid(24,
-                "valery",
-                "victorovich",
-                "whoshich",
-        "M",
-                false);
-        Useroid expectedUser = new Useroid(24,
-                "valery",
-                "victorovich",
-                "whoshich",
-                "M",
-                false);
-        softly.assertThat(actualUser).isEqualTo(expectedUser);
+//        User actualUser = new User(24,
+//                "valery",
+//                "victorovich",
+//                "whoshich",
+//        "M",
+//                false);
+//        User expectedUser = new User(24,
+//                "valery",
+//                "victorovich",
+//                "whoshich",
+//                "M",
+//                false);
+        Useroid actualUseroid = Useroid.builder().
+                age(24).
+                name("valery").
+                surname("victorovich").
+                lastName("whosich").
+                gender("M").
+                isActiveClient(false).
+                build();
+        Useroid expectedUseroid = Useroid.builder().
+                age(25).
+                name("valery").
+                surname("victorovich").
+                lastName("whosich").
+                gender("M").
+                isActiveClient(false).
+                build();
+        softly.assertThat(actualUseroid).usingRecursiveComparison().isNotEqualTo(expectedUseroid);
         UserData userData = FilesReader.readJson(PathConstants.USER_DATA_PATH, UserData.class);
-        softly.assertThat(userData.getUsers()).contains(actualUser);
+        assertThat(userData).isNotNull();
+        softly.assertThat(userData.getUsers()).usingRecursiveFieldByFieldElementComparator().contains(actualUseroid);
+        softly.assertThat(userData.getUsers()).hasSize(4).usingRecursiveFieldByFieldElementComparator().doesNotContain(expectedUseroid);
+        softly.assertThat(userData.getUsers()).filteredOn(useroid -> useroid.getAge()==25).isEmpty();
+        softly.assertAll();
+    }
+
+    @Тогда("коллекция по запросу соответствует требованиям")
+    @Step("Проверка совпадения коллекции по запросу")
+    public void checkApi() {
+        SoftAssertions softly = new SoftAssertions();
+        OfficeDataModel expectedOffices = FilesReader.readJson(PathConstants.OFFICES_DATA_PATH, OfficeDataModel.class);
+        String expectedJson;
+        try {
+            expectedJson = new String(Files.readAllBytes(Paths.get(PathConstants.OFFICES_DATA_PATH))).replaceAll("\\s+", "");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        Response getExchangeOfficesResponse = GetExchangeOfficesRequest.performGet();
+        assumeThat(getExchangeOfficesResponse.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
+        OfficeDataModel offices = ApiUtilities.parseResponseAs(getExchangeOfficesResponse, OfficeDataModel.class);
+        assumeThat(offices.items()).isNotEmpty();
+        softly.assertThat(offices.items()).
+                filteredOn(office -> office.address().contains("England")).
+                    isEmpty();
+        softly.assertThat(offices.items())
+                        .extracting(ExchangeOfficeModel::name)
+                                .contains("ДО \"Гаванский\"", "ДО \"Пушкинский\"", "ДО \"Тосненский\"");
+        softly.assertThat(offices).usingRecursiveComparison().isEqualTo(expectedOffices);
+        softly.assertThat(getExchangeOfficesResponse.getBody().asString().replaceAll("\\s+", "")).isEqualTo(expectedJson);
         softly.assertAll();
     }
 }
