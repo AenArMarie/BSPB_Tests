@@ -1,15 +1,18 @@
 package com.bspbtests.steps;
 
+import com.bspbtests.constants.FileTypes;
 import com.bspbtests.constants.PathConstants;
 import com.bspbtests.data.ExchangeOfficeModel;
 import com.bspbtests.data.OfficeDataModel;
 import com.bspbtests.data.Useroid;
 import com.bspbtests.jsondata.UserData;
 import com.bspbtests.requests.GetExchangeOfficesRequest;
+import com.bspbtests.utility.AllureUtilities;
 import com.bspbtests.utility.ApiUtilities;
 import com.utility.files.FilesReader;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
@@ -77,14 +80,18 @@ public class CollectionSteps {
     @Step("Проверка совпадения коллекции по запросу")
     public void checkApi() {
         SoftAssertions softly = new SoftAssertions();
+        AllureUtilities.attachJson("Expected json", PathConstants.OFFICES_DATA_PATH);
         OfficeDataModel expectedOffices = FilesReader.readJson(PathConstants.OFFICES_DATA_PATH, OfficeDataModel.class);
         String expectedJson = FilesReader.readFileAsString(PathConstants.OFFICES_DATA_PATH);
         assumeThat(expectedJson).isNotNull();
         expectedJson = expectedJson.replaceAll("\\s+", "");
         Response getExchangeOfficesResponse = GetExchangeOfficesRequest.performGet();
         assumeThat(getExchangeOfficesResponse.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
+        Allure.addAttachment("Response json",
+                FileTypes.APP_JSON,
+                getExchangeOfficesResponse.getBody().asPrettyString(),
+                FileTypes.JSON);
         OfficeDataModel offices = ApiUtilities.parseResponseAs(getExchangeOfficesResponse, OfficeDataModel.class);
-        assumeThat(offices.items()).isNotEmpty();
 
         softly.assertThat(offices.items()).
                 filteredOn(office -> office.address().contains("England")).
