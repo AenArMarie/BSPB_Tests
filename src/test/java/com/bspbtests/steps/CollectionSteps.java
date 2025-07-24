@@ -87,10 +87,7 @@ public class CollectionSteps {
         expectedJson = expectedJson.replaceAll("\\s+", "");
         Response getExchangeOfficesResponse = GetExchangeOfficesRequest.performGet();
         assumeThat(getExchangeOfficesResponse.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
-        Allure.addAttachment("Response json",
-                FileTypes.APP_JSON,
-                getExchangeOfficesResponse.getBody().asPrettyString(),
-                FileTypes.JSON);
+        AllureUtilities.attachJson("Response json", getExchangeOfficesResponse);
         OfficeDataModel offices = ApiUtilities.parseResponseAs(getExchangeOfficesResponse, OfficeDataModel.class);
 
         softly.assertThat(offices.items()).

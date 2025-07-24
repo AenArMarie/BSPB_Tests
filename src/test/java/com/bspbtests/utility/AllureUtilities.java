@@ -3,6 +3,7 @@ package com.bspbtests.utility;
 import com.bspbtests.constants.FileTypes;
 import com.utility.logger.ProjectLogger;
 import io.qameta.allure.Allure;
+import io.restassured.response.Response;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,5 +16,9 @@ public class AllureUtilities {
         } catch (FileNotFoundException e) {
             ProjectLogger.error("Не удалось прикрепить файл");
         }
+    }
+
+    public static void attachJson(String name, Response response) {
+        Allure.addAttachment(name, FileTypes.APP_JSON, response.getBody().asPrettyString(), FileTypes.JSON);
     }
 }
