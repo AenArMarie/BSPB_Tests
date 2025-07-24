@@ -15,7 +15,7 @@ import static com.bspbtests.steps.Hooks.testData;
 
 public class InvestmentRateSteps {
 
-    @Дано("он переходит на страницу вклада 'Белые ночи' из подменю 'Вклады'")
+    @Дано("пользователь переходит на страницу вклада 'Белые ночи' из подменю 'Вклады'")
     @Step("Переход на страницу вклада 'Белые ночи' из подменю 'Вклады'")
     public void openingWhiteNightsPage() {
         MainPage mainPage = new MainPage();
@@ -28,7 +28,7 @@ public class InvestmentRateSteps {
         calculatorForm.isDisplayed();
     }
 
-    @Когда("он выбирает срок вклада")
+    @Когда("пользователь выбирает срок вклада")
     @Step("Выбор срока вклада")
     public void choosingInvestmentPeriod() {
         CalculatorForm calculatorForm = new CalculatorForm();
@@ -36,7 +36,7 @@ public class InvestmentRateSteps {
         calculatorForm.setInvestmentSum(testData.getInvestmentRateData().getInvestedAmount());
     }
 
-    @Когда("он указывает сумму вклада")
+    @Когда("пользователь указывает сумму вклада")
     @Step("Указание суммы вклада")
     public void inputtingInvestmentAmount() {
         CalculatorForm calculatorForm = new CalculatorForm();

@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class PageOpeningSteps {
 
-    @Когда("он нажимает на пункт меню {string}")
+    @Когда("пользователь нажимает на пункт меню {string}")
     @Step("Нажатие на пункт меню {menuText}")
     public void menuButtonPressed(String menuText) {
         MainPage mainPage = new MainPage();

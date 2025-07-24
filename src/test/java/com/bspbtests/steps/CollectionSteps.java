@@ -32,7 +32,7 @@ public class CollectionSteps {
 
     }
 
-    @Тогда("его воображаемое самопредставление совпадает с тестовыми данными")
+    @Тогда("воображаемое самопредставление пользователя совпадает с тестовыми данными")
     @Step("Проверка совпадения самопредставления пользователя с тестовыми данными")
     public void checkSelfAwareness() {
         SoftAssertions softly = new SoftAssertions();
@@ -78,25 +78,26 @@ public class CollectionSteps {
     public void checkApi() {
         SoftAssertions softly = new SoftAssertions();
         OfficeDataModel expectedOffices = FilesReader.readJson(PathConstants.OFFICES_DATA_PATH, OfficeDataModel.class);
-        String expectedJson;
-        try {
-            expectedJson = new String(Files.readAllBytes(Paths.get(PathConstants.OFFICES_DATA_PATH))).replaceAll("\\s+", "");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
+        String expectedJson = FilesReader.readFileAsString(PathConstants.OFFICES_DATA_PATH);
+        assumeThat(expectedJson).isNotNull();
+        expectedJson = expectedJson.replaceAll("\\s+", "");
         Response getExchangeOfficesResponse = GetExchangeOfficesRequest.performGet();
         assumeThat(getExchangeOfficesResponse.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
         OfficeDataModel offices = ApiUtilities.parseResponseAs(getExchangeOfficesResponse, OfficeDataModel.class);
         assumeThat(offices.items()).isNotEmpty();
+
         softly.assertThat(offices.items()).
                 filteredOn(office -> office.address().contains("England")).
                     isEmpty();
         softly.assertThat(offices.items())
+                .as("Проверка наличия нужных имен пунктов обмена")
                         .extracting(ExchangeOfficeModel::name)
                                 .contains("ДО \"Гаванский\"", "ДО \"Пушкинский\"", "ДО \"Тосненский\"");
         softly.assertThat(offices).usingRecursiveComparison().isEqualTo(expectedOffices);
-        //softly.assertThat(getExchangeOfficesResponse.getBody().asString().replaceAll("\\s+", "")).isEqualTo(expectedJson);
+        softly.assertThat(getExchangeOfficesResponse.getBody().asString().replaceAll("\\s+", "")).
+            as("Проверка равенства строк json-файлов").
+                withFailMessage("Json-файлы не равны").
+                    isEqualTo(expectedJson);
         softly.assertAll();
     }
 }

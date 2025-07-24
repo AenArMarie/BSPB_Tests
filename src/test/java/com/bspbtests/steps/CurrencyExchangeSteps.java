@@ -16,7 +16,7 @@ import static org.assertj.core.api.Assertions.within;
 
 public class CurrencyExchangeSteps {
 
-    @Дано("он открывает форму конвертации валют")
+    @Дано("пользователь открывает форму конвертации валют")
     @Step("Открытие формы конвертации валют")
     public void openConversionForm() {
         ProjectLogger.info("Открытие страницы покупки валюты");
@@ -44,39 +44,32 @@ public class CurrencyExchangeSteps {
         currencyConversionForm.selectAsConvertedCurrencyByText(testData.getCurrencyExchangeData().getConvertedCurrencyText());
     }
 
-    @Когда("он вводит маленькое количество валюты")
-    @Step("Ввод малого числа валюты")
-    public void enterSmallAmount() {
+    @Тогда("расчет конверсии количества валюты {double} соответствует ожидаемому значению с допустимой погрешностью {double}")
+    @Step("Проверка на соответствие конверсии количества валюты тестовым данным")
+    public void verifySmallConversion(double value, double margin) {
         CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
-        double amount = testData.getCurrencyExchangeData().getAmountBelowThreshold();
-        ProjectLogger.info("Установка количества валюты: " + amount);
-        currencyConversionForm.setExistingCurrencyAmount(String.valueOf(amount));
-    }
-
-    @Тогда("расчет конверсии соответствует ожидаемому значению с допустимой погрешностью")
-    @Step("Проверка на соответствие конверсии малого количества валюты тестовым данным")
-    public void verifySmallConversion() {
-        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
-        String rawRate = currencyConversionForm.getConversionRateByPartialText(testData.getCurrencyExchangeData().getMinimalConversionRateCurrency());
+        String rawRate;
+        if (value < 500.0)
+            rawRate = currencyConversionForm.getConversionRateByPartialText(testData.getCurrencyExchangeData().getMinimalConversionRateCurrency());
+        else
+            rawRate = currencyConversionForm.getConversionRateByPartialText(testData.getCurrencyExchangeData().getThresholdForDiffConversionRateText());
         String rateStr = StringProcessing.splitStringByTextAndGetPart(rawRate, StringConstants.EQUALS_SEPARATOR, 1);
         double rate = Double.parseDouble(StringProcessing.splitStringByTextAndGetPart(rateStr, StringConstants.ALL_SPACES, 0));
 
-        double expected = rate * testData.getCurrencyExchangeData().getAmountBelowThreshold();
+        double expected = rate * value;
         double actual = Double.parseDouble(currencyConversionForm.getConvertedCurrencyAmount().replaceAll(StringConstants.ALL_SPACES, ""));
-        double margin = testData.getCurrencyExchangeData().getMarginOfError();
 
         assertThat(actual)
                 .as("Проверка данных о конвертации")
                 .isCloseTo(expected, within(margin));
     }
 
-    @Когда("он вводит большое количество валюты")
+    @Когда("пользователь вводит количество валюты {double}")
     @Step("Ввод большого количества валюты")
-    public void enterLargeAmount() {
+    public void enterLargeAmount(double value) {
         CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
-        double amount = testData.getCurrencyExchangeData().getAmountAboveThreshold();
-        ProjectLogger.info("Установка количества валюты: " + amount);
-        currencyConversionForm.setExistingCurrencyAmount(String.valueOf(amount));
+        ProjectLogger.info("Установка количества валюты: " + value);
+        currencyConversionForm.setExistingCurrencyAmount(String.valueOf(value));
     }
 
     @Тогда("расчет конверсии также соответствует ожидаемому значению с допустимой погрешностью")

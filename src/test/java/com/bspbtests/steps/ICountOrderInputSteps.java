@@ -15,7 +15,7 @@ import static com.bspbtests.steps.Hooks.testData;
 
 public class ICountOrderInputSteps {
 
-    @Дано("он переходит на страницу дебетовых карт")
+    @Дано("пользователь переходит на страницу дебетовых карт")
     @Step("Переход на страницу дебетовых карт")
     public void openingDebitCardsPage() {
         MainPage mainPage = new MainPage();
@@ -26,7 +26,7 @@ public class ICountOrderInputSteps {
         debitCardsPage.isDisplayed();
     }
 
-    @Дано("он открывает страницу карты 'ЯСЧИТАЮ'")
+    @Дано("пользователь открывает страницу карты 'ЯСЧИТАЮ'")
     @Step("Открытие страницы карты 'ЯСЧИТАЮ'")
     public void openingICountPage() {
         DebitCardsPage debitCardsPage = new DebitCardsPage();
@@ -36,7 +36,7 @@ public class ICountOrderInputSteps {
         cardOrderingForm.isDisplayed();
     }
 
-    @Когда("он вводит номер телефона")
+    @Когда("пользователь вводит номер телефона")
     @Step("Ввод номера телефона")
     public void enterPhoneNumber() {
         CardOrderingForm cardOrderingForm = new CardOrderingForm();
@@ -44,7 +44,7 @@ public class ICountOrderInputSteps {
         cardOrderingForm.inputPhoneNumber(testData.getCardOrderingData().getPhoneNumber());
     }
 
-    @Когда("он вводит электронную почту")
+    @Когда("пользователь вводит электронную почту")
     @Step("Ввод электронной почты")
     public void enterEmail() {
         CardOrderingForm cardOrderingForm = new CardOrderingForm();
@@ -52,7 +52,7 @@ public class ICountOrderInputSteps {
         cardOrderingForm.inputEmail(testData.getCardOrderingData().getEmail());
     }
 
-    @Когда("он нажимает кнопку 'Продолжить'")
+    @Когда("пользователь нажимает кнопку 'Продолжить'")
     @Step("Нажатие кнопки 'Продолжить'")
     public void clickContinue() {
         CardOrderingForm cardOrderingForm = new CardOrderingForm();
