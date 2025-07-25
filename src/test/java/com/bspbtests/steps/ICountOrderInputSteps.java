@@ -36,20 +36,20 @@ public class ICountOrderInputSteps {
         cardOrderingForm.isDisplayed();
     }
 
-    @Когда("пользователь вводит номер телефона")
+    @Когда("пользователь вводит номер телефона {string}")
     @Step("Ввод номера телефона")
-    public void enterPhoneNumber() {
+    public void enterPhoneNumber(String number) {
         CardOrderingForm cardOrderingForm = new CardOrderingForm();
         ProjectLogger.info("Ввод номера телефона");
-        cardOrderingForm.inputPhoneNumber(testData.getCardOrderingData().getPhoneNumber());
+        cardOrderingForm.inputPhoneNumber(number);
     }
 
-    @Когда("пользователь вводит электронную почту")
+    @Когда("пользователь вводит электронную почту {string}")
     @Step("Ввод электронной почты")
-    public void enterEmail() {
+    public void enterEmail(String email) {
         CardOrderingForm cardOrderingForm = new CardOrderingForm();
         ProjectLogger.info("Ввод почты");
-        cardOrderingForm.inputEmail(testData.getCardOrderingData().getEmail());
+        cardOrderingForm.inputEmail(email);
     }
 
     @Когда("пользователь нажимает кнопку 'Продолжить'")

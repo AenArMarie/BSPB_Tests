@@ -1,6 +1,5 @@
 package com.bspbtests.steps;
 
-import com.bspbtests.constants.FileTypes;
 import com.bspbtests.constants.PathConstants;
 import com.bspbtests.data.ExchangeOfficeModel;
 import com.bspbtests.data.OfficeDataModel;
@@ -10,19 +9,15 @@ import com.bspbtests.requests.GetExchangeOfficesRequest;
 import com.bspbtests.utility.AllureUtilities;
 import com.bspbtests.utility.ApiUtilities;
 import com.utility.files.FilesReader;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
-import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
-import org.assertj.core.api.Assertions;
-import org.assertj.core.api.Assumptions;
 import org.assertj.core.api.SoftAssertions;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assumptions.assumeThat;
@@ -103,5 +98,19 @@ public class CollectionSteps {
                 withFailMessage("Json-файлы не равны").
                     isEqualTo(expectedJson);
         softly.assertAll();
+    }
+
+    @Тогда("коллекция по запросу офисов обмена валюты содержит участки с именами:")
+    @Step("Проверка наличия участков с определенными именами")
+    public void checkExchangeOfficesAPIContains(DataTable table) {
+        Response getExchangeOfficesResponse = GetExchangeOfficesRequest.performGet();
+        assumeThat(getExchangeOfficesResponse.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
+        AllureUtilities.attachJson("Response json", getExchangeOfficesResponse);
+        OfficeDataModel offices = ApiUtilities.parseResponseAs(getExchangeOfficesResponse, OfficeDataModel.class);
+        List<String> expectedNames = table.asList(String.class);
+        assertThat(offices.items())
+                .as("Проверка наличия нужных имен пунктов обмена")
+                .extracting(ExchangeOfficeModel::name)
+                .containsAll(expectedNames);
     }
 }
