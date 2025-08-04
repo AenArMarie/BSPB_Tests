@@ -69,10 +69,10 @@ public class Driver {
     private static WebDriver createDriver() throws MalformedURLException {
         BrowserModel browser = FilesReader.readJson(PathConstants.BROWSER_CONFIG_PATH, BrowserModel.class);
         Assumptions.assumeThat(browser).isNotNull();
-        if (System.getenv("remoteDriver").equals("true"))
-            return createRemoteWebDriver(browser);
-        else
-            return LOCAL_WEB_DRIVER_FACTORY.get(browser.getName()).get();
+        return switch (System.getenv("remoteDriver")) {
+            case "false" -> LOCAL_WEB_DRIVER_FACTORY.get(browser.getName()).get();
+            case null, default -> createRemoteWebDriver(browser);
+        };
     }
 
     private static WebDriver createRemoteWebDriver(BrowserModel browser) {

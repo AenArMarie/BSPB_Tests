@@ -1,5 +1,6 @@
 package com.bspbtests.steps;
 
+import com.bspbtests.DataContainer.Container;
 import com.bspbtests.constants.PathConstants;
 import com.bspbtests.data.ExchangeOfficeModel;
 import com.bspbtests.data.OfficeDataModel;
@@ -10,6 +11,7 @@ import com.bspbtests.utility.AllureUtilities;
 import com.bspbtests.utility.ApiUtilities;
 import com.utility.files.FilesReader;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
@@ -21,6 +23,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assumptions.assumeThat;
 
 public class CollectionSteps {
+    private Container context;
+
+    public CollectionSteps(Container container) {
+        context = container;
+    }
 
     @Тогда("воображаемое самопредставление пользователя совпадает с тестовыми данными")
     public void checkSelfAwareness() {
@@ -84,6 +91,24 @@ public class CollectionSteps {
         assumeThat(getExchangeOfficesResponse.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
         AllureUtilities.attachJson("Response json", getExchangeOfficesResponse);
         OfficeDataModel offices = ApiUtilities.parseResponseAs(getExchangeOfficesResponse, OfficeDataModel.class);
+        List<String> expectedNames = table.asList(String.class);
+        assertThat(offices.items())
+                .as("Проверка наличия нужных имен пунктов обмена")
+                .extracting(ExchangeOfficeModel::name)
+                .containsAll(expectedNames);
+    }
+
+    @Когда("пользователь выполняет запрос на получение офисов")
+    public void sendOfficesRequest() {
+        Response getExchangeOfficesResponse = GetExchangeOfficesRequest.performGet();
+        assumeThat(getExchangeOfficesResponse.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
+        AllureUtilities.attachJson("Response json", getExchangeOfficesResponse);
+        context.setResponse(getExchangeOfficesResponse);
+    }
+
+    @Тогда("этот запрос содержит участки с именами:")
+    public void checkOfficeNames(DataTable table) {
+        OfficeDataModel offices = ApiUtilities.parseResponseAs(context.getResponse(), OfficeDataModel.class);
         List<String> expectedNames = table.asList(String.class);
         assertThat(offices.items())
                 .as("Проверка наличия нужных имен пунктов обмена")
