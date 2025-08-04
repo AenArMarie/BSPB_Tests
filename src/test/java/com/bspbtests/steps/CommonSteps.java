@@ -5,6 +5,7 @@ import com.bspbtests.pages.MainPage;
 import com.utility.logger.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 import io.qameta.allure.Step;
+import org.assertj.core.api.Assumptions;
 
 public class CommonSteps {
 
@@ -12,7 +13,7 @@ public class CommonSteps {
     public void userOnMainPage() {
         ProjectLogger.info(CommonLogMessages.MAIN_PAGE_CHECK_LOG);
         MainPage mainPage = new MainPage();
-        mainPage.isDisplayed();
+        Assumptions.assumeThat(mainPage.isDisplayed());
     }
 
 }

@@ -8,6 +8,7 @@ import com.utility.logger.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
+import org.assertj.core.api.Assumptions;
 
 import static com.bspbtests.steps.Hooks.testData;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -21,7 +22,7 @@ public class CurrencyExchangeSteps {
         MainPage mainPage = new MainPage();
         mainPage.clickBuyCurrencyButton();
         CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
-        currencyConversionForm.isDisplayed();
+        Assumptions.assumeThat(currencyConversionForm.isDisplayed());
     }
 
     @Дано("выбрана исходная валюта")

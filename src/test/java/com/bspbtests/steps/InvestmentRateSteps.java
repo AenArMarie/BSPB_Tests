@@ -8,6 +8,7 @@ import com.utility.logger.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
+import org.assertj.core.api.Assumptions;
 import org.assertj.core.api.SoftAssertions;
 
 public class InvestmentRateSteps {
@@ -21,7 +22,7 @@ public class InvestmentRateSteps {
         WhiteNightsInvestmentPage whiteNightsInvestmentPage = new WhiteNightsInvestmentPage();
         whiteNightsInvestmentPage.isDisplayed();
         CalculatorForm calculatorForm = new CalculatorForm();
-        calculatorForm.isDisplayed();
+        Assumptions.assumeThat(calculatorForm.isDisplayed());
     }
 
     @Когда("пользователь выбирает срок вклада {string}")

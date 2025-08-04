@@ -8,6 +8,7 @@ import com.utility.logger.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
+import org.assertj.core.api.Assumptions;
 import org.assertj.core.api.SoftAssertions;
 
 public class ICountOrderInputSteps {
@@ -19,7 +20,7 @@ public class ICountOrderInputSteps {
         mainPage.hoverCards();
         mainPage.clickDebitCards();
         DebitCardsPage debitCardsPage = new DebitCardsPage();
-        debitCardsPage.isDisplayed();
+        Assumptions.assumeThat(debitCardsPage.isDisplayed());
     }
 
     @Дано("пользователь открывает страницу карты 'ЯСЧИТАЮ'")
@@ -28,7 +29,7 @@ public class ICountOrderInputSteps {
         ProjectLogger.info("Переход на страницу карты 'ЯСЧИТАЮ'");
         debitCardsPage.clickICountCardLink();
         CardOrderingForm cardOrderingForm = new CardOrderingForm();
-        cardOrderingForm.isDisplayed();
+        Assumptions.assumeThat(cardOrderingForm.isDisplayed());
     }
 
     @Когда("пользователь вводит номер телефона {string}")
