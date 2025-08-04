@@ -8,18 +8,18 @@ import org.openqa.selenium.By;
 
 public class CurrencyConversionForm extends BaseForm {
 
-    private Element existingDropDownButton = new Element(By.xpath("//button[contains(@id, 'menu-button') and ancestor::*[contains(@class, 'css-17m0t2z')]]"),
+    private final Element existingDropDownButton = new Element(By.xpath("//button[contains(@id, 'menu-button') and ancestor::*[contains(@class, 'css-17m0t2z')]]"),
             "Кнопка открытия выпадающего меню с выбором имеющейся валюты");
-    private Element convertedDropDownButton = new Element(By.xpath("//button[contains(@id, 'menu-button') and ancestor::*[contains(@class, 'css-i8yqn1')]]"),
+    private final Element convertedDropDownButton = new Element(By.xpath("//button[contains(@id, 'menu-button') and ancestor::*[contains(@class, 'css-i8yqn1')]]"),
             "Кнопка открытия выпадающего меню с выбором переведенной валюты");
 
-    private String existingCurrencyMenuButtonXpathTemplate = "//button[@role = 'menuitem' and contains(., '%s') and ancestor::*[contains(@class, 'css-17m0t2z')] ]";
-    private String convertedCurrencyMenuButtonXpathTemplate = "//button[@role = 'menuitem' and contains(., '%s') and ancestor::*[contains(@class, 'css-i8yqn1')] ]";
+    private final String existingCurrencyMenuButtonXpathTemplate = "//button[@role = 'menuitem' and contains(., '%s') and ancestor::*[contains(@class, 'css-17m0t2z')] ]";
+    private final String convertedCurrencyMenuButtonXpathTemplate = "//button[@role = 'menuitem' and contains(., '%s') and ancestor::*[contains(@class, 'css-i8yqn1')] ]";
 
-    private String conversionRateTextTemplate = "//*[contains(@class, 'css-v61jaa') and ancestor::*[contains(@class, 'css-17m0t2z')] and ancestor::*[contains(@id, 'tabpanel-0')] and contains(. ,'%s')]";
+    private final String conversionRateTextTemplate = "//*[contains(@class, 'css-v61jaa') and ancestor::*[contains(@class, 'css-17m0t2z')] and ancestor::*[contains(@id, 'tabpanel-0')] and contains(. ,'%s')]";
 
-    private Input existingCurrencyAmountInput = new Input(By.xpath("//input[ancestor::*[contains(@class, 'css-17m0t2z')] and ancestor::*[contains(@id, 'tabpanel-0')]]"), "Поле ввода имеющейся валюты");
-    private Input convertedCurrencyAmountInput = new Input(By.xpath("//input[ancestor::*[contains(@class, 'css-i8yqn1')] and ancestor::*[contains(@id, 'tabpanel-0')]]"), "Поле ввода имеющейся валюты");
+    private final Input existingCurrencyAmountInput = new Input(By.xpath("//input[ancestor::*[contains(@class, 'css-17m0t2z')] and ancestor::*[contains(@id, 'tabpanel-0')]]"), "Поле ввода имеющейся валюты");
+    private final Input convertedCurrencyAmountInput = new Input(By.xpath("//input[ancestor::*[contains(@class, 'css-i8yqn1')] and ancestor::*[contains(@id, 'tabpanel-0')]]"), "Поле ввода имеющейся валюты");
 
     public CurrencyConversionForm() {
         super(By.className("css-rrf209"), "Форма конвертации валюты");

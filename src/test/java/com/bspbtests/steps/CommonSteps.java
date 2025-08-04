@@ -9,7 +9,6 @@ import io.qameta.allure.Step;
 public class CommonSteps {
 
     @Дано("пользователь находится на главной странице")
-    @Step("Открытие главной страницы")
     public void userOnMainPage() {
         ProjectLogger.info(CommonLogMessages.MAIN_PAGE_CHECK_LOG);
         MainPage mainPage = new MainPage();

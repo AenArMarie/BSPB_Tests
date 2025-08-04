@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 
 public class DebitCardsPage extends BaseForm {
 
-    private Element iCountCardLink = new Element(By.xpath(String.format(CommonLocatorTemplates.CARD_LINK, ElementsTextConstants.ICOUNT_CARD_TEXT)), "Ссылка на карту 'ЯСЧИТАЮ'");
+    private final Element iCountCardLink = new Element(By.xpath(String.format(CommonLocatorTemplates.CARD_LINK, ElementsTextConstants.ICOUNT_CARD_TEXT)), "Ссылка на карту 'ЯСЧИТАЮ'");
 
     public DebitCardsPage() {
         super(By.xpath(String.format(CommonLocatorTemplates.CARD_LINK, ElementsTextConstants.ICOUNT_CARD_TEXT)), "Страница дебетовых карт");

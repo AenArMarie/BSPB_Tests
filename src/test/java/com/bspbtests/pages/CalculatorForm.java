@@ -12,11 +12,11 @@ import org.openqa.selenium.TimeoutException;
 
 public class CalculatorForm extends BaseForm {
 
-    private Input investmentSumInput = new Input(By.className("css-vfqw27"), "Поле ввода суммы вклада");
-    private Element interestAmount = new Element(By.xpath(String.format(CommonLocatorTemplates.CALCULATOR_LABEL, ElementsTextConstants.RUB_CURRENCY_TEXT)), "Расчетная выгода от вклада");
-    private Element investmentRate = new Element(By.xpath(String.format(CommonLocatorTemplates.CALCULATOR_LABEL, ElementsTextConstants.PERCENTAGE_TEXT)), "Ставка вклада");
+    private final Input investmentSumInput = new Input(By.className("css-vfqw27"), "Поле ввода суммы вклада");
+    private final Element interestAmount = new Element(By.xpath(String.format(CommonLocatorTemplates.CALCULATOR_LABEL, ElementsTextConstants.RUB_CURRENCY_TEXT)), "Расчетная выгода от вклада");
+    private final Element investmentRate = new Element(By.xpath(String.format(CommonLocatorTemplates.CALCULATOR_LABEL, ElementsTextConstants.PERCENTAGE_TEXT)), "Ставка вклада");
 
-    private String investmentPeriodXpathTemplate = "//*[contains(@class, 'css-gi9t6w') and contains(., '%s')]/ancestor::li";
+    private final String investmentPeriodXpathTemplate = "//*[contains(@class, 'css-gi9t6w') and contains(., '%s')]/ancestor::li";
 
     public CalculatorForm() {
         super(By.className("css-te1w57"), "Калькулятор");

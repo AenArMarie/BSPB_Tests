@@ -13,7 +13,6 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.qameta.allure.Allure;
-import io.qameta.allure.Step;
 
 import java.io.ByteArrayInputStream;
 
@@ -23,7 +22,6 @@ public class Hooks {
     public static ConfigData configData;
 
     @Before("@web")
-    @Step("Запуск теста")
     public void setUp() {
         testData = FilesReader.readJson(PathConstants.TEST_DATA_PATH, TestData.class);
         configData = FilesReader.readJson(PathConstants.CONFIG_DATA_PATH, ConfigData.class);
@@ -37,7 +35,6 @@ public class Hooks {
     }
 
     @After("@web")
-    @Step("Завершение теста")
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
             Allure.addAttachment(scenario.getName(),
