@@ -4,7 +4,6 @@ import com.bspbtests.constants.CommonLogMessages;
 import com.bspbtests.constants.FileTypes;
 import com.bspbtests.constants.PathConstants;
 import com.bspbtests.jsondata.ConfigData;
-import com.bspbtests.jsondata.testdata.TestData;
 import com.bspbtests.utility.driver.Driver;
 import com.bspbtests.utility.driver.DriverMethods;
 import com.utility.files.FilesReader;
@@ -18,12 +17,10 @@ import java.io.ByteArrayInputStream;
 
 public class Hooks {
 
-    public static TestData testData;
     public static ConfigData configData;
 
     @Before("@web")
     public void setUp() {
-        testData = FilesReader.readJson(PathConstants.TEST_DATA_PATH, TestData.class);
         configData = FilesReader.readJson(PathConstants.CONFIG_DATA_PATH, ConfigData.class);
 
         ProjectLogger.info("Запуск теста");

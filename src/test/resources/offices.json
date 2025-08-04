@@ -6,17 +6,17 @@
       "name": "ДО \"Гаванский\"",
       "rates": [
         {
-          "buyRate": 21.5000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.5000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         },
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -24,39 +24,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -68,7 +68,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -76,39 +76,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -120,7 +120,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -128,39 +128,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -172,7 +172,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -180,39 +180,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -224,7 +224,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -232,39 +232,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -275,17 +275,17 @@
       "name": "ДО \"Коммерческий департамент\"",
       "rates": [
         {
-          "buyRate": 21.5000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.5000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         },
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -293,39 +293,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -337,7 +337,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -345,39 +345,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -389,7 +389,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -397,39 +397,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -441,7 +441,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -449,39 +449,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -492,17 +492,17 @@
       "name": "ДО \"Гражданский\"",
       "rates": [
         {
-          "buyRate": 21.5000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.5000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         },
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -510,39 +510,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -554,7 +554,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -562,39 +562,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -606,7 +606,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -614,39 +614,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -657,17 +657,17 @@
       "name": "ДО \"Комендантский\"",
       "rates": [
         {
-          "buyRate": 21.5000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.5000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         },
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -675,39 +675,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -719,7 +719,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -727,39 +727,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -771,7 +771,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -779,39 +779,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -822,17 +822,17 @@
       "name": "ДО \"На Ленинском\"",
       "rates": [
         {
-          "buyRate": 21.5000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.5000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         },
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -840,39 +840,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -884,7 +884,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -892,39 +892,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -936,7 +936,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -944,39 +944,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -988,7 +988,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -996,39 +996,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1039,26 +1039,26 @@
       "name": "ДО \"Центральный\"",
       "rates": [
         {
-          "buyRate": 21.5000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.5000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 95.0000,
-          "cbRate": 98.9751,
+          "buyRate": 97.0000,
+          "cbRate": 98.8177,
           "currencyCode": "CHF",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 100.0000,
+          "sellRate": 102.0000,
           "transactionVolume": 1
         },
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1066,48 +1066,48 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 105.0000,
-          "cbRate": 105.9122,
+          "buyRate": 107.5000,
+          "cbRate": 106.2912,
           "currencyCode": "GBP",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 112.0000,
+          "sellRate": 114.5000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1119,7 +1119,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1127,39 +1127,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1171,7 +1171,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1179,39 +1179,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1222,17 +1222,17 @@
       "name": "ДО \"Адмиралтейский\"",
       "rates": [
         {
-          "buyRate": 21.5000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.5000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         },
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1240,39 +1240,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 93.6000,
+          "sellRate": 93.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 93.5000,
+          "sellRate": 93.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 74.4000,
-          "cbRate": 78.4477,
+          "buyRate": 76.4000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 79.6000,
+          "sellRate": 81.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 74.5000,
-          "cbRate": 78.4477,
+          "buyRate": 76.5000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 79.5000,
+          "sellRate": 81.5000,
           "transactionVolume": 500
         }
       ]
@@ -1284,7 +1284,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1292,39 +1292,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1335,17 +1335,17 @@
       "name": "ДО \"Коммерческий департамент-2\"",
       "rates": [
         {
-          "buyRate": 21.5000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.5000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         },
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1353,39 +1353,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1397,7 +1397,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1405,39 +1405,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1449,7 +1449,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1457,39 +1457,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1500,17 +1500,17 @@
       "name": "ДО \"Инвестрбанк\"",
       "rates": [
         {
-          "buyRate": 21.5000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.5000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         },
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1518,39 +1518,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1562,7 +1562,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1570,39 +1570,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1614,7 +1614,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1622,39 +1622,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1666,7 +1666,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1674,39 +1674,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1718,7 +1718,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1726,39 +1726,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1770,7 +1770,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1778,39 +1778,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1822,7 +1822,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1830,39 +1830,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1874,7 +1874,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1882,39 +1882,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1926,7 +1926,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1934,39 +1934,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -1978,7 +1978,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -1986,39 +1986,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2030,7 +2030,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2038,39 +2038,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2081,17 +2081,17 @@
       "name": "ДО \"Московский\"",
       "rates": [
         {
-          "buyRate": 21.5000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.5000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         },
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2099,39 +2099,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2143,7 +2143,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2151,39 +2151,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2195,7 +2195,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2203,39 +2203,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2247,7 +2247,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2255,39 +2255,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2298,17 +2298,17 @@
       "name": "Центр сделок с недвижимостью №1",
       "rates": [
         {
-          "buyRate": 21.5000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.5000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         },
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2316,39 +2316,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2360,7 +2360,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2368,39 +2368,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2412,7 +2412,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2420,39 +2420,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2464,7 +2464,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2472,39 +2472,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2516,7 +2516,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2524,39 +2524,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2568,7 +2568,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2576,39 +2576,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2620,7 +2620,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2628,39 +2628,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2672,7 +2672,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2680,39 +2680,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2724,7 +2724,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2732,39 +2732,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2776,7 +2776,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2784,39 +2784,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2828,7 +2828,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2836,39 +2836,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2880,7 +2880,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2888,39 +2888,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2932,7 +2932,7 @@
       "rates": [
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -2940,39 +2940,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -2983,17 +2983,17 @@
       "name": "ДО \"На Шоссе Революции\"",
       "rates": [
         {
-          "buyRate": 21.5000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.5000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         },
         {
           "buyRate": 11.4000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -3001,39 +3001,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.7000,
-          "cbRate": 91.7897,
+          "buyRate": 92.6000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.4000,
+          "sellRate": 96.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.8000,
-          "cbRate": 91.7897,
+          "buyRate": 92.7000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 97.3000,
+          "sellRate": 96.2000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 80.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.8000,
+          "sellRate": 83.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 80.8000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.7000,
+          "sellRate": 83.5000,
           "transactionVolume": 500
         }
       ]
@@ -3044,48 +3044,48 @@
       "name": "ДО \"Дельта\" филиала в г.  Москва",
       "rates": [
         {
-          "buyRate": 91.4000,
-          "cbRate": 91.7897,
+          "buyRate": 92.4000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 96.1000,
+          "sellRate": 96.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 79.4000,
-          "cbRate": 78.4477,
+          "buyRate": 80.5000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.1000,
+          "sellRate": 83.2000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 91.5000,
-          "cbRate": 91.7897,
+          "buyRate": 92.5000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 96.0000,
+          "sellRate": 96.5000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 79.5000,
-          "cbRate": 78.4477,
+          "buyRate": 80.6000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.0000,
+          "sellRate": 83.1000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 11.2000,
-          "cbRate": 10.9593,
+          "buyRate": 11.3000,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 12.0000,
+          "sellRate": 12.3000,
           "transactionVolume": 1
         }
       ]
@@ -3096,48 +3096,48 @@
       "name": "ДО \"Автозаводский\" филиала в г.  Москва",
       "rates": [
         {
-          "buyRate": 91.4000,
-          "cbRate": 91.7897,
+          "buyRate": 92.4000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 96.1000,
+          "sellRate": 96.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 79.4000,
-          "cbRate": 78.4477,
+          "buyRate": 80.5000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.1000,
+          "sellRate": 83.2000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 91.5000,
-          "cbRate": 91.7897,
+          "buyRate": 92.5000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 96.0000,
+          "sellRate": 96.5000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 79.5000,
-          "cbRate": 78.4477,
+          "buyRate": 80.6000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.0000,
+          "sellRate": 83.1000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 11.2000,
-          "cbRate": 10.9593,
+          "buyRate": 11.3000,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 12.0000,
+          "sellRate": 12.3000,
           "transactionVolume": 1
         }
       ]
@@ -3148,75 +3148,75 @@
       "name": "Филиал г. Москва",
       "rates": [
         {
-          "buyRate": 91.4000,
-          "cbRate": 91.7897,
+          "buyRate": 92.4000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 96.1000,
+          "sellRate": 96.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 79.4000,
-          "cbRate": 78.4477,
+          "buyRate": 80.5000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.1000,
+          "sellRate": 83.2000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 106.5000,
-          "cbRate": 105.9122,
+          "buyRate": 107.5000,
+          "cbRate": 106.2912,
           "currencyCode": "GBP",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 113.5000,
+          "sellRate": 114.5000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 96.0000,
-          "cbRate": 98.9751,
+          "buyRate": 97.0000,
+          "cbRate": 98.8177,
           "currencyCode": "CHF",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 101.0000,
+          "sellRate": 102.0000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 91.5000,
-          "cbRate": 91.7897,
+          "buyRate": 92.5000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 96.0000,
+          "sellRate": 96.5000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 79.5000,
-          "cbRate": 78.4477,
+          "buyRate": 80.6000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.0000,
+          "sellRate": 83.1000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 11.2000,
-          "cbRate": 10.9593,
+          "buyRate": 11.3000,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 12.0000,
+          "sellRate": 12.3000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 21.4000,
-          "cbRate": 21.3608,
+          "buyRate": 22.1000,
+          "cbRate": 21.8731,
           "currencyCode": "AED",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 22.4000,
+          "sellRate": 23.1000,
           "transactionVolume": 1
         }
       ]
@@ -3228,7 +3228,7 @@
       "rates": [
         {
           "buyRate": 11.0000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -3236,39 +3236,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.3000,
-          "cbRate": 91.7897,
+          "buyRate": 92.9000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 95.0000,
+          "sellRate": 95.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.4000,
-          "cbRate": 91.7897,
+          "buyRate": 93.0000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 94.9000,
+          "sellRate": 95.5000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 79.3000,
-          "cbRate": 78.4477,
+          "buyRate": 81.1000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.0000,
+          "sellRate": 83.8000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 79.4000,
-          "cbRate": 78.4477,
+          "buyRate": 81.2000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 81.9000,
+          "sellRate": 83.7000,
           "transactionVolume": 500
         }
       ]
@@ -3280,7 +3280,7 @@
       "rates": [
         {
           "buyRate": 11.0000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -3288,39 +3288,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.3000,
-          "cbRate": 91.7897,
+          "buyRate": 92.9000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 95.0000,
+          "sellRate": 95.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.4000,
-          "cbRate": 91.7897,
+          "buyRate": 93.0000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 94.9000,
+          "sellRate": 95.5000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 79.3000,
-          "cbRate": 78.4477,
+          "buyRate": 81.1000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.0000,
+          "sellRate": 83.8000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 79.4000,
-          "cbRate": 78.4477,
+          "buyRate": 81.2000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 81.9000,
+          "sellRate": 83.7000,
           "transactionVolume": 500
         }
       ]
@@ -3332,7 +3332,7 @@
       "rates": [
         {
           "buyRate": 11.0000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -3340,39 +3340,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.3000,
-          "cbRate": 91.7897,
+          "buyRate": 92.9000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 95.0000,
+          "sellRate": 95.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.4000,
-          "cbRate": 91.7897,
+          "buyRate": 93.0000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 94.9000,
+          "sellRate": 95.5000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 79.3000,
-          "cbRate": 78.4477,
+          "buyRate": 81.1000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.0000,
+          "sellRate": 83.8000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 79.4000,
-          "cbRate": 78.4477,
+          "buyRate": 81.2000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 81.9000,
+          "sellRate": 83.7000,
           "transactionVolume": 500
         }
       ]
@@ -3384,7 +3384,7 @@
       "rates": [
         {
           "buyRate": 11.0000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -3392,39 +3392,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.3000,
-          "cbRate": 91.7897,
+          "buyRate": 92.9000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 95.0000,
+          "sellRate": 95.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.4000,
-          "cbRate": 91.7897,
+          "buyRate": 93.0000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 94.9000,
+          "sellRate": 95.5000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 79.3000,
-          "cbRate": 78.4477,
+          "buyRate": 81.1000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.0000,
+          "sellRate": 83.8000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 79.4000,
-          "cbRate": 78.4477,
+          "buyRate": 81.2000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 81.9000,
+          "sellRate": 83.7000,
           "transactionVolume": 500
         }
       ]
@@ -3436,7 +3436,7 @@
       "rates": [
         {
           "buyRate": 11.0000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -3444,39 +3444,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.3000,
-          "cbRate": 91.7897,
+          "buyRate": 92.9000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 95.0000,
+          "sellRate": 95.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.4000,
-          "cbRate": 91.7897,
+          "buyRate": 93.0000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 94.9000,
+          "sellRate": 95.5000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 79.3000,
-          "cbRate": 78.4477,
+          "buyRate": 81.1000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.0000,
+          "sellRate": 83.8000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 79.4000,
-          "cbRate": 78.4477,
+          "buyRate": 81.2000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 81.9000,
+          "sellRate": 83.7000,
           "transactionVolume": 500
         }
       ]
@@ -3488,7 +3488,7 @@
       "rates": [
         {
           "buyRate": 11.0000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -3496,39 +3496,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.3000,
-          "cbRate": 91.7897,
+          "buyRate": 92.9000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 95.0000,
+          "sellRate": 95.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.4000,
-          "cbRate": 91.7897,
+          "buyRate": 93.0000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 94.9000,
+          "sellRate": 95.5000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 79.3000,
-          "cbRate": 78.4477,
+          "buyRate": 81.1000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.0000,
+          "sellRate": 83.8000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 79.4000,
-          "cbRate": 78.4477,
+          "buyRate": 81.2000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 81.9000,
+          "sellRate": 83.7000,
           "transactionVolume": 500
         }
       ]
@@ -3540,7 +3540,7 @@
       "rates": [
         {
           "buyRate": 11.0000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -3548,39 +3548,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.3000,
-          "cbRate": 91.7897,
+          "buyRate": 92.9000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 95.0000,
+          "sellRate": 95.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.4000,
-          "cbRate": 91.7897,
+          "buyRate": 93.0000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 94.9000,
+          "sellRate": 95.5000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 79.3000,
-          "cbRate": 78.4477,
+          "buyRate": 81.1000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.0000,
+          "sellRate": 83.8000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 79.4000,
-          "cbRate": 78.4477,
+          "buyRate": 81.2000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 81.9000,
+          "sellRate": 83.7000,
           "transactionVolume": 500
         }
       ]
@@ -3592,7 +3592,7 @@
       "rates": [
         {
           "buyRate": 11.0000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -3600,39 +3600,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.3000,
-          "cbRate": 91.7897,
+          "buyRate": 92.9000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 95.0000,
+          "sellRate": 95.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.4000,
-          "cbRate": 91.7897,
+          "buyRate": 93.0000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 94.9000,
+          "sellRate": 95.5000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 79.3000,
-          "cbRate": 78.4477,
+          "buyRate": 81.1000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 82.0000,
+          "sellRate": 83.8000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 79.4000,
-          "cbRate": 78.4477,
+          "buyRate": 81.2000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 81.9000,
+          "sellRate": 83.7000,
           "transactionVolume": 500
         }
       ]
@@ -3644,7 +3644,7 @@
       "rates": [
         {
           "buyRate": 11.0000,
-          "cbRate": 10.9593,
+          "cbRate": 11.0899,
           "currencyCode": "CNY",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
@@ -3652,39 +3652,39 @@
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.0000,
-          "cbRate": 91.7897,
+          "buyRate": 92.4000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 95.2000,
+          "sellRate": 95.6000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 92.1000,
-          "cbRate": 91.7897,
+          "buyRate": 92.5000,
+          "cbRate": 91.7056,
           "currencyCode": "EUR",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 95.1000,
+          "sellRate": 95.5000,
           "transactionVolume": 500
         },
         {
-          "buyRate": 80.1000,
-          "cbRate": 78.4477,
+          "buyRate": 81.6000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 83.3000,
+          "sellRate": 84.8000,
           "transactionVolume": 1
         },
         {
-          "buyRate": 80.2000,
-          "cbRate": 78.4477,
+          "buyRate": 81.7000,
+          "cbRate": 80.3289,
           "currencyCode": "USD",
           "currencyCodeSecond": "RUB",
           "lotSize": 1,
-          "sellRate": 83.2000,
+          "sellRate": 84.7000,
           "transactionVolume": 500
         }
       ]

@@ -2,6 +2,7 @@ package com.bspbtests.steps;
 
 import com.bspbtests.DataContainer.Container;
 import com.bspbtests.constants.PathConstants;
+import com.bspbtests.constants.StringConstants;
 import com.bspbtests.data.ExchangeOfficeModel;
 import com.bspbtests.data.OfficeDataModel;
 import com.bspbtests.data.Useroid;
@@ -78,7 +79,8 @@ public class CollectionSteps {
                 .extracting(ExchangeOfficeModel::name)
                 .contains("ДО \"Гаванский\"", "ДО \"Пушкинский\"", "ДО \"Тосненский\"");
         softly.assertThat(offices).usingRecursiveComparison().isEqualTo(expectedOffices);
-        softly.assertThat(getExchangeOfficesResponse.getBody().asString().replaceAll("\\s+", "")).
+        softly.assertThat(getExchangeOfficesResponse.getBody().asString().
+                        replaceAll(StringConstants.ALL_SPACES, StringConstants.EMPTY_STRING)).
                 as("Проверка равенства строк json-файлов").
                 withFailMessage("Json-файлы не равны").
                 isEqualTo(expectedJson);
