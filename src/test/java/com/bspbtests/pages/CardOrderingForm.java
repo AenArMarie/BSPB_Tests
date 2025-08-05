@@ -8,39 +8,39 @@ import org.openqa.selenium.By;
 
 public class CardOrderingForm extends BaseForm {
 
-    private final Input firstNameInput = new Input(By.id("firstName"), "Поле ввода имени");
-    private final Input lastNameInput = new Input(By.id("lastName"), "Поле ввода фамилии");
-    private final Input phoneNumberInput = new Input(By.xpath("//*[contains(@name, 'phoneNumber')]"), "Поле ввода номера телефона");
-    private final Input emailInput = new Input(By.id("emailAddress"), "Поле ввода почты");
-    private final Input addressInput = new Input(By.id("deliveryAddress"), "Поле ввода адреса");
+    private static final Input firstNameInput = new Input(By.id("firstName"), "Поле ввода имени");
+    private static final Input lastNameInput = new Input(By.id("lastName"), "Поле ввода фамилии");
+    private static final Input phoneNumberInput = new Input(By.xpath("//*[contains(@name, 'phoneNumber')]"), "Поле ввода номера телефона");
+    private static final Input emailInput = new Input(By.id("emailAddress"), "Поле ввода почты");
+    private static final Input addressInput = new Input(By.id("deliveryAddress"), "Поле ввода адреса");
 
-    private final Element continueButton = new Element(By.className("css-19eb57h"), "Кнопка продолжения оформления");
+    private static final Element continueButton = new Element(By.className("css-19eb57h"), "Кнопка продолжения оформления");
 
-    public CardOrderingForm() {
-        super(By.className("css-qu1ryg"), "Форма оформления заказа карты");
+    public static boolean isDisplayed() {
+        return new Element(By.className("css-qu1ryg"), "Форма оформления заказа карты").getElement().isDisplayed();
     }
 
-    public void inputPhoneNumber(String text) {
+    public static void inputPhoneNumber(String text) {
         phoneNumberInput.setInput(text);
     }
 
-    public void inputEmail(String text) {
+    public static void inputEmail(String text) {
         emailInput.setInput(text);
     }
 
-    public String getFirstNameInvalidity() {
+    public static String getFirstNameInvalidity() {
         return firstNameInput.getAttribute(AttributeConstants.ARIA_INVALID);
     }
 
-    public String getLastNameInvalidity() {
+    public static String getLastNameInvalidity() {
         return lastNameInput.getAttribute(AttributeConstants.ARIA_INVALID);
     }
 
-    public String getAddressInvalidity() {
+    public static String getAddressInvalidity() {
         return addressInput.getAttribute(AttributeConstants.ARIA_INVALID);
     }
 
-    public void clickContinueButton() {
+    public static void clickContinueButton() {
         continueButton.click();
     }
 }

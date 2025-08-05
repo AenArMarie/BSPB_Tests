@@ -13,30 +13,31 @@ import org.openqa.selenium.TimeoutException;
 @SuppressWarnings("FieldCanBeLocal")
 public class CalculatorForm extends BaseForm {
 
-    private final Input investmentSumInput = new Input(By.className("css-vfqw27"), "Поле ввода суммы вклада");
-    private final Element interestAmount = new Element(By.xpath(String.format(CommonLocatorTemplates.CALCULATOR_LABEL, ElementsTextConstants.RUB_CURRENCY_TEXT)), "Расчетная выгода от вклада");
-    private final Element investmentRate = new Element(By.xpath(String.format(CommonLocatorTemplates.CALCULATOR_LABEL, ElementsTextConstants.PERCENTAGE_TEXT)), "Ставка вклада");
+    private static final Input investmentSumInput = new Input(By.className("css-vfqw27"), "Поле ввода суммы вклада");
+    private static final Element interestAmount = new Element(By.xpath(String.format(CommonLocatorTemplates.CALCULATOR_LABEL, ElementsTextConstants.RUB_CURRENCY_TEXT)), "Расчетная выгода от вклада");
+    private static final Element investmentRate = new Element(By.xpath(String.format(CommonLocatorTemplates.CALCULATOR_LABEL, ElementsTextConstants.PERCENTAGE_TEXT)), "Ставка вклада");
 
-    private final String investmentPeriodXpathTemplate = "//*[contains(@class, 'css-gi9t6w') and contains(., '%s')]/ancestor::li";
+    private static final String investmentPeriodXpathTemplate = "//*[contains(@class, 'css-gi9t6w') and contains(., '%s')]/ancestor::li";
 
-    public CalculatorForm() {
-        super(By.className("css-te1w57"), "Калькулятор");
+
+    public static boolean isDisplayed() {
+        return new Element(By.className("css-te1w57"), "Калькулятор").getElement().isDisplayed();
     }
 
-    public void setInvestmentSum(String amount) {
+    public static void setInvestmentSum(String amount) {
         investmentSumInput.setInput(amount);
     }
 
-    public void clickInvestmentPeriodByText(String text) {
+    public static void clickInvestmentPeriodByText(String text) {
         Element investmentPeriodButton = new Element(By.xpath(String.format(investmentPeriodXpathTemplate, text)), "Кнопка выбора периода вложения с текстом " + text);
         investmentPeriodButton.click();
     }
 
-    public String getInvestmentRate() {
+    public static String getInvestmentRate() {
         return investmentRate.getText();
     }
 
-    public boolean checkIfNormalizedInterestAmountEqualToText(String text) {
+    public  static boolean checkIfNormalizedInterestAmountEqualToText(String text) {
         try {
             DriverMethods.getWait().until(driver -> {
                 String normalizedAmount = interestAmount.getText().replaceAll(StringConstants.ALL_NON_NUMERIC_CHARS, StringConstants.EMPTY_STRING);

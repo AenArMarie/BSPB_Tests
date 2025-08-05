@@ -16,21 +16,20 @@ public class PageOpeningSteps {
 
     @Когда("пользователь нажимает на пункт меню {string}")
     public void menuButtonPressed(String menuText) {
-        MainPage mainPage = new MainPage();
         ProjectLogger.info("Переход на страницу '" + menuText + "'");
-        mainPage.clickTopMenuItemByText(menuText);
+        MainPage.clickTopMenuItemByText(menuText);
     }
 
     @Тогда("открывается страница {string}")
     public void pageOpened(String expectedPageName) {
         ProjectLogger.info("Проверка отображения страницы '" + expectedPageName + "'");
-        BaseForm expectedPage = switch (expectedPageName) {
-            case MainPageMenuItemText.PRIVATE_BANKING -> new PrivateBankingPage();
-            default ->
-                    new MainMenuPage(ElementsTextConstants.PAGES_UNIQUE_ELEMENT_TEXT.get(expectedPageName), expectedPageName);
-        };
-        assertThat(expectedPage.isDisplayed())
-                .as("Проверка отображения страницы " + expectedPageName)
-                .isTrue();
+        switch (expectedPageName) { //TODO поправь ради Христа
+            case MainPageMenuItemText.PRIVATE_BANKING -> assertThat(PrivateBankingPage.isDisplayed()).
+                    as("Проверка отображения страницы " + expectedPageName).
+                    isTrue();
+            default -> assertThat(MainMenuPage.isDisplayed(ElementsTextConstants.PAGES_UNIQUE_ELEMENT_TEXT.get(expectedPageName), expectedPageName)).
+                    as("Проверка отображения страницы " + expectedPageName).
+                    isTrue();
+        }
     }
 }

@@ -18,37 +18,32 @@ public class CurrencyExchangeSteps {
     @Дано("пользователь открывает форму конвертации валют")
     public void openConversionForm() {
         ProjectLogger.info("Открытие страницы покупки валюты");
-        MainPage mainPage = new MainPage();
-        mainPage.clickBuyCurrencyButton();
-        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
-        Assumptions.assumeThat(currencyConversionForm.isDisplayed());
+        MainPage.clickBuyCurrencyButton();
+        Assumptions.assumeThat(CurrencyConversionForm.isDisplayed());
     }
 
     @Дано("выбрана исходная валюта с текстом {string}")
     public void selectExistingCurrency(String valueType) {
-        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         ProjectLogger.info("Выбор имеющейся валюты: " + valueType);
-        currencyConversionForm.clickExistingCurrenciesDropDownButton();
-        currencyConversionForm.selectAsExistingCurrencyByText(valueType);
+        CurrencyConversionForm.clickExistingCurrenciesDropDownButton();
+        CurrencyConversionForm.selectAsExistingCurrencyByText(valueType);
     }
 
     @Дано("выбрана целевая валюта с текстом {string}")
     public void selectTargetCurrency(String valueType) {
-        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         ProjectLogger.info("Выбор конвертированной валюты: " + valueType);
-        currencyConversionForm.clickConvertedCurrenciesDropDownButton();
-        currencyConversionForm.selectAsConvertedCurrencyByText(valueType);
+        CurrencyConversionForm.clickConvertedCurrenciesDropDownButton();
+        CurrencyConversionForm.selectAsConvertedCurrencyByText(valueType);
     }
 
     @Тогда("вычисленное значение равно конверсии количества валюты {double} по курсу для {string} с погрешностью {double}")
     public void verifyConversion(double value, String conversionSign, double margin) {
-        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
-        String rawRate = currencyConversionForm.getConversionRateByPartialText(conversionSign);
+        String rawRate = CurrencyConversionForm.getConversionRateByPartialText(conversionSign);
         String rateStr = StringProcessing.splitStringByTextAndGetPart(rawRate, StringConstants.EQUALS_SEPARATOR, 1);
         double rate = Double.parseDouble(StringProcessing.splitStringByTextAndGetPart(rateStr, StringConstants.ALL_SPACES, 0));
 
         double expected = rate * value;
-        double actual = Double.parseDouble(currencyConversionForm.getConvertedCurrencyAmount().replaceAll(StringConstants.ALL_SPACES, ""));
+        double actual = Double.parseDouble(CurrencyConversionForm.getConvertedCurrencyAmount().replaceAll(StringConstants.ALL_SPACES, ""));
 
         assertThat(actual)
                 .as("Проверка данных о конвертации")
@@ -57,8 +52,7 @@ public class CurrencyExchangeSteps {
 
     @Когда("пользователь вводит количество валюты {double}")
     public void enterLargeAmount(double value) {
-        CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
         ProjectLogger.info("Установка количества валюты: " + value);
-        currencyConversionForm.setExistingCurrencyAmount(String.valueOf(value));
+        CurrencyConversionForm.setExistingCurrencyAmount(String.valueOf(value));
     }
 }
