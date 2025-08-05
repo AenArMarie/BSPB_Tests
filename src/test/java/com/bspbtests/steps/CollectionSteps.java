@@ -65,7 +65,7 @@ public class CollectionSteps {
         OfficeDataModel expectedOffices = FilesReader.readJson(PathConstants.OFFICES_DATA_PATH, OfficeDataModel.class);
         String expectedJson = FilesReader.readFileAsString(PathConstants.OFFICES_DATA_PATH);
         assumeThat(expectedJson).isNotNull();
-        expectedJson = expectedJson.replaceAll("\\s+", "");
+        expectedJson = expectedJson.replaceAll(StringConstants.ALL_SPACES, StringConstants.EMPTY_STRING);
         Response getExchangeOfficesResponse = GetExchangeOfficesRequest.performGet();
         assumeThat(getExchangeOfficesResponse.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
         AllureUtilities.attachJson("Response json", getExchangeOfficesResponse);

@@ -1,6 +1,7 @@
 properties([
     githubProjectProperty(displayName: '', projectUrlStr: 'https://github.com/AenArMarie/BSPB_Tests/'),
     buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '3')),
+    parameters([string(defaultValue: 'false', name: 'remoteDriver')]),
     pipelineTriggers([githubPush()])
 ])
 

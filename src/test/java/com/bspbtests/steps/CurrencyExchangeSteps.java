@@ -40,14 +40,10 @@ public class CurrencyExchangeSteps {
         currencyConversionForm.selectAsConvertedCurrencyByText(valueType);
     }
 
-    @Тогда("расчет конверсии количества валюты {double} соответствует ожидаемому значению с допустимой погрешностью {double}")
-    public void verifyConversion(double value, double margin) {
+    @Тогда("вычисленное значение равно конверсии количества валюты {double} по курсу для {string} с погрешностью {double}")
+    public void verifyConversion(double value, String conversionSign, double margin) {
         CurrencyConversionForm currencyConversionForm = new CurrencyConversionForm();
-        String rawRate;
-        if (value < 500.0)
-            rawRate = currencyConversionForm.getConversionRateByPartialText("1"); //TODO хардкод?
-        else
-            rawRate = currencyConversionForm.getConversionRateByPartialText("500"); //TODO хардкод.
+        String rawRate = currencyConversionForm.getConversionRateByPartialText(conversionSign);
         String rateStr = StringProcessing.splitStringByTextAndGetPart(rawRate, StringConstants.EQUALS_SEPARATOR, 1);
         double rate = Double.parseDouble(StringProcessing.splitStringByTextAndGetPart(rateStr, StringConstants.ALL_SPACES, 0));
 
