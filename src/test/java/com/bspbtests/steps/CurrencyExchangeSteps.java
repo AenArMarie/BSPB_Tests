@@ -4,7 +4,7 @@ import com.bspbtests.constants.StringConstants;
 import com.bspbtests.pages.CurrencyConversionForm;
 import com.bspbtests.pages.MainPage;
 import com.bspbtests.utility.dataprocessing.StringProcessing;
-import com.utility.logger.ProjectLogger;
+import com.bspbtests.utility.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;

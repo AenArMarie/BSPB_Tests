@@ -10,6 +10,7 @@ import com.bspbtests.webelements.Input;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 
+@SuppressWarnings("FieldCanBeLocal")
 public class CalculatorForm extends BaseForm {
 
     private final Input investmentSumInput = new Input(By.className("css-vfqw27"), "Поле ввода суммы вклада");

@@ -1,7 +1,7 @@
 package com.bspbtests.utility.driver;
 
 import com.bspbtests.constants.PathConstants;
-import com.utility.files.FilesReader;
+import com.bspbtests.utility.FilesReader;
 import org.assertj.core.api.Assumptions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +11,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.AbstractDriverOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.net.MalformedURLException;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -57,16 +56,12 @@ public class Driver {
 
     public static WebDriver instance() {
         if (driver.get() == null) {
-            try {
-                driver.set(createDriver());
-            } catch (MalformedURLException e) {
-                throw new RuntimeException(e);
-            }
+            driver.set(createDriver());
         }
         return driver.get();
     }
 
-    private static WebDriver createDriver() throws MalformedURLException {
+    private static WebDriver createDriver()  {
         BrowserModel browser = FilesReader.readJson(PathConstants.BROWSER_CONFIG_PATH, BrowserModel.class);
         Assumptions.assumeThat(browser).isNotNull();
         return switch (System.getenv("remoteDriver")) {
@@ -88,6 +83,7 @@ public class Driver {
                 address(URI.create("http://localhost:4444/wd/hub")).
                 oneOf(options).
                 build();
+
     }
 
     public static void quit() {

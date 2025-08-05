@@ -2,25 +2,19 @@ package com.bspbtests.webelements;
 
 import com.bspbtests.utility.driver.Driver;
 import com.bspbtests.utility.driver.DriverMethods;
-import com.utility.logger.ProjectLogger;
+import com.bspbtests.utility.ProjectLogger;
+import lombok.Getter;
 import org.openqa.selenium.*;
 
+@Getter
 public abstract class BaseElement {
 
-    private By locator;
-    private String name;
+    private final By locator;
+    private final String name;
 
     public BaseElement(By elementLocator, String elementName) {
         locator = elementLocator;
         name = elementName;
-    }
-
-    public By getLocator() {
-        return locator;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public WebElement getElement() {

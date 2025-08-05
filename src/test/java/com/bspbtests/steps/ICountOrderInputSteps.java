@@ -4,7 +4,7 @@ import com.bspbtests.constants.AttributeConstants;
 import com.bspbtests.pages.CardOrderingForm;
 import com.bspbtests.pages.DebitCardsPage;
 import com.bspbtests.pages.MainPage;
-import com.utility.logger.ProjectLogger;
+import com.bspbtests.utility.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;

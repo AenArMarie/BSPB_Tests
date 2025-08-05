@@ -4,7 +4,7 @@ import com.bspbtests.constants.StringConstants;
 import com.bspbtests.pages.CalculatorForm;
 import com.bspbtests.pages.MainPage;
 import com.bspbtests.pages.WhiteNightsInvestmentPage;
-import com.utility.logger.ProjectLogger;
+import com.bspbtests.utility.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;

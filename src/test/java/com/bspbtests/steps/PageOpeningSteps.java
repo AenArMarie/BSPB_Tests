@@ -6,7 +6,7 @@ import com.bspbtests.pages.MainMenuPage;
 import com.bspbtests.pages.MainPage;
 import com.bspbtests.pages.PrivateBankingPage;
 import com.bspbtests.pages.baseform.BaseForm;
-import com.utility.logger.ProjectLogger;
+import com.bspbtests.utility.ProjectLogger;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 

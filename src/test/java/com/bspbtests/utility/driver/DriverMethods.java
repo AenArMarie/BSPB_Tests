@@ -1,7 +1,7 @@
 package com.bspbtests.utility.driver;
 
 import com.bspbtests.constants.FileTypes;
-import com.utility.logger.ProjectLogger;
+import com.bspbtests.utility.ProjectLogger;
 import lombok.Getter;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -10,8 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.InputStream;
-import java.net.URL;
 import java.time.Duration;
 
 public class DriverMethods {

@@ -1,7 +1,6 @@
-package com.utility.files;
+package com.bspbtests.utility;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.utility.logger.ProjectLogger;
 
 import java.io.File;
 import java.io.IOException;

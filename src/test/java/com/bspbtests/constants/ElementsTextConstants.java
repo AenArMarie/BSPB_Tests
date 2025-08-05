@@ -1,7 +1,5 @@
 package com.bspbtests.constants;
 
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.Map;
 
 public class ElementsTextConstants {
@@ -20,11 +18,9 @@ public class ElementsTextConstants {
     public static final Map<String, String> PAGES_UNIQUE_ELEMENT_TEXT;
 
     static {
-        Map<String, String> map = new HashMap<>();
-        map.put("Бизнесу", "Зарплатный");
-        map.put("Финансовые рынки", "Финансовым");
-        map.put("Инвесторам", "акционеров");
-        map.put("ВЭД", "ВЭД360");
-        PAGES_UNIQUE_ELEMENT_TEXT = Collections.unmodifiableMap(map);
+        PAGES_UNIQUE_ELEMENT_TEXT = Map.of("Бизнесу", "Зарплатный",
+                "Финансовые рынки", "Финансовым",
+                "Инвесторам", "акционеров",
+                "ВЭД", "ВЭД360");
     }
 }

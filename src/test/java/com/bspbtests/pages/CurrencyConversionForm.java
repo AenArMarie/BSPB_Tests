@@ -6,6 +6,7 @@ import com.bspbtests.webelements.Element;
 import com.bspbtests.webelements.Input;
 import org.openqa.selenium.By;
 
+@SuppressWarnings("FieldCanBeLocal")
 public class CurrencyConversionForm extends BaseForm {
 
     private final Element existingDropDownButton = new Element(By.xpath("//button[contains(@id, 'menu-button') and ancestor::*[contains(@class, 'css-17m0t2z')]]"),

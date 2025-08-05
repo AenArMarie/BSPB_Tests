@@ -9,7 +9,7 @@ import com.bspbtests.jsondata.UserData;
 import com.bspbtests.requests.GetExchangeOfficesRequest;
 import com.bspbtests.utility.AllureUtilities;
 import com.bspbtests.utility.ApiUtilities;
-import com.utility.files.FilesReader;
+import com.bspbtests.utility.FilesReader;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
@@ -23,7 +23,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assumptions.assumeThat;
 
 public class CollectionSteps {
-    private Container context;
+    private final Container context;
 
     public CollectionSteps(Container container) {
         context = container;

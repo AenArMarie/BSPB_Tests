@@ -1,7 +1,6 @@
 package com.bspbtests.utility;
 
 import com.bspbtests.constants.FileTypes;
-import com.utility.logger.ProjectLogger;
 import io.qameta.allure.Allure;
 import io.restassured.response.Response;
 

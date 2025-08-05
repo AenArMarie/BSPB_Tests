@@ -2,9 +2,8 @@ package com.bspbtests.steps;
 
 import com.bspbtests.constants.CommonLogMessages;
 import com.bspbtests.pages.MainPage;
-import com.utility.logger.ProjectLogger;
+import com.bspbtests.utility.ProjectLogger;
 import io.cucumber.java.ru.Дано;
-import io.qameta.allure.Step;
 import org.assertj.core.api.Assumptions;
 
 public class CommonSteps {

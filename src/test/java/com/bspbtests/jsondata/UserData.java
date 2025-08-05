@@ -1,6 +1,5 @@
 package com.bspbtests.jsondata;
 
-import com.bspbtests.data.User;
 import com.bspbtests.data.Useroid;
 import lombok.Getter;
 import lombok.Setter;

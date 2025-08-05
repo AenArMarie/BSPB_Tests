@@ -1,12 +1,8 @@
 package com.bspbtests.data;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import lombok.*;
-
-import java.util.Objects;
 
 @Builder
 @EqualsAndHashCode
