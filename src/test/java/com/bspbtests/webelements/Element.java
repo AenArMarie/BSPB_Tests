@@ -1,4 +1,4 @@
-package com.bspbtests.utility.webelements;
+package com.bspbtests.webelements;
 
 import org.openqa.selenium.By;
 

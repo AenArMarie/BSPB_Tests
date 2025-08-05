@@ -1,4 +1,4 @@
-package com.bspbtests.utility.webelements;
+package com.bspbtests.webelements;
 
 import com.bspbtests.utility.driver.Driver;
 import com.bspbtests.utility.driver.DriverMethods;

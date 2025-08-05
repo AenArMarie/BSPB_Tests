@@ -33,7 +33,6 @@ public class DriverMethods {
 
     public static void waitForElementToAppear(By locator) {
         try {
-            WebDriverWait wait = new WebDriverWait(Driver.instance(), Duration.ofSeconds(10));
             wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         } catch (TimeoutException e) {
             ProjectLogger.error("Элемент не прогрузился за указанное время: " + e.getMessage());

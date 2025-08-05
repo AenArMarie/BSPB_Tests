@@ -1,4 +1,4 @@
-package com.bspbtests.DataContainer;
+package com.bspbtests.datacontainer;
 
 import io.restassured.response.Response;
 import lombok.Getter;

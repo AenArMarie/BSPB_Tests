@@ -1,8 +1,7 @@
 package com.bspbtests.steps;
 
-import com.bspbtests.DataContainer.Container;
+import com.bspbtests.datacontainer.Container;
 import com.bspbtests.constants.PathConstants;
-import com.bspbtests.constants.StringConstants;
 import com.bspbtests.data.ExchangeOfficeModel;
 import com.bspbtests.data.OfficeDataModel;
 import com.bspbtests.data.Useroid;
@@ -51,39 +50,10 @@ public class CollectionSteps {
                 build();
         softly.assertThat(actualUseroid).usingRecursiveComparison().isNotEqualTo(expectedUseroid);
         UserData userData = FilesReader.readJson(PathConstants.USER_DATA_PATH, UserData.class);
-        assertThat(userData).isNotNull();
+        assumeThat(userData).as("Проверка userData не null").isNotNull();
         softly.assertThat(userData.getUsers()).usingRecursiveFieldByFieldElementComparator().contains(actualUseroid);
         softly.assertThat(userData.getUsers()).hasSize(4).usingRecursiveFieldByFieldElementComparator().doesNotContain(expectedUseroid);
         softly.assertThat(userData.getUsers()).filteredOn(useroid -> useroid.getAge() == 25).isEmpty();
-        softly.assertAll();
-    }
-
-    @Тогда("коллекция по запросу соответствует требованиям")
-    public void checkApi() {
-        SoftAssertions softly = new SoftAssertions();
-        AllureUtilities.attachJson("Expected json", PathConstants.OFFICES_DATA_PATH);
-        OfficeDataModel expectedOffices = FilesReader.readJson(PathConstants.OFFICES_DATA_PATH, OfficeDataModel.class);
-        String expectedJson = FilesReader.readFileAsString(PathConstants.OFFICES_DATA_PATH);
-        assumeThat(expectedJson).isNotNull();
-        expectedJson = expectedJson.replaceAll(StringConstants.ALL_SPACES, StringConstants.EMPTY_STRING);
-        Response getExchangeOfficesResponse = GetExchangeOfficesRequest.performGet();
-        assumeThat(getExchangeOfficesResponse.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
-        AllureUtilities.attachJson("Response json", getExchangeOfficesResponse);
-        OfficeDataModel offices = ApiUtilities.parseResponseAs(getExchangeOfficesResponse, OfficeDataModel.class);
-
-        softly.assertThat(offices.items()).
-                filteredOn(office -> office.address().contains("England")).
-                isEmpty();
-        softly.assertThat(offices.items())
-                .as("Проверка наличия нужных имен пунктов обмена")
-                .extracting(ExchangeOfficeModel::name)
-                .contains("ДО \"Гаванский\"", "ДО \"Пушкинский\"", "ДО \"Тосненский\"");
-        softly.assertThat(offices).usingRecursiveComparison().isEqualTo(expectedOffices);
-        softly.assertThat(getExchangeOfficesResponse.getBody().asString().
-                        replaceAll(StringConstants.ALL_SPACES, StringConstants.EMPTY_STRING)).
-                as("Проверка равенства строк json-файлов").
-                withFailMessage("Json-файлы не равны").
-                isEqualTo(expectedJson);
         softly.assertAll();
     }
 

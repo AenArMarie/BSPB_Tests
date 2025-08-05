@@ -2,8 +2,8 @@ package com.bspbtests.pages;
 
 import com.bspbtests.constants.AttributeConstants;
 import com.bspbtests.pages.baseform.BaseForm;
-import com.bspbtests.utility.webelements.Element;
-import com.bspbtests.utility.webelements.Input;
+import com.bspbtests.webelements.Element;
+import com.bspbtests.webelements.Input;
 import org.openqa.selenium.By;
 
 public class CurrencyConversionForm extends BaseForm {

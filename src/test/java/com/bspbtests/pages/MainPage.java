@@ -2,7 +2,7 @@ package com.bspbtests.pages;
 
 import com.bspbtests.constants.ElementsTextConstants;
 import com.bspbtests.pages.baseform.BaseForm;
-import com.bspbtests.utility.webelements.Element;
+import com.bspbtests.webelements.Element;
 import org.openqa.selenium.By;
 
 public class MainPage extends BaseForm {
