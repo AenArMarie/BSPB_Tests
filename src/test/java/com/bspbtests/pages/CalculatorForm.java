@@ -10,7 +10,6 @@ import com.bspbtests.webelements.Input;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 
-@SuppressWarnings("FieldCanBeLocal")
 public class CalculatorForm extends BaseForm {
 
     private static final Input investmentSumInput = new Input(By.className("css-vfqw27"), "Поле ввода суммы вклада");
@@ -37,7 +36,7 @@ public class CalculatorForm extends BaseForm {
         return investmentRate.getText();
     }
 
-    public  static boolean checkIfNormalizedInterestAmountEqualToText(String text) {
+    public static boolean checkIfNormalizedInterestAmountEqualToText(String text) {
         try {
             DriverMethods.getWait().until(driver -> {
                 String normalizedAmount = interestAmount.getText().replaceAll(StringConstants.ALL_NON_NUMERIC_CHARS, StringConstants.EMPTY_STRING);

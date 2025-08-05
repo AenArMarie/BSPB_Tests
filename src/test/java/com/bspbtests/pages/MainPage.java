@@ -5,7 +5,6 @@ import com.bspbtests.pages.baseform.BaseForm;
 import com.bspbtests.webelements.Element;
 import org.openqa.selenium.By;
 
-@SuppressWarnings("FieldCanBeLocal")
 public class MainPage extends BaseForm {
 
     private static final Element investmentsMenu = new Element(By.xpath(String.format("//*[contains(@class, 'css-1y4qndl') and contains(., '%s')]", ElementsTextConstants.MAIN_PAGE_INVEST)), "Выпадающее меню 'Вклады'");
