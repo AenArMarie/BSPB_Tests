@@ -1,14 +1,12 @@
 package com.bspbtests.steps;
 
 import com.bspbtests.constants.StringConstants;
-import com.bspbtests.pages.CalculatorForm;
+import com.bspbtests.pages.CalculatorFormI;
 import com.bspbtests.pages.MainPage;
 import com.bspbtests.pages.WhiteNightsInvestmentPage;
-import com.bspbtests.utility.ProjectLogger;
 import io.cucumber.java.ru.Дано;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
-import org.assertj.core.api.Assumptions;
 import org.assertj.core.api.SoftAssertions;
 
 import static org.assertj.core.api.Assumptions.assumeThat;
@@ -17,34 +15,31 @@ public class InvestmentRateSteps {
 
     @Дано("пользователь переходит на страницу вклада 'Белые ночи' из подменю 'Вклады'")
     public void openingWhiteNightsPage() {
-        ProjectLogger.info("Переход на страницу вклада 'Белые ночи'");
         MainPage.hoverInvestments();
         MainPage.clickWhiteNights();
-        assumeThat(WhiteNightsInvestmentPage.isDisplayed());
-        assumeThat(CalculatorForm.isDisplayed());
+        assumeThat(WhiteNightsInvestmentPage.isDisplayed()).isTrue();
+        assumeThat(CalculatorFormI.isDisplayed()).isTrue();
     }
 
     @Когда("пользователь выбирает срок вклада {string}")
     public void choosingInvestmentPeriod(String investmentPeriod) {
-        ProjectLogger.info("Установка суммы вклада " + investmentPeriod);
-        CalculatorForm.clickInvestmentPeriodByText(investmentPeriod);
+        CalculatorFormI.clickInvestmentPeriodByText(investmentPeriod);
     }
 
     @Когда("пользователь указывает сумму вклада {string}")
     public void inputtingInvestmentAmount(String investedSum) {
-        ProjectLogger.info("Установка срока вклада " + investedSum);
-        CalculatorForm.setInvestmentSum(investedSum);
+        CalculatorFormI.setInvestmentSum(investedSum);
     }
 
     @Тогда("ставка равна {int} и выгода по вкладу равна {string}")
     public void checkingInvestmentRate(int expectedRate, String expectedValue) {
         SoftAssertions softly = new SoftAssertions();
-        String investmentRateText = CalculatorForm.getInvestmentRate();
+        String investmentRateText = CalculatorFormI.getInvestmentRate();
         long investmentRate = Long.parseLong(investmentRateText.replaceAll(StringConstants.ALL_NON_NUMERIC_CHARS, StringConstants.EMPTY_STRING));
         softly.assertThat(investmentRate)
                 .as("Проверка процента вклада")
                 .isEqualTo(expectedRate);
-        softly.assertThat(CalculatorForm.checkIfNormalizedInterestAmountEqualToText(expectedValue))
+        softly.assertThat(CalculatorFormI.checkIfNormalizedInterestAmountEqualToText(expectedValue))
                 .as("Проверка прибыли вклада").isTrue();
         softly.assertAll();
     }

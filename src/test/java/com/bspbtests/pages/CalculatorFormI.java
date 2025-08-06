@@ -3,14 +3,14 @@ package com.bspbtests.pages;
 import com.bspbtests.constants.CommonLocatorTemplates;
 import com.bspbtests.constants.ElementsTextConstants;
 import com.bspbtests.constants.StringConstants;
-import com.bspbtests.pages.baseform.BaseForm;
+import com.bspbtests.pages.baseform.IBaseForm;
 import com.bspbtests.utility.driver.DriverMethods;
 import com.bspbtests.webelements.Element;
 import com.bspbtests.webelements.Input;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 
-public class CalculatorForm extends BaseForm {
+public class CalculatorFormI implements IBaseForm {
 
     private static final Input investmentSumInput = new Input(By.className("css-vfqw27"), "Поле ввода суммы вклада");
     private static final Element interestAmount = new Element(By.xpath(String.format(CommonLocatorTemplates.CALCULATOR_LABEL, ElementsTextConstants.RUB_CURRENCY_TEXT)), "Расчетная выгода от вклада");

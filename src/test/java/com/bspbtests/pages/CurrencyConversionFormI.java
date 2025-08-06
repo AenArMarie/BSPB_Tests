@@ -1,12 +1,12 @@
 package com.bspbtests.pages;
 
 import com.bspbtests.constants.AttributeConstants;
-import com.bspbtests.pages.baseform.BaseForm;
+import com.bspbtests.pages.baseform.IBaseForm;
 import com.bspbtests.webelements.Element;
 import com.bspbtests.webelements.Input;
 import org.openqa.selenium.By;
 
-public class CurrencyConversionForm extends BaseForm {
+public class CurrencyConversionFormI implements IBaseForm {
 
     private static final Element existingDropDownButton = new Element(By.xpath("//button[contains(@id, 'menu-button') and ancestor::*[contains(@class, 'css-17m0t2z')]]"),
             "Кнопка открытия выпадающего меню с выбором имеющейся валюты");

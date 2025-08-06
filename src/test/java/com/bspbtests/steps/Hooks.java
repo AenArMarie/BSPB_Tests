@@ -22,12 +22,8 @@ public class Hooks {
     @Before("@web")
     public void setUp() {
         configData = FilesReader.readJson(PathConstants.CONFIG_DATA_PATH, ConfigData.class);
-
-        ProjectLogger.info("Запуск теста");
-        ProjectLogger.info("Открытие главной страницы");
-
-        Driver.instance().manage().window().maximize();
-        Driver.instance().get(configData.getBaseUrl());
+        Driver.getDriver().manage().window().maximize();
+        Driver.getDriver().get(configData.getBaseUrl());
         DriverMethods.initializeWait(configData.getDriverWaitTime());
     }
 
@@ -46,8 +42,6 @@ public class Hooks {
                     FileTypes.TEXT,
                     DriverMethods.getSelenoidVideoLink());
         }
-
-        ProjectLogger.info("Завершение теста\n");
         Driver.quit();
     }
 }

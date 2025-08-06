@@ -10,8 +10,7 @@ public class CommonSteps {
 
     @Дано("пользователь находится на главной странице")
     public void userOnMainPage() {
-        ProjectLogger.info(CommonLogMessages.MAIN_PAGE_CHECK_LOG);
-        Assumptions.assumeThat(MainPage.isDisplayed());
+        Assumptions.assumeThat(MainPage.isDisplayed()).isTrue();
     }
 
 }

@@ -1,11 +1,11 @@
 package com.bspbtests.pages;
 
 import com.bspbtests.constants.ElementsTextConstants;
-import com.bspbtests.pages.baseform.BaseForm;
+import com.bspbtests.pages.baseform.IBaseForm;
 import com.bspbtests.webelements.Element;
 import org.openqa.selenium.By;
 
-public class MainPage extends BaseForm {
+public class MainPage implements IBaseForm {
 
     private static final Element investmentsMenu = new Element(By.xpath(String.format("//*[contains(@class, 'css-1y4qndl') and contains(., '%s')]", ElementsTextConstants.MAIN_PAGE_INVEST)), "Выпадающее меню 'Вклады'");
     private static final Element cardsMenu = new Element(By.xpath(String.format("//*[contains(@class, 'css-1y4qndl') and contains(., '%s')]", ElementsTextConstants.CARDS)), "Выпадающее меню 'Карты'");

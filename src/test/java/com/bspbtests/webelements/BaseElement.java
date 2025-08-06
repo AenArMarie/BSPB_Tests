@@ -21,7 +21,7 @@ public abstract class BaseElement {
         WebElement webElement = null;
         try {
             DriverMethods.waitForElementToAppear(getLocator());
-            webElement = Driver.instance().findElement(getLocator());
+            webElement = Driver.getDriver().findElement(getLocator());
         } catch (NoSuchElementException e) {
             ProjectLogger.error("Элемент " + getName() + " не найден: " + e.getMessage());
         }

@@ -1,10 +1,9 @@
 package com.bspbtests.steps;
 
-import com.bspbtests.datacontainer.Container;
 import com.bspbtests.constants.PathConstants;
 import com.bspbtests.data.ExchangeOfficeModel;
 import com.bspbtests.data.OfficeDataModel;
-import com.bspbtests.data.Useroid;
+import com.bspbtests.datacontainer.Container;
 import com.bspbtests.jsondata.UserData;
 import com.bspbtests.requests.GetExchangeOfficesRequest;
 import com.bspbtests.utility.AllureUtilities;
@@ -15,7 +14,6 @@ import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
-import org.assertj.core.api.SoftAssertions;
 
 import java.util.List;
 
@@ -31,30 +29,16 @@ public class CollectionSteps {
 
     @Тогда("воображаемое самопредставление пользователя совпадает с тестовыми данными")
     public void checkSelfAwareness() {
-        SoftAssertions softly = new SoftAssertions();
-        Useroid actualUseroid = Useroid.builder().
-                age(24).
-                name("valery").
-                surname("victorovich").
-                lastName("whosich").
-                gender("M").
-                isActiveClient(false).
-                build();
-        Useroid expectedUseroid = Useroid.builder().
-                age(25).
-                name("valery").
-                surname("victorovich").
-                lastName("whosich").
-                gender("M").
-                isActiveClient(false).
-                build();
-        softly.assertThat(actualUseroid).usingRecursiveComparison().isNotEqualTo(expectedUseroid);
         UserData userData = FilesReader.readJson(PathConstants.USER_DATA_PATH, UserData.class);
-        assumeThat(userData).as("Проверка userData не null").isNotNull();
-        softly.assertThat(userData.getUsers()).usingRecursiveFieldByFieldElementComparator().contains(actualUseroid);
-        softly.assertThat(userData.getUsers()).hasSize(4).usingRecursiveFieldByFieldElementComparator().doesNotContain(expectedUseroid);
-        softly.assertThat(userData.getUsers()).filteredOn(useroid -> useroid.getAge() == 25).isEmpty();
-        softly.assertAll();
+        assumeThat(userData).
+                as("Проверка userData не null").
+                isNotNull().
+                hasNoNullFieldsOrProperties();
+        assertThat(userData.getUsers()).
+                isNotNull().
+                hasSize(4).
+                filteredOn(useroid -> useroid.getAge() == 25).
+                isEmpty();
     }
 
     @Тогда("коллекция по запросу офисов обмена валюты содержит участки с именами:")

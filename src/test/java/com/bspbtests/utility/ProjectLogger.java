@@ -13,11 +13,6 @@ public class ProjectLogger {
         Allure.addAttachment("INFO log", text);
     }
 
-    public static void debug(String text) {
-        logger.debug(text);
-        Allure.addAttachment("DEBUG log", text);
-    }
-
     public static void error(String text) {
         logger.error(text);
         Allure.addAttachment("ERROR log", text);

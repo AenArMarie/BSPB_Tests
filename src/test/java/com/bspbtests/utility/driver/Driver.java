@@ -2,7 +2,7 @@ package com.bspbtests.utility.driver;
 
 import com.bspbtests.constants.PathConstants;
 import com.bspbtests.utility.FilesReader;
-import org.assertj.core.api.Assumptions;
+import com.bspbtests.utility.ProjectLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -54,16 +54,19 @@ public class Driver {
                 put("enableVideo", true);
             }};
 
-    public static WebDriver instance() {
+    public static WebDriver getDriver() {
         if (driver.get() == null) {
             driver.set(createDriver());
         }
         return driver.get();
     }
 
-    private static WebDriver createDriver()  {
+    private static WebDriver createDriver() {
         BrowserModel browser = FilesReader.readJson(PathConstants.BROWSER_CONFIG_PATH, BrowserModel.class);
-        Assumptions.assumeThat(browser).isNotNull();
+        if (browser == null || browser.getName() == null) {
+            ProjectLogger.error("Ошибка при чтении конфигурации браузера");
+            throw new RuntimeException();
+        }
         return switch (System.getenv("remoteDriver")) {
             case "false" -> LOCAL_WEB_DRIVER_FACTORY.get(browser.getName()).get();
             case null, default -> createRemoteWebDriver(browser);
@@ -83,7 +86,6 @@ public class Driver {
                 address(URI.create("http://localhost:4444/wd/hub")).
                 oneOf(options).
                 build();
-
     }
 
     public static void quit() {

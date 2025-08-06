@@ -18,15 +18,15 @@ public class DriverMethods {
     private static Wait<WebDriver> wait;
 
     public static void initializeWait(int millisOfWaitTime) {
-        wait = new WebDriverWait(Driver.instance(), Duration.ofMillis(millisOfWaitTime));
+        wait = new WebDriverWait(Driver.getDriver(), Duration.ofMillis(millisOfWaitTime));
     }
 
     public static String getPageSource() {
-        return Driver.instance().getPageSource();
+        return Driver.getDriver().getPageSource();
     }
 
     public static byte[] makeScreenshotByteArray() {
-        return ((TakesScreenshot) Driver.instance()).getScreenshotAs(OutputType.BYTES);
+        return ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
     public static void waitForElementToAppear(By locator) {
@@ -38,11 +38,11 @@ public class DriverMethods {
     }
 
     public static String getSelenoidVideoLink() {
-        String sessionId = ((RemoteWebDriver) Driver.instance()).getSessionId().toString();
+        String sessionId = ((RemoteWebDriver) Driver.getDriver()).getSessionId().toString();
         return  "http://localhost:8084/video/" + sessionId + FileTypes.MP4;
     }
 
     public static Actions getActions() {
-        return new Actions(Driver.instance());
+        return new Actions(Driver.getDriver());
     }
 }

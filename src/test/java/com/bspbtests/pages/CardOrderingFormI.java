@@ -1,12 +1,12 @@
 package com.bspbtests.pages;
 
 import com.bspbtests.constants.AttributeConstants;
-import com.bspbtests.pages.baseform.BaseForm;
+import com.bspbtests.pages.baseform.IBaseForm;
 import com.bspbtests.webelements.Element;
 import com.bspbtests.webelements.Input;
 import org.openqa.selenium.By;
 
-public class CardOrderingForm extends BaseForm {
+public class CardOrderingFormI implements IBaseForm {
 
     private static final Input firstNameInput = new Input(By.id("firstName"), "Поле ввода имени");
     private static final Input lastNameInput = new Input(By.id("lastName"), "Поле ввода фамилии");
