@@ -33,12 +33,15 @@ public class CollectionSteps {
     public void checkSelfAwareness(int amount, int age) {
         UserData userData = FilesReader.readJson(PathConstants.USER_DATA_PATH, UserData.class);
         assertThat(userData)
-                .as("Проверка данных на null") //TODO
+                .as("Проверка данных на null")
                 .isNotNull()
+                .as("Не имеет null параметров")
                 .hasNoNullFieldsOrProperties()
                 .extracting(UserData::getUsers)
                 .asInstanceOf(list(Useroid.class))
+                .as("Имеет размер %d", amount)
                 .hasSize(amount)
+                .as("Не имеет пользователей с возрастом %d", age)
                 .filteredOn(useroid -> useroid.getAge() == age)
                 .isEmpty();
     }
