@@ -3,7 +3,7 @@ package com.bspbtests.steps;
 import com.bspbtests.constants.PathConstants;
 import com.bspbtests.data.ExchangeOfficeModel;
 import com.bspbtests.data.OfficeDataModel;
-import com.bspbtests.data.Useroid;
+import com.bspbtests.data.User;
 import com.bspbtests.datacontainer.Container;
 import com.bspbtests.jsondata.UserData;
 import com.bspbtests.requests.GetExchangeOfficesRequest;
@@ -38,11 +38,11 @@ public class CollectionSteps {
                 .as("Не имеет null параметров")
                 .hasNoNullFieldsOrProperties()
                 .extracting(UserData::getUsers)
-                .asInstanceOf(list(Useroid.class))
+                .asInstanceOf(list(User.class))
                 .as("Имеет размер %d", amount)
                 .hasSize(amount)
                 .as("Не имеет пользователей с возрастом %d", age)
-                .filteredOn(useroid -> useroid.getAge() == age)
+                .filteredOn(user -> user.getAge() == age)
                 .isEmpty();
     }
 

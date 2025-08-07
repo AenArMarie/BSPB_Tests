@@ -1,7 +1,7 @@
 package com.bspbtests.steps;
 
 import com.bspbtests.constants.AttributeConstants;
-import com.bspbtests.pages.CardOrderingFormI;
+import com.bspbtests.pages.CardOrderingForm;
 import com.bspbtests.pages.DebitCardsPage;
 import com.bspbtests.pages.MainPage;
 import io.cucumber.java.ru.Дано;
@@ -22,34 +22,34 @@ public class CountOrderInputSteps {
     @Дано("пользователь открывает страницу карты 'ЯСЧИТАЮ'")
     public void openingICountPage() {
         DebitCardsPage.clickICountCardLink();
-        Assumptions.assumeThat(CardOrderingFormI.isDisplayed()).isTrue();
+        Assumptions.assumeThat(CardOrderingForm.isDisplayed()).isTrue();
     }
 
     @Когда("пользователь вводит номер телефона {string}")
     public void enterPhoneNumber(String number) {
-        CardOrderingFormI.inputPhoneNumber(number);
+        CardOrderingForm.inputPhoneNumber(number);
     }
 
     @Когда("пользователь вводит электронную почту {string}")
     public void enterEmail(String email) {
-        CardOrderingFormI.inputEmail(email);
+        CardOrderingForm.inputEmail(email);
     }
 
     @Когда("пользователь нажимает кнопку 'Продолжить'")
     public void clickContinue() {
-        CardOrderingFormI.clickContinueButton();
+        CardOrderingForm.clickContinueButton();
     }
 
     @Тогда("поля 'Фамилия', 'Имя' и 'Адрес доставки' подсвечиваются красным")
     public void checkingRedStatus() {
         SoftAssertions softly = new SoftAssertions();
-        softly.assertThat(CardOrderingFormI.getLastNameInvalidity())
+        softly.assertThat(CardOrderingForm.getLastNameInvalidity())
                 .as("Проверка: поле 'Фамилия' горит красным")
                 .isEqualTo(AttributeConstants.TRUE);
-        softly.assertThat(CardOrderingFormI.getFirstNameInvalidity())
+        softly.assertThat(CardOrderingForm.getFirstNameInvalidity())
                 .as("Проверка: поле 'Имя' горит красным")
                 .isEqualTo(AttributeConstants.TRUE);
-        softly.assertThat(CardOrderingFormI.getAddressInvalidity())
+        softly.assertThat(CardOrderingForm.getAddressInvalidity())
                 .as("Проверка: поле 'Адрес доставки' горит красным")
                 .isEqualTo(AttributeConstants.TRUE);
         softly.assertAll();

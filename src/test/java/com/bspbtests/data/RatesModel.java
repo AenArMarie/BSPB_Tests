@@ -1,5 +1,8 @@
 package com.bspbtests.data;
 
+/**
+ * Запись курсов обмена
+ */
 public record RatesModel(Double buyRate,
                          Double cbRate,
                          String currencyCode,

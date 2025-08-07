@@ -16,8 +16,8 @@ public class PageOpeningSteps {
 
     @Тогда("открывается страница {string}")
     public void pageOpened(String expectedPageName) {
-        assertThat(PageChecker.fromPageName(expectedPageName).isDisplayed(expectedPageName)).
-                as("Проверка отображения страницы " + expectedPageName).
-                isTrue();
+        assertThat(PageChecker.fromPageName(expectedPageName).isDisplayed(expectedPageName))
+                .as("Проверка отображения страницы " + expectedPageName)
+                .isTrue();
     }
 }

@@ -1,5 +1,8 @@
 package com.bspbtests.constants;
 
+/**
+ * Константы типов файлов
+ */
 public class FileTypes {
 
     public static final String IMAGE_PNG = "image/png";

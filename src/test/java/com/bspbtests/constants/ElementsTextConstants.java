@@ -2,6 +2,9 @@ package com.bspbtests.constants;
 
 import java.util.Map;
 
+/**
+ * Константы текста веб-элементов
+ */
 public class ElementsTextConstants {
 
     public static final String ICOUNT_CARD_TEXT = "ЯСЧИТАЮ";
