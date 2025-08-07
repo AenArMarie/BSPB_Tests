@@ -13,6 +13,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Драйвер
+ */
 public class Driver {
 
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
@@ -27,6 +30,10 @@ public class Driver {
         return options;
     }
 
+    /**
+     * Метод, возвращающий драйвер и создающий его в случае отсутствия
+     * @return драйвер текущей сессии типа {@link WebDriver}
+     */
     public static WebDriver getDriver() {
         if (driver.get() == null) {
             driver.set(createDriver());
@@ -55,6 +62,9 @@ public class Driver {
                 build();
     }
 
+    /**
+     * Метод, завершающий работу драйвера
+     */
     public static void quit() {
         if (driver.get() != null) {
             driver.get().quit();

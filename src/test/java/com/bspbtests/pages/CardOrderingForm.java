@@ -47,7 +47,7 @@ public class CardOrderingForm implements IBaseForm {
     /**
      * Проверка наличия атрибута не валидности поля имени
      *
-     * @return true если атрибут не валидности присутствует, false в обратном случае
+     * @return {@code true} если атрибут не валидности присутствует, {@code false} в обратном случае
      */
     public static String getFirstNameInvalidity() {
         return firstNameInput.getAttribute(AttributeConstants.ARIA_INVALID); //TODO енамка для полей

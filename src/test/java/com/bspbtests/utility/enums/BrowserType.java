@@ -9,6 +9,9 @@ import org.openqa.selenium.remote.AbstractDriverOptions;
 
 import java.util.Arrays;
 
+/**
+ * Enum для разных типов браузера
+ */
 public enum BrowserType {
     CHROME {
         @Override
@@ -38,9 +41,24 @@ public enum BrowserType {
         }
     };
 
+    /**
+     * Метод для создания локального драйвера
+     *
+     * @return веб драйвер в формате {@link WebDriver}
+     */
     public abstract WebDriver createLocalDriver();
+
+    /**
+     * Метод для создания настроек удаленного браузера
+     * @return настройки браузера в формате {@link AbstractDriverOptions<>}
+     */
     public abstract AbstractDriverOptions<?> createRemoteOptions();
 
+    /**
+     * Метод для поиска браузера среди enum-объектов
+     * @param name название браузера
+     * @return enum нужного браузер
+     */
     public static BrowserType fromString(String name) {
         return Arrays.stream(values())
                 .filter(b -> b.name().equalsIgnoreCase(name))

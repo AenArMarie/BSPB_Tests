@@ -7,8 +7,8 @@ public interface IBaseForm {
 
     /**
      * Метод возвращает статус отображения страницы
-     * @return true при успешной проверке отображения,
-     * false при неуспешной
+     * @return {@code true} при успешной проверке отображения,
+     * {@code false} при неуспешной
      */
     static boolean isDisplayed() {
         return false;

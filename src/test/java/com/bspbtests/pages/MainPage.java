@@ -5,6 +5,9 @@ import com.bspbtests.pages.baseform.IBaseForm;
 import com.bspbtests.webelements.Element;
 import org.openqa.selenium.By;
 
+/**
+ * Главная страница
+ */
 public class MainPage implements IBaseForm {
 
     private static final Element investmentsMenu = new Element(By.xpath(String.format("//*[contains(@class, 'css-1y4qndl') and contains(., '%s')]", ElementsTextConstants.MAIN_PAGE_INVEST)), "Выпадающее меню 'Вклады'");
@@ -15,30 +18,52 @@ public class MainPage implements IBaseForm {
 
     private static final String topMenuLocatorTemplate = "//*[contains(@class, 'css-9f19sy') and contains(., '%s')]";
 
+    /**
+     * @see IBaseForm#isDisplayed()
+     */
     public static boolean isDisplayed() {
         return new Element(By.xpath(String.format("//*[contains(@class, 'css-2wq498') and contains(., '%s')]", ElementsTextConstants.MAIN_PAGE_MORTGAGE)), "Главная страница").getElement().isDisplayed();
     }
 
+    /**
+     * Наведение на вклады
+     */
     public static void hoverInvestments() {
         investmentsMenu.hover();
     }
 
+    /**
+     * Наведение на карты
+     */
     public static void hoverCards() {
         cardsMenu.hover();
     }
 
+    /**
+     * Клик на вклад белые ночи
+     */
     public static void clickWhiteNights() {
         whiteNightsInvestment.click();
     }
 
+    /**
+     * Клик на дебетовые карты
+     */
     public static void clickDebitCards() {
         debitCards.click();
     }
 
+    /**
+     * Клик на покупку валюты
+     */
     public static void clickBuyCurrencyButton() {
         buyCurrencyButton.click();
     }
 
+    /**
+     * Клик на кнопку верхнего меню по тексту
+     * @param text фрагмент текста верхнего меню
+     */
     public static void clickTopMenuItemByText(String text) {
         Element menuItem = new Element(By.xpath(String.format(topMenuLocatorTemplate, text)), "Кнопка с текстом " + text);
         menuItem.click();

@@ -61,8 +61,8 @@ public class CalculatorForm implements IBaseForm {
      * Метод проверки равенства выгоды по вкладу
      *
      * @param text ожидаемая выгода
-     * @return true при успешной проверке,
-     * false при провале
+     * @return {@code true} при успешной проверке,
+     * {@code false} при провале
      */
     public static boolean checkIfNormalizedInterestAmountEqualToText(String text) {
         try {

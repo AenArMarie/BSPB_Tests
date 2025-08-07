@@ -3,6 +3,9 @@ package com.bspbtests.utility.driver;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Информация о браузере
+ */
 @Setter
 @Getter
 public class BrowserModel {
