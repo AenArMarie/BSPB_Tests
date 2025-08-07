@@ -1,5 +1,6 @@
-package com.bspbtests.utility;
+package com.bspbtests.utility.dataprocessing;
 
+import com.bspbtests.utility.ProjectLogger;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;

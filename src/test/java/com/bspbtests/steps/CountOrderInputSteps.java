@@ -10,7 +10,7 @@ import io.cucumber.java.ru.Тогда;
 import org.assertj.core.api.Assumptions;
 import org.assertj.core.api.SoftAssertions;
 
-public class ICountOrderInputSteps {
+public class CountOrderInputSteps {
 
     @Дано("пользователь переходит на страницу дебетовых карт")
     public void openingDebitCardsPage() {

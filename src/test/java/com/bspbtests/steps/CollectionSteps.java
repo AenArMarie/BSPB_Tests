@@ -3,12 +3,13 @@ package com.bspbtests.steps;
 import com.bspbtests.constants.PathConstants;
 import com.bspbtests.data.ExchangeOfficeModel;
 import com.bspbtests.data.OfficeDataModel;
+import com.bspbtests.data.Useroid;
 import com.bspbtests.datacontainer.Container;
 import com.bspbtests.jsondata.UserData;
 import com.bspbtests.requests.GetExchangeOfficesRequest;
 import com.bspbtests.utility.AllureUtilities;
 import com.bspbtests.utility.ApiUtilities;
-import com.bspbtests.utility.FilesReader;
+import com.bspbtests.utility.dataprocessing.FilesReader;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
@@ -19,6 +20,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assumptions.assumeThat;
+import static org.assertj.core.api.InstanceOfAssertFactories.list;
 
 public class CollectionSteps {
     private final Container context;
@@ -27,18 +29,18 @@ public class CollectionSteps {
         context = container;
     }
 
-    @Тогда("воображаемое самопредставление пользователя совпадает с тестовыми данными")
-    public void checkSelfAwareness() {
+    @Тогда("количество пользователей равно {int} и ни один из них не имеет возраст {int}")
+    public void checkSelfAwareness(int amount, int age) {
         UserData userData = FilesReader.readJson(PathConstants.USER_DATA_PATH, UserData.class);
-        assumeThat(userData).
-                as("Проверка userData не null").
-                isNotNull().
-                hasNoNullFieldsOrProperties();
-        assertThat(userData.getUsers()).
-                isNotNull().
-                hasSize(4).
-                filteredOn(useroid -> useroid.getAge() == 25).
-                isEmpty();
+        assertThat(userData)
+                .as("Проверка данных на null") //TODO
+                .isNotNull()
+                .hasNoNullFieldsOrProperties()
+                .extracting(UserData::getUsers)
+                .asInstanceOf(list(Useroid.class))
+                .hasSize(amount)
+                .filteredOn(useroid -> useroid.getAge() == age)
+                .isEmpty();
     }
 
     @Тогда("коллекция по запросу офисов обмена валюты содержит участки с именами:")
