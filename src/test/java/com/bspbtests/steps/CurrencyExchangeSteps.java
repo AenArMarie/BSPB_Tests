@@ -54,7 +54,7 @@ public class CurrencyExchangeSteps {
                 .isCloseTo(expected, within(margin));
     }
 
-    @Когда("пользователь вводит количество валюты {double}")
+    @Когда("пользователь вводит количество валюты {double}") //TODO if not double (try to make ur own type)
     public void enterLargeAmount(double value) {
         CurrencyConversionForm.setExistingCurrencyAmount(String.valueOf(value));
     }

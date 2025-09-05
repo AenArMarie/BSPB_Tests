@@ -39,7 +39,7 @@ public class CollectionSteps {
                 .hasNoNullFieldsOrProperties()
                 .extracting(UserData::getUsers)
                 .asInstanceOf(list(User.class))
-                .as("Имеет размер %d", amount)
+                .as("Имеет размер %d", amount) //TODO
                 .hasSize(amount)
                 .as("Не имеет пользователей с возрастом %d", age)
                 .filteredOn(user -> user.getAge() == age)

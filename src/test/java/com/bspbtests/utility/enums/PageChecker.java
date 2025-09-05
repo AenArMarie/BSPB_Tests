@@ -7,7 +7,9 @@ import com.bspbtests.pages.PrivateBankingPage;
 import com.bspbtests.pages.baseform.IBaseForm;
 
 /**
- * Enum для вывода метода {@link IBaseForm#isDisplayed()} и {@link com.bspbtests.pages.baseform.ITemplatedForm#isDisplayed(String, String)} разных страниц
+ * Enum для вывода метода {@code isDisplayed} разных страниц
+ * @see IBaseForm#isDisplayed()
+ * @see com.bspbtests.pages.baseform.ITemplatedForm#isDisplayed(String, String)
  */
 public enum PageChecker {
     PRIVATE_BANKING {
