@@ -1,15 +1,17 @@
 package com.bspbtests.steps;
 
 import com.bspbtests.constants.PathConstants;
-import com.bspbtests.data.ExchangeOfficeModel;
-import com.bspbtests.data.OfficeDataModel;
 import com.bspbtests.data.User;
+import com.bspbtests.data.offices.ExchangeOfficeModel;
+import com.bspbtests.data.offices.OfficeDataModel;
 import com.bspbtests.datacontainer.Container;
 import com.bspbtests.jsondata.UserData;
-import com.bspbtests.requests.GetExchangeOfficesRequest;
+import com.bspbtests.requests.ProjectRequests;
 import com.bspbtests.utility.AllureUtilities;
 import com.bspbtests.utility.ApiUtilities;
 import com.bspbtests.utility.dataprocessing.FilesReader;
+import com.bspbtests.utility.dataprocessing.ProjectMapper;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
@@ -48,7 +50,7 @@ public class CollectionSteps {
 
     @Тогда("коллекция по запросу офисов обмена валюты содержит участки с именами:")
     public void checkExchangeOfficesAPIContains(DataTable table) {
-        Response getExchangeOfficesResponse = GetExchangeOfficesRequest.performGet();
+        Response getExchangeOfficesResponse = ProjectRequests.getOfficesExchangeRates();
         assumeThat(getExchangeOfficesResponse.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
         AllureUtilities.attachJson("Response json", getExchangeOfficesResponse);
         OfficeDataModel offices = ApiUtilities.parseResponseAs(getExchangeOfficesResponse, OfficeDataModel.class);
@@ -61,10 +63,30 @@ public class CollectionSteps {
 
     @Когда("пользователь выполняет запрос на получение офисов")
     public void sendOfficesRequest() {
-        Response getExchangeOfficesResponse = GetExchangeOfficesRequest.performGet();
+        Response getExchangeOfficesResponse = ProjectRequests.getOfficesExchangeRates();
         assumeThat(getExchangeOfficesResponse.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
         AllureUtilities.attachJson("Response json", getExchangeOfficesResponse);
         context.setResponse(getExchangeOfficesResponse);
+    }
+
+    @Когда("пользователь выполняет запрос на курса обмена для карты {string}")
+    public void sendCardsExchangeRateRequest(String cardName) {
+        Response getCardExchangeRateResponse = ProjectRequests.getExchangeRateByCard(cardName);
+        AllureUtilities.attachJson("Response json", getCardExchangeRateResponse);
+        context.setResponse(getCardExchangeRateResponse);
+    }
+
+    @Тогда("ответ на запрос совпадает с ответом по относительному пути {string}")
+    public void checkOfficeNames(String path) {
+        assumeThat(context.getResponse()).isNotNull();
+        String expectedJson = FilesReader.readJsonAsString(path);
+        assumeThat(expectedJson).isNotNull();
+        JsonNode actualNode = ProjectMapper.mapJson(context.getResponse().asString());
+        JsonNode expectedNode = ProjectMapper.mapJson(FilesReader.readJsonAsString(path));
+        assertThat(actualNode)
+                .as("Проверка равенства json")
+                .usingRecursiveComparison()
+                .isEqualTo(expectedNode);
     }
 
     @Тогда("этот запрос содержит участки с именами:")

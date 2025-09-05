@@ -1,6 +1,9 @@
 package com.bspbtests.utility;
 
 import io.restassured.response.Response;
+import org.apache.http.HttpStatus;
+
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
@@ -11,6 +14,7 @@ public class ApiUtilities {
 
     /**
      * Метод для выполнения GET-запроса без header-ов и query-параметров
+     *
      * @param url URL запроса
      * @return ответ на запрос в формате {@link Response}
      */
@@ -23,12 +27,28 @@ public class ApiUtilities {
     }
 
     /**
+     * Метод для выполнения GET-запроса с query-параметрами без header-ов
+     *
+     * @param url URL запроса
+     * @return ответ на запрос в формате {@link Response}
+     */
+    public static Response getRequestWithQuery(String url, Map<String, String> query) {
+        return given()
+                .queryParams(query)
+                .when()
+                .get(url)
+                .then()
+                .statusCode(HttpStatus.SC_OK)
+                .extract().response();
+    }
+
+    /**
      * Метод для преобразования ответа на запрос в выбранный класс
      *
-     * @param response ответ на запрос
+     * @param response    ответ на запрос
      * @param targetClass класс, в который преобразуется ответ на запрос
+     * @param <T>         тип объекта, в который преобразуется ответ на запрос
      * @return ответ на запрос, преобразованный в объект типа {@code T}
-     * @param <T> тип объекта, в который преобразуется ответ на запрос
      */
     public static <T> T parseResponseAs(Response response, Class<T> targetClass) {
         return response.as(targetClass);

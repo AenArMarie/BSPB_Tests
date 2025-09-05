@@ -1,4 +1,6 @@
-package com.bspbtests.data;
+package com.bspbtests.data.offices;
+
+import com.bspbtests.data.RatesModel;
 
 import java.util.ArrayList;
 

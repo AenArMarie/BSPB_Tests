@@ -5,19 +5,20 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /**
  * Класс для чтения файлов
  */
 public class FilesReader {
 
-
     /**
      * Метод, преобразующий Json в объект класса {@code T}
      *
-     * @param filePath путь к файлу из проектной директории
+     * @param filePath    путь к файлу из проектной директории
      * @param targetClass класс типа {@code T}
-     * @param <T> тип объекта, в который переводится Json
+     * @param <T>         тип объекта, в который переводится Json
      * @return объект типа {@code T}, полученный в результате перевода из Json
      */
     public static <T> T readJson(String filePath, Class<T> targetClass) {
@@ -26,6 +27,14 @@ public class FilesReader {
             return objectMapper.readValue(new File(filePath), targetClass);
         } catch (IOException e) {
             ProjectLogger.error("Ошибка чтения JSON " + e.getMessage());
+            return null;
+        }
+    }
+
+    public static String readJsonAsString(String filePath) {
+        try {
+            return Files.readString(Paths.get(filePath));
+        } catch (IOException e) {
             return null;
         }
     }

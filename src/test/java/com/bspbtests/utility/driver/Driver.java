@@ -49,8 +49,7 @@ public class Driver {
         }
         return switch (System.getenv("remoteDriver")) {
             case "false" -> BrowserType.fromString(browser.getName()).createLocalDriver();
-            //case null, default -> createRemoteWebDriver(browser);
-            case null, default -> BrowserType.fromString(browser.getName()).createLocalDriver();
+            case null, default -> createRemoteWebDriver(browser);
         };
     }
 
@@ -68,7 +67,7 @@ public class Driver {
      */
     public static void quit() {
         if (driver.get() != null) {
-            //driver.get().quit();
+            driver.get().quit();
             driver.remove();
         }
     }
