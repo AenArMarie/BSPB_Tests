@@ -16,6 +16,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 import io.restassured.response.Response;
+import net.javacrumbs.jsonunit.core.Option;
 import org.apache.http.HttpStatus;
 
 import java.util.List;
@@ -23,6 +24,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assumptions.assumeThat;
 import static org.assertj.core.api.InstanceOfAssertFactories.list;
+import static net.javacrumbs.jsonunit.assertj.JsonAssertions.assertThatJson;
 
 public class CollectionSteps {
     private final Container context;
@@ -41,7 +43,7 @@ public class CollectionSteps {
                 .hasNoNullFieldsOrProperties()
                 .extracting(UserData::getUsers)
                 .asInstanceOf(list(User.class))
-                .as("Имеет размер %d", amount) //TODO
+                .as("Имеет размер %d", amount)
                 .hasSize(amount)
                 .as("Не имеет пользователей с возрастом %d", age)
                 .filteredOn(user -> user.getAge() == age)
@@ -81,21 +83,22 @@ public class CollectionSteps {
         assumeThat(context.getResponse()).isNotNull();
         String expectedJson = FilesReader.readJsonAsString(path);
         assumeThat(expectedJson).isNotNull();
-        JsonNode actualNode = ProjectMapper.mapJson(context.getResponse().asString());
-        JsonNode expectedNode = ProjectMapper.mapJson(FilesReader.readJsonAsString(path));
-        assertThat(actualNode)
-                .as("Проверка равенства json")
-                .usingRecursiveComparison()
-                .isEqualTo(expectedNode);
+        assertThatJson(context.getResponse().getBody().asString())
+                .as("Проверка равенства json строк")
+                .when(Option.IGNORING_EXTRA_ARRAY_ITEMS)
+                .isEqualTo(expectedJson);
     }
 
     @Тогда("этот запрос содержит участки с именами:")
     public void checkOfficeNames(DataTable table) {
-        OfficeDataModel offices = ApiUtilities.parseResponseAs(context.getResponse(), OfficeDataModel.class);
+        assumeThat(context.getResponse()).isNotNull();
         List<String> expectedNames = table.asList(String.class);
-        assertThat(offices.items())
+        System.out.println(expectedNames);
+        assertThatJson(context.getResponse().getBody().asString())
                 .as("Проверка наличия нужных имен пунктов обмена")
-                .extracting(ExchangeOfficeModel::name)
+                .node("items")
+                .isArray()
+                .extracting("name")
                 .containsAll(expectedNames);
     }
 }

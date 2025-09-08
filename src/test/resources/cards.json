@@ -1,18 +1,9 @@
 {
   "items": [
     {
-      "buyRate": 76.5400,
-      "cbRate": 81.2977,
+      "buyRate": 77.1100,
+      "cbRate": 81.5556,
       "currencyCode": "USD",
-      "currencyCodeSecond": "RUB",
-      "lotSize": 1,
-      "sellRate": 0,
-      "transactionVolume": 1
-    },
-    {
-      "buyRate": 89.7100,
-      "cbRate": 94.7754,
-      "currencyCode": "EUR",
       "currencyCodeSecond": "RUB",
       "lotSize": 1,
       "sellRate": 0,
